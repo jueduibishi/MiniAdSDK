@@ -1,7 +1,8 @@
 # MiniAdSDK
 广告集成，最低支持iOS11，支持模拟器+真机联调。
-# 接入
+# 接入指引，请添加source，否则可能走cdn的配置。
 ```
+source 'https://github.com/CocoaPods/Specs.git'
 pod 'MiniAdSDK'
 ```
 # 配置
