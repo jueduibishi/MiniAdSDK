@@ -4,8 +4,9 @@
 ```
 pod 'MiniAdSDK'
 ```
-#配置
-##1、在项目的Info.plist文件中添加以下字段
+# 配置
+==============
+## 1、在项目的Info.plist文件中添加以下字段
 ```
 <dict>
     <key>NSAppTransportSecurity</key>
@@ -68,12 +69,13 @@ pod 'MiniAdSDK'
     <string>为了提供个性化的广告体验，我们需要您的同意来跟踪您的活动。</string>
 </dict>
 ```
-##2、模拟器配置
+## 2、模拟器配置
+
 英特尔芯片的Mac创建的demo项目可以直接运行。
 穿山甲集成的BaiduMobAdSDK和GDTMobSDK不支持arm64的模拟器，所以必须做如下设置。
 M1之后的arm架构的Mac创建的xcode项目必须修改下Target——Build Settings——Excluded Architectures——Any iOS Simulator SDK设置为arm64。
 
-##3、其他配置
+## 3、其他配置
 Targets-build settings - user script sandboxing 设置为No
 
 # 类型和错误码说明
