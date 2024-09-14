@@ -1,6 +1,6 @@
 # MiniAdSDK
-广告集成，最低支持iOS12,本项目依赖KSAdSDK用于真机联调。
-#接入
+广告集成，最低支持iOS12，本项目依赖KSAdSDK用于真机联调。
+# 接入
 ```
 pod 'MiniAdSDK'
 ```
