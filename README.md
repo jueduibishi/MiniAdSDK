@@ -222,9 +222,7 @@ manager.didRewardBlock = ^(int code, NSString * _Nonnull result) {
 };
 [manager loadRewardAD:YES];
 if (manager.isReadToPlay) {
-    UIViewController *vc=[UIApplication sharedApplication].delegate.window.rootViewController;
-    //若有SceneDelegate，采用多窗口模式，请自行处理获取正确的rootvc
-    [manager showAd:vc];
+    [manager showAd:self];
 }
 else{
      NSLog(@"激励广告加载未完成");
@@ -276,8 +274,9 @@ else{
 /// 加载插屏广告
 -(void)loadScreenAD;
 
-///显示广告
--(void)showAd;
+/// 当前的vc
+/// - Parameter rootVC: vc
+-(void)showAd:(UIViewController*)rootVC;
 
 属性 
 BOOL isReadToPlay;//广告加载完成
@@ -292,7 +291,7 @@ manager.screenBlock = ^(int code, NSString * _Nonnull result) {
 [manager loadScreenAD];
 
 if (manager.isReadToPlay) {
-    [manager showAd];
+    [manager showAd:self];
 }
 else{
      NSLog(@"插屏广告加载未完成");
