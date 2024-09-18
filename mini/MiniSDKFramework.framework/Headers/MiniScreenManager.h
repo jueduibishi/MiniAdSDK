@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import <MiniSDKFramework/AdErrorCode.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -19,7 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 加载插屏广告
 -(void)loadScreenAD;
--(void)showAd;
+/// 当前的vc
+/// - Parameter rootVC: vc
+-(void)showAd:(UIViewController*)rootVC;
 
 @end
 
