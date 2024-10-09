@@ -1,8 +1,8 @@
 # MiniAdSDK
 广告集成，最低支持iOS11，支持模拟器+真机联调。
 ## 0.1.2版本说明：
-由于SDK冲突问题，移除优量汇集成。
-此版本支持：穿山甲，百度，快手。
+由于SDK冲突问题，移除优量汇集成。  
+此版本支持：穿山甲，百度，快手。  
 若需要支持优量汇，请按一下代码引入：
 ```
 pod 'GMGdtAdapter', '4.14.90.0'
@@ -80,8 +80,8 @@ pod 'MiniAdSDK'
 ```
 ## 2、模拟器配置
 
-英特尔芯片的Mac创建的demo项目可以直接运行。
-穿山甲集成的BaiduMobAdSDK和GDTMobSDK不支持arm64的模拟器，所以必须做如下设置。
+英特尔芯片的Mac创建的demo项目可以直接运行。  
+穿山甲集成的BaiduMobAdSDK和GDTMobSDK不支持arm64的模拟器，所以必须做如下设置。  
 M1之后的arm架构的Mac创建的xcode项目必须修改下Target——Build Settings——Excluded Architectures——Any iOS Simulator SDK设置为arm64。
 
 ## 3、其他配置
@@ -136,11 +136,11 @@ typedef NS_ENUM(int,screenErrorCode){
 ## iOS14适配说明
 从iOS 14开始，只有在获得用户明确许可的前提下，应用才可以访问用户的IDFA数据并向用户投放定向广告。在应用程序调用 App Tracking Transparency 框架向最终用户提出应用程序跟踪授权请求之前，IDFA将不可用。如果某个应用未提出此请求，则读取到的IDFA将返回全为0的字符串，这个可能会导致广告收入降低。
 
-ATT(App Tracking Transparency), 适用于请求用户权限，访问与应用相关的数据已跟踪用户或设备。在iOS14.5以后(之前不做配置也能正常获取IDFA)想要依旧能使用IDFA，建议开发者在初始化聚合SDK之前获取ATT授权，以便允许用户授权跟踪权限。
+ATT(App Tracking Transparency), 适用于请求用户权限，访问与应用相关的数据已跟踪用户或设备。在iOS14.5以后(之前不做配置也能正常获取IDFA)想要依旧能使用IDFA，建议开发者在初始化聚合SDK之前获取ATT授权，以便允许用户授权跟踪权限。  
 
-关于隐私权限弹窗的说明文案，已在上方接入方式步骤2的Info.plist中有提及，文案可根据需求自行修改。
+关于隐私权限弹窗的说明文案，已在上方接入方式步骤2的Info.plist中有提及，文案可根据需求自行修改。  
 
-在代码层面请求授权，建议最好在SDK初始化之前请求授权。
+在代码层面请求授权，建议最好在SDK初始化之前请求授权。  
 
 ```
  - (void)requestIDFA {
