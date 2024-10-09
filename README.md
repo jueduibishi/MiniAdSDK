@@ -1,5 +1,13 @@
 # MiniAdSDK
 广告集成，最低支持iOS11，支持模拟器+真机联调。
+##0.1.2版本说明：
+由于SDK冲突问题，移除优量汇集成。
+此版本支持：穿山甲，百度，快手。
+若需要支持优量汇，请按一下代码引入：
+```
+pod 'GMGdtAdapter', '4.14.90.0'
+pod 'GDTMobSDK', '4.14.90'
+```
 # 接入指引，请添加source，否则可能走cdn的配置。
 ```
 source 'https://github.com/CocoaPods/Specs.git'
