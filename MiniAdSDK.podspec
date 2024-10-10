@@ -140,6 +140,6 @@ Pod::Spec.new do |spec|
   # spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-    spec.dependency "KSAdSDK", "3.3.66.3"
+  # spec.dependency "KSAdSDK", "3.3.66.3"
 
 end

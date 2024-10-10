@@ -12,6 +12,10 @@
 source 'https://github.com/CocoaPods/Specs.git'
 pod 'MiniAdSDK'
 ```
+若使用0.1.1版本，则还需引入额外引入快手sdk
+```
+pod "KSAdSDK", "3.3.66.3"
+```
 ## 以下为支持平台可选配置
 若需要支持优量汇，请按以下代码引入：
 ```
