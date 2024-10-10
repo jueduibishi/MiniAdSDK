@@ -1,17 +1,31 @@
 # MiniAdSDK
 广告集成，最低支持iOS11，支持模拟器+真机联调。
-## 0.1.2版本说明：
-由于SDK冲突问题，移除优量汇集成。  
-此版本支持：穿山甲，百度，快手。  
+# 版本说明
+| 版本 | 支持平台 |  
+|:--------:|:------------:|  
+| >0.1.2 | 穿山甲 |  
+| 0.1.2 | 穿山甲  百度  快手 |  
+| 0.1.1 | 穿山甲  百度  快手  优量汇 |  
+  
+# 接入指引，请添加source，否则可能走cdn的配置。
+```
+source 'https://github.com/CocoaPods/Specs.git'
+pod 'MiniAdSDK'
+```
 若需要支持优量汇，请按以下代码引入：
 ```
 pod 'GMGdtAdapter', '4.14.90.0'
 pod 'GDTMobSDK', '4.14.90'
 ```
-# 接入指引，请添加source，否则可能走cdn的配置。
+若需要支持百度，请按以下代码引入：
 ```
-source 'https://github.com/CocoaPods/Specs.git'
-pod 'MiniAdSDK'
+pod 'GMBaiduAdapter', '5.360.0'
+pod 'BaiduMobAdSDK', '5.360'
+```
+若需要支持快手，请按以下代码引入：
+```
+pod 'GMKsAdapter', '3.3.66.3.0'
+pod 'KSAdSDK', '3.3.66.3'
 ```
 # 配置
 
