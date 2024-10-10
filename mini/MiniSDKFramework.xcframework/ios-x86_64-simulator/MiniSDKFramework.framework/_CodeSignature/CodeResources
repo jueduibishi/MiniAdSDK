@@ -6,7 +6,7 @@
 	<dict>
 		<key>CSJAdSDK.bundle/Info.plist</key>
 		<data>
-		OdtzjEIlmiWHcejGnsZvyKXCHs8=
+		1y8K10YYVITecyIf8h84njH0YLE=
 		</data>
 		<key>CSJAdSDK.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>CSJAdSDK.bundle/bu_dynamic_default.json</key>
 		<data>
-		MYcNUJ9PKCPTODjmXQ4h9KDz8mQ=
+		DAeP39VTu0dkkHCXvZ0qDi9/ePs=
 		</data>
 		<key>CSJAdSDK.bundle/bu_dynamic_user.png</key>
 		<data>
@@ -107,6 +107,14 @@
 		<key>CSJAdSDK.bundle/bu_fullScreen.png</key>
 		<data>
 		Jc0esD3JxjuKp4sYFFIn+xaEFXA=
+		</data>
+		<key>CSJAdSDK.bundle/bu_handle.png</key>
+		<data>
+		s/0VWLirC3H9JJPf17i8xVUzpSY=
+		</data>
+		<key>CSJAdSDK.bundle/bu_handle_switch.png</key>
+		<data>
+		KujmkIMLyRi/sQ1+ErQdikCTLAI=
 		</data>
 		<key>CSJAdSDK.bundle/bu_leftback.png</key>
 		<data>
@@ -215,6 +223,30 @@
 		<key>CSJAdSDK.bundle/bu_topShadow.png</key>
 		<data>
 		fzhfpKpS+RBidSm+d0SzS3lgv1Y=
+		</data>
+		<key>CSJAdSDK.bundle/bu_ugen_back.png</key>
+		<data>
+		LPtK+/OE0pRW7DJUhgJKmcEpvfQ=
+		</data>
+		<key>CSJAdSDK.bundle/bu_ugen_close.png</key>
+		<data>
+		QOLz4cdTa1ZzofxPkgUrDmM4yIg=
+		</data>
+		<key>CSJAdSDK.bundle/bu_ugen_logo.png</key>
+		<data>
+		lLSUXafTr3xfsOdtHVMExRmwZuo=
+		</data>
+		<key>CSJAdSDK.bundle/bu_ugen_muted.png</key>
+		<data>
+		fWYO2B8UOwIQisCsQs1pIUcehOU=
+		</data>
+		<key>CSJAdSDK.bundle/bu_ugen_star.png</key>
+		<data>
+		pObkgtg8NAa2aPWPYLbJ4lez21c=
+		</data>
+		<key>CSJAdSDK.bundle/bu_ugen_unmuted.png</key>
+		<data>
+		1o8W2tR+1skyB8hTj5Om35KWIO8=
 		</data>
 		<key>CSJAdSDK.bundle/bu_unlock_go.png</key>
 		<data>
@@ -361,11 +393,11 @@
 		</data>
 		<key>CSJAdSDK.bundle/uchain_dsl.bin</key>
 		<data>
-		+rDeoJar9xBr07bWI54Zk4bkO/Y=
+		zm8PdJ79fdiVD6c04pnfwjkyKzc=
 		</data>
 		<key>CSJAdSDK.bundle/version.txt</key>
 		<data>
-		78HrEhTWtW2tGk+RasPJifNUcws=
+		oCOrdc5qR4LyJFVrS4fUUEEOp6A=
 		</data>
 		<key>CSJAdSDK.bundle/zh-Hans.lproj/BULanguage.strings</key>
 		<dict>
@@ -389,13 +421,25 @@
 		<data>
 		l/fYmTO3pALH0TOdV4gYMMucNoA=
 		</data>
-		<key>Frameworks/Pods_MiniSDKFramework.framework/Pods_MiniSDKFramework</key>
+		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeDirectory</key>
 		<data>
-		TUkU9KNgCnU6FtmVzm5AmNEHxno=
+		WdUV64B0y/4+YJfreNJROkaa3sE=
+		</data>
+		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeRequirements</key>
+		<data>
+		OnX22wWFKRSOFN1+obRynMCeyXM=
+		</data>
+		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeRequirements-1</key>
+		<data>
+		/GUhVyL8K+TV9F17pOdVQjblZTE=
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeResources</key>
 		<data>
-		bE/zMXcXqNGrXinaVbUT9h9Hyvg=
+		YFAhSR99Ov7up5YSS6m3BVpI1Bs=
+		</data>
+		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeSignature</key>
+		<data>
+		2jmj7l5rSw0yVb/vlWAYkK/YBwk=
 		</data>
 		<key>Headers/AdErrorCode.h</key>
 		<data>
@@ -436,7 +480,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Pz8YZttfvK0Y8bzMuYDZqdX3m0ReLocYztWvYkUsfwE=
+			OtHR4IwjmMWb/PY4V9yNz0lmHsVzio1NXS1k/JOF4i4=
 			</data>
 		</dict>
 		<key>CSJAdSDK.bundle/PrivacyInfo.xcprivacy</key>
@@ -569,7 +613,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5gCppphvFZfUtIqw7nBJdnwMBGJKsHSH7IEyylj8BcY=
+			mfk5o3jiQhVzaRiwpLEYGUOTuXqnrcu2Dfxdo+GotJ4=
 			</data>
 		</dict>
 		<key>CSJAdSDK.bundle/bu_dynamic_user.png</key>
@@ -612,6 +656,20 @@
 			<key>hash2</key>
 			<data>
 			EVhAi8pz6bFC8J7C+7i9bkRMkHhteRKFRStn3FgdJuY=
+			</data>
+		</dict>
+		<key>CSJAdSDK.bundle/bu_handle.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			XfCwHaaPXP5JjooU9WpMQZUp7Oije1VbB7i+3fVBbNc=
+			</data>
+		</dict>
+		<key>CSJAdSDK.bundle/bu_handle_switch.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			OVDQNETSOlYT7tyZUO+hUOW3ZIvLtLV3dakoIHeyG18=
 			</data>
 		</dict>
 		<key>CSJAdSDK.bundle/bu_leftback.png</key>
@@ -801,6 +859,48 @@
 			<key>hash2</key>
 			<data>
 			n1Hk2xRN0MEyS7o0YPjsrNCaLRvG1PlJsbsBhi7zgN4=
+			</data>
+		</dict>
+		<key>CSJAdSDK.bundle/bu_ugen_back.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			fD3FaAikMx6QgE5UZd2GeOfM461V6c514br/ej/PTJ8=
+			</data>
+		</dict>
+		<key>CSJAdSDK.bundle/bu_ugen_close.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			nID8zWVkp4QVI5URW+SBa0BRrdA1zKjUMJQB6+T2bgc=
+			</data>
+		</dict>
+		<key>CSJAdSDK.bundle/bu_ugen_logo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0NAMCoAnL8GRZKJN8nRNkBKycjfYj1JiVGgzHXrmmdQ=
+			</data>
+		</dict>
+		<key>CSJAdSDK.bundle/bu_ugen_muted.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2xy+F2xvN9DepESDdDRAXmTnN+e4M77mUH6HB7PT2Dw=
+			</data>
+		</dict>
+		<key>CSJAdSDK.bundle/bu_ugen_star.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			RrYrcNY55vzR363T3OSqmbp4rkMoeenB1GET3Gae0zI=
+			</data>
+		</dict>
+		<key>CSJAdSDK.bundle/bu_ugen_unmuted.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0DhqdJFPj2tGEFoPmSgPl2X8CDzf7xbcyda7bStv63I=
 			</data>
 		</dict>
 		<key>CSJAdSDK.bundle/bu_unlock_go.png</key>
@@ -1037,14 +1137,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			s8Vvw1ppd5b4IdvwIo9L1kPe0AwJJn5gwtrs76mBAnM=
+			38DXphb1AujjmD+pyxDXeC/iGZSGc5LIr6XZGFzIo7A=
 			</data>
 		</dict>
 		<key>CSJAdSDK.bundle/version.txt</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fGUn3q0IB1DH1TYzAT/D6f/lbMRN7TD6aZZIyHbBqNw=
+			wf7dkCHtV/zP8SO9suaux0BqCpWb41o8yPIW3x1VCBs=
 			</data>
 		</dict>
 		<key>CSJAdSDK.bundle/zh-Hans.lproj/BULanguage.strings</key>
@@ -1070,6 +1170,21 @@
 			<key>symlink</key>
 			<string>A</string>
 		</dict>
+		<key>Frameworks/CSJMBaiduAdapter.framework/Versions/Current</key>
+		<dict>
+			<key>symlink</key>
+			<string>A</string>
+		</dict>
+		<key>Frameworks/CSJMGdtAdapter.framework/Versions/Current</key>
+		<dict>
+			<key>symlink</key>
+			<string>A</string>
+		</dict>
+		<key>Frameworks/CSJMKsAdapter.framework/Versions/Current</key>
+		<dict>
+			<key>symlink</key>
+			<string>A</string>
+		</dict>
 		<key>Frameworks/CSJMediation.framework/Versions/Current</key>
 		<dict>
 			<key>symlink</key>
@@ -1082,18 +1197,39 @@
 			V6O2IPQR+Tgi5erPpivO10TtR8cehbJLBb6XD4SwWzw=
 			</data>
 		</dict>
-		<key>Frameworks/Pods_MiniSDKFramework.framework/Pods_MiniSDKFramework</key>
+		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eKPzgqT05c2wE0YA09waLPiTfgk5HLzl5mHXalDgfhQ=
+			N+rLW1olb3kayhwk8Ne1TMOwEiUTr02luNGB1RzVSII=
+			</data>
+		</dict>
+		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeRequirements</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			mHkgkE6rZQ51eIwFSqCwUk5qgL/HGqMt+NI3phdD+YY=
+			</data>
+		</dict>
+		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeRequirements-1</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			tthFf5R5bh4ut7KCxazgKTgcD7UNdVlb5EIy4OxT69c=
 			</data>
 		</dict>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+QClGMp9ncfSe9Xogl9t29FaO14lmzf77wDzny/sXCA=
+			2jOVMuL/5cj58iqHO7hwQa8h8kGUOvrrHLu071oHL6I=
+			</data>
+		</dict>
+		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeSignature</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
 			</data>
 		</dict>
 		<key>Headers/AdErrorCode.h</key>
