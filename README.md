@@ -187,12 +187,12 @@ ATT(App Tracking Transparency), 适用于请求用户权限，访问与应用相
 
 设置接口为内网
 ```
-[SdkManager setServerType:serverOnlineType];
+[SdkManager setServerType:serverTestType];
 ```
 
 设置接口为OT
 ```
-[SdkManager setServerType:serverOnlineType];
+[SdkManager setServerType:serverOtType];
 ```
 
 设置接口为线上服务器
