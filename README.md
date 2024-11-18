@@ -1,7 +1,10 @@
 # MiniAdSDK
 广告集成，最低支持iOS11，支持模拟器+真机联调。<br>为了解决sdk冲突问题，最新版本只保留基础的穿山甲集成，其他平台支持需要自行引入。<br>故不再更新仅支持真机打包的MiniAdSDKipa和手动导入版本。
 # 版本说明 
-## 0.1.7更新说明：修复配置导致的初始化失败。
+## 0.1.7更新说明
+1、修复配置导致的初始化失败。
+2、优化测试模式
+
 | 版本历史 | 支持平台 |  
 |:--------:|:------------:|  
 | 待更 | 待更 | 
@@ -103,6 +106,11 @@ Targets-build settings - user script sandboxing 设置为No
 # 类型和错误码说明
 
 ```
+typedef NS_ENUM(NSInteger,serverType){
+    serverOnlineType=0,//正式网
+    serverTestType,//测试
+    serverOtType,//ot
+};
 typedef NS_ENUM(NSInteger,clientType){
     client_youxihe=1,//游戏盒
     client_kuaibao,//快爆
@@ -177,9 +185,23 @@ ATT(App Tracking Transparency), 适用于请求用户权限，访问与应用相
 
 目前SDK处于测试阶段，接口请求的是内网测试服务器，SDK初始化之前务必执行以下代码来设置测试接口。
 
+设置接口为内网
 ```
-// YES:测试接口 NO:线上接口，若本方法不执行，则默认为线上服务器接口。
-[SdkManager setTest:YES];
+[SdkManager setServerType:serverOnlineType];
+```
+
+设置接口为OT
+```
+[SdkManager setServerType:serverOnlineType];
+```
+
+设置接口为线上服务器
+```
+[SdkManager setServerType:serverOnlineType];
+```
+获取当前服务器类型，具体类型详见上方。
+```
+serverType type = [SdkManager serverType];
 ```
 请添加相关host
 ```
