@@ -419,11 +419,11 @@
 		</dict>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/Info.plist</key>
 		<data>
-		l/fYmTO3pALH0TOdV4gYMMucNoA=
+		cXIdSnCJp2Dby8AzfpkL60V1mdY=
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeDirectory</key>
 		<data>
-		3Ea+qoq807YXfg19txqrvNvIgCc=
+		NsDkylVZo3Dg+Ol+rBD6/NOX7S4=
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -431,11 +431,11 @@
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		wiwfEOJ2xqFWxwuOwLhd0yVylWQ=
+		biCVVY2hr4kaPHflrXPFpM+lK24=
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeResources</key>
 		<data>
-		YFAhSR99Ov7up5YSS6m3BVpI1Bs=
+		wuvTizfNBKkV72cWzAHrPJuVl8c=
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeSignature</key>
 		<data>
@@ -443,7 +443,7 @@
 		</data>
 		<key>Headers/AdErrorCode.h</key>
 		<data>
-		izl7sSi3XA2fi62+1ExYNGf8PpA=
+		v1d3HjFLFSphthMcr91kPzUOXl8=
 		</data>
 		<key>Headers/MiniBannerManager.h</key>
 		<data>
@@ -463,11 +463,11 @@
 		</data>
 		<key>Headers/SdkManager.h</key>
 		<data>
-		8ZDv3EKybfcBgmK9lNuC72ts0bY=
+		By+4LRJZbZT+jZSq67ku76xc/cA=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		pXXc5zDRmDPvRDX1FTVwp7wSku4=
+		4tN5VeHivL+f704ApYhWTzwKGlk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1194,14 +1194,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			V6O2IPQR+Tgi5erPpivO10TtR8cehbJLBb6XD4SwWzw=
+			xSlILsCrCp+Tsi6a+BXaXDpUl2JS54zxOzTyICIlPRQ=
 			</data>
 		</dict>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6BnACkuUtigwuGTWTPW9UaICQV/tizCtY3qa1rUlt/o=
+			POGWDug5/9Xt7GZnA/TLlCGuG8FcM7z4L886tH5ATAo=
 			</data>
 		</dict>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeRequirements</key>
@@ -1215,14 +1215,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KQYXkBV5S3r7llP1qgG22SElWZMWfpAWuR21pQz8gvQ=
+			dALz/+vwRF3tp/ns1fOGo50tb0SSWbaUWZv52N/f0dQ=
 			</data>
 		</dict>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2jOVMuL/5cj58iqHO7hwQa8h8kGUOvrrHLu071oHL6I=
+			AYpa4HykmVkNGuEpP5AMQSXd3zELnDq++puqx5Xw4cY=
 			</data>
 		</dict>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeSignature</key>
@@ -1236,7 +1236,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			L+j780LwA/cGbJNOlekE/VLd8JrnYhwORHuw5EE8IB4=
+			hguKPsF/SkVeKSjBjnilsAQwR+j4zBfKAo2wmlNqP6E=
 			</data>
 		</dict>
 		<key>Headers/MiniBannerManager.h</key>
@@ -1271,7 +1271,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PuJ3JKLDVg6s2C47WNETQAiJ5f5LHMieS4rjp7YP0sg=
+			9NJzu40AaNVPZ1tzXJ8hPqkDfDwVOJWgUrLTLvZFoUw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

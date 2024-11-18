@@ -13,6 +13,11 @@ typedef NS_ENUM(NSInteger,clientType){
     client_youxihe=1,//游戏盒
     client_kuaibao,//快爆
 };
+typedef NS_ENUM(NSInteger,serverType){
+    serverOnlineType=0,//正式网
+    serverTestType,//测试
+    serverOtType,//ot
+};
 
 typedef void(^adHandel)(int code,NSString *result);
 

@@ -28,9 +28,14 @@ NS_ASSUME_NONNULL_BEGIN
   personalAD:(BOOL)personalAD
        Complete:(resultHandel)block;
 
-/// 设置测试环境
-/// - Parameter value: yes = test server ，ot不测试，默认no=线上
-+(void)setTest:(BOOL)value;
+
+
+/// 设置服务器接口
+/// - Parameter type: online/test/ot
++(void)setServerType:(serverType)type;
+
+/// 服务器接口
++(serverType)serverType;
 @end
 
 NS_ASSUME_NONNULL_END
