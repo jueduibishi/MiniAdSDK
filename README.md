@@ -1,6 +1,7 @@
 # MiniAdSDK
 广告集成，最低支持iOS11，支持模拟器+真机联调。<br>为了解决sdk冲突问题，最新版本只保留基础的穿山甲集成，其他平台支持需要自行引入。<br>故不再更新仅支持真机打包的MiniAdSDKipa和手动导入版本。
 # 版本说明 
+## 最新支持手游和H5，基于穿山甲6.6.1.5，群里已更，线上待发布。
 ## 0.1.7更新说明
 1、修复配置导致的初始化失败。
 2、优化测试模式
@@ -10,7 +11,7 @@
 | 待更 | 待更 | 
 | 0.1.7 | 默认支持穿山甲:6.4.1.0，以下自行引入<br> 优量汇:`pod 'GDTMobSDK', '4.15.0'`<br> 百度:`pod 'BaiduMobAdSDK', '5.370'`<br>  快手:`pod 'KSAdSDK', '3.3.67.0'` |  
 | 0.1.6 | 默认支持穿山甲:6.4.1.0，以下自行引入<br> 优量汇:`pod 'GDTMobSDK', '4.15.0'`<br> 百度:`pod 'BaiduMobAdSDK', '5.370'`<br>  快手:`pod 'KSAdSDK', '3.3.67.0'` | 
-  
+# 群内的测试版本请手动集成，以下接入指引可忽略。
 # 接入指引，请添加source，否则可能走cdn的配置。
 ```
 source 'https://github.com/CocoaPods/Specs.git'
@@ -105,52 +106,9 @@ Targets-build settings - user script sandboxing 设置为No
 
 # 类型和错误码说明
 
+详情见
 ```
-typedef NS_ENUM(NSInteger,serverType){
-    serverOnlineType=0,//正式网
-    serverTestType,//测试
-    serverOtType,//ot
-};
-typedef NS_ENUM(NSInteger,clientType){
-    client_youxihe=1,//游戏盒
-    client_kuaibao,//快爆
-};
-
-typedef void(^adHandel)(int code,NSString *result);
-
-typedef NS_ENUM(int,slotErrorCode){
-    slotInitFailCode=0,//无广告位id，初始化失败
-    slotLoadFailCode,//广告加载错误
-    slotLoadSuccessCode,//广告加载成功
-    slotPlayFailCode,//广告播放错误
-    slotPlaySuccedCode,//广告播放完成
-    slotClickCode,//广告点击
-    slotCloseCode,//广告关闭
-    slotReWardSucCode,//广告奖励到达
-    slotReWardFailCode,//广告奖励发放失败
-    slotSkipCode,//广告被跳过
-};//激励广告错误
-
-typedef NS_ENUM(int,bannerErrorCode){
-    bannerInitFaildCode=0,//无广告位id，初始化失败
-    bannerLoadFailCode,//广告加载错误
-    bannerLoadSuccessCode,//广告加载成功
-    bannerClickCode,//广告点击
-    bannerCloseCode,//广告关闭
-};//banner广告错误
-
-typedef NS_ENUM(int,screenErrorCode){
-    screenInitFaildCode=0,//无广告位id，初始化失败
-    screenLoadFailCode,//广告加载错误
-    screenLoadSuccessCode,//广告加载成功
-    screenPlayFailCode,//广告播放错误
-    screenPlaySuccedCode,//广告播放完成
-    screenClickCode,//广告点击
-    screenCloseCode,//广告关闭
-    screenReWardSucCode,//广告奖励到达
-    screenReWardFailCode,//广告奖励发放失败
-    screenSkipCode,//广告被跳过
-};//插屏广告错误
+AdErrorCode.h
 ```
 # SDK使用说明
 
@@ -203,34 +161,20 @@ ATT(App Tracking Transparency), 适用于请求用户权限，访问与应用相
 ```
 serverType type = [SdkManager serverType];
 ```
-请添加相关host
+# 请添加相关host（有新增）
 ```
 192.168.62.200 t.media.5054399.net
 192.168.62.200 t.sdk.3839app.com
+192.168.62.200 t.union.4399.cn
+152.136.23.204 ot-union.4399.cn
 ```
 注意，真机测试连电脑分享的网络时需要开启代理。
 
-## 广告SDK初始化
+# 广告SDK初始化
 
-### 接口方法
-回调详见上方的类型和错误码说明，都在block中。
-
-```
-/// 初始化
-/// - Parameters:
-///   - client: yxh or kb
-///   - gameID: gameid
-///   - platformID: platformID
-///   - personalAD: 个性化广告
-///   - block: compliete
-+(void)initType:(clientType)client
-         gameID:(NSString*)gameID
-     platformID:(NSString*)platformID
-     personalAD:(BOOL)personalAD
-       Complete:(resultHandel)block;
-```
+## 3种初始化方法任选一种执行即可。也可根据业务需求在多处执行，SDK会自己处理重复初始化的逻辑问题。
        
-### 代码示例
+### 小程序初始化示例
 
 ```
 [SdkManager initType:client_youxihe gameID:gameid platformID:platformid personalAD:YES Complete:^(BOOL success, NSString * _Nullable errorString) {
@@ -239,7 +183,30 @@ serverType type = [SdkManager serverType];
         }else{
         }}];    
 ```
+### 手游初始化示例
 
+```
+    [SdkManager initMobileID:@"4868" bundleID:@"cn.4399.gamehotspot" personalAD:YES sdkVer:@"0.0.7" Complete:^(BOOL success, NSString * _Nullable errorString) {
+        NSString *title;
+        if (success) {
+            title = @"广告初始化成功";
+        }else{
+            title = [NSString stringWithFormat:@"来自手游初始化：%@",errorString];
+        }
+    }];
+```
+### H5初始化示例
+```
+    [SdkManager initH5ID:TestH5AppID personalAD:YES Complete:^(BOOL success, NSString * _Nullable errorString) {
+        NSString *title;
+        if (success) {
+            title = @"广告初始化成功";
+        }else{
+            title = [NSString stringWithFormat:@"来自h5初始化：：%@",errorString];
+        }
+    }];
+```
+# 小程序广告集成
 ## 激励视频广告
 
 ### 接口方法、属性
@@ -339,4 +306,130 @@ if (manager.isReadToPlay) {
 else{
      NSLog(@"插屏广告加载未完成");
 }
+```
+## 手游广告集成
+### 激励视频
+广告加载
+```
+        MobileSlotManager *manager = [MobileSlotManager shareInstance];
+        manager.didRewardBlock = ^(int code, NSString * _Nonnull result) {
+            NSLog(@"%d,%@",code, result);
+            self->blockLabel1.text=result;
+        };
+        [manager loadRewardADWithUserID:TestMobileSlotUserID horizontal:YES];
+```
+
+广告展示
+```
+        MobileSlotManager *manager = [MobileSlotManager shareInstance];
+        manager.didRewardBlock = ^(int code, NSString * _Nonnull result) {
+            NSLog(@"%d,%@",code, result);
+            self->blockLabel1.text=result;
+        };
+        if (manager.isReadToPlay) {
+            [manager showAd:self];
+        }
+        else{
+            self->blockLabel1.text=@"激励广告加载未完成";
+        }
+```
+### banner广告
+广告加载
+```
+        MobileBannerManager *manager = [MobileBannerManager shareInstance];
+        manager.bannerBlock = ^(int code, NSString * _Nonnull result) {
+            NSLog(@"%d,%@",code, result);
+            self->blockLabel2.text=result;
+        };
+        UILabel *label = [self.view viewWithTag:bannerAdViewtag];
+        [manager loadBannerAD:self userID:TestMobileBannerUserID showView:label size:CGSizeMake(320, 50)];
+```
+广告展示
+```
+        MobileBannerManager *manager = [MobileBannerManager shareInstance];
+        if (manager.isReadToPlay) {
+            [manager showAd];
+        }else{
+            self->blockLabel2.text=@"banner广告加载未完成";
+        }
+```
+### 原生(信息流)广告
+
+## 注意，信息流广告一次最多加载并返回3个广告素材，根据showAdArrayBlock返回的数据插入到UITableViewController的数据源中进行展示。加载和展示是按顺序直接进行的，一般不分开。
+广告加载和展示
+```
+        MobileNativManager *manager = [MobileNativManager shareInstance];
+        manager.nativeBlock = ^(int code, NSString * _Nonnull result) {
+            NSLog(@"%d,%@",code, result);
+            self->blockLabel3.text=result;
+        };
+        [manager loadNativAD:self userID:TestMobileNativeUserID size:CGSizeMake(320, 50) loadMax:2];
+        manager.showAdArrayBlock = ^(NSArray<UIView *> * _Nonnull adModelViewArray) {
+            self->nativArray = adModelViewArray;
+            ...
+            ...
+            //代码示例，循环和其他逻辑略
+            [self.dataSource insertObject:model atIndex:index];
+            [self.tableView reloadData];
+        }
+    
+        };
+        //-------------------------------------------------
+        if (nativArray) {
+            UIView *view1 = nativArray.firstObject;
+            [self->nativView1 addSubview:view1];
+            if (nativArray.count>1) {
+                UIView *view2 = nativArray.lastObject;
+                [self->nativView2 addSubview:view2];
+        }
+        }else{
+            self->blockLabel3.text=@"未获取到广告素材";
+        }
+```
+
+
+## H5广告集成
+
+### 激励视频广告
+
+广告加载
+```
+        H5SlotManager *manager = [H5SlotManager shareInstance];
+        manager.didRewardBlock = ^(int code, NSString * _Nonnull result) {
+            NSLog(@"%d,%@",code, result);
+            self->blockLabel1.text=result;
+        };
+        [manager loadRewardADWithPost:TestH5PostID horizontal:YES];
+```
+广告展示
+```
+        H5SlotManager *manager = [H5SlotManager shareInstance];
+        manager.didRewardBlock = ^(int code, NSString * _Nonnull result) {
+            NSLog(@"%d,%@",code, result);
+            self->blockLabel1.text=result;
+        };
+        if (manager.isReadToPlay) {
+            [manager showAd:self];
+        }
+        else{
+            self->blockLabel1.text=@"激励广告加载未完成";
+        }
+```
+# 注意：若不进行提前初始化和预加载素材，则可合在一起使用
+
+```
+    [SdkManager initH5ID:TestH5AppID personalAD:YES Complete:^(BOOL success, NSString * _Nullable errorString) {
+        H5SlotManager *manager = [H5SlotManager shareInstance];
+        WeakObj(manager)
+        manager.didRewardBlock = ^(int code, NSString * _Nonnull result) {
+            NSLog(@"%d,%@",code, result);
+            self->blockLabel1.text=result;
+            StrongObj(manager)
+            if (code == slotLoadSuccessCode) {
+                [manager showAd:self];
+            }
+        };
+        [manager loadRewardADWithPost:TestH5PostID horizontal:YES];
+        
+    }];
 ```
