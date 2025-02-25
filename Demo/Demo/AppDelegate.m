@@ -34,8 +34,9 @@
     [firstView addSubview:label];
 
     //测试接口
-    [SdkManager setServerType:serverTestType];
-    //隐私相关
+    if ([ViewController userDefaultsObjectByKey:@"serverType"] == nil) {
+        [SdkManager setServerType:serverTestType];
+    }    //隐私相关
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self requestIDFA];
     });
