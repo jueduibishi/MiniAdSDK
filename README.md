@@ -13,7 +13,7 @@
 # 集成错误若干解决方案
 ## 报错：真机运行报Unable to install 
 
-方案：选项Demo —— Targets —— Build Phases —— Embed Framworks 点击“➕”，添加刚才导入的Pods_Demo.framework,后面的Code Sign On Co...打勾。
+方案：选项Demo —— Targets —— Build Phases —— Embed Framworks —— 导入的Pods_Demo.framework,后面的Code Sign On Co...打勾。
 ## 报错：Sandbox: rsync(18801) deny(1) file-read-data...MiniSDKFramework.framework/_CodeSignature等
 
 方案：Targets-build settings - user script sandboxing 设置为No
