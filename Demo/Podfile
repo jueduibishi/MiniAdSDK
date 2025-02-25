@@ -1,0 +1,13 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '11.0'
+
+target 'Demo' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Demo
+pod 'MiniAdSDKipa'
+#pod 'GDTMobSDK', '4.15.10'#优量汇
+#pod 'BaiduMobAdSDK', '5.370'
+#pod 'KSAdSDK', '3.3.71'
+end

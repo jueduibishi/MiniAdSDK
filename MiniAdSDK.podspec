@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "MiniAdSDK"
-  spec.version      = "0.1.7"
+  spec.version      = "0.1.8"
   spec.summary      = "广告集成."
 
   # This description is used to generate tags and improve search results.
@@ -93,7 +93,7 @@ Pod::Spec.new do |spec|
   #
 
   #spec.source_files  = "Classes/**/*"
-  spec.vendored_frameworks = "mini/MiniSDKFramework.xcframework"
+  spec.vendored_frameworks = "sdk/MiniSDKFramework.xcframework"
   #spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
