@@ -364,27 +364,18 @@ else{
             self->blockLabel3.text=result;
         };
         [manager loadNativAD:self userID:TestMobileNativeUserID size:CGSizeMake(320, 50) loadMax:2];
-        manager.showAdArrayBlock = ^(NSArray<UIView *> * _Nonnull adModelViewArray) {
-            self->nativArray = adModelViewArray;
-            ...
-            ...
-            //代码示例，循环和其他逻辑略
-            [self.dataSource insertObject:model atIndex:index];
-            [self.tableView reloadData];
-        }
-    
+        manager.showAdBlock = ^(NSArray<UIView *> * _Nullable adModelArray) {
+            if (adModelArray) {
+                [self->nativView1 addSubview:adModelArray.firstObject];
+                //...
+                //...
+                //代码示例，循环和其他逻辑略
+                //XXmodel *model = [[XXmodel alloc]init];
+                //model.adView = adModelArray.firstObject;
+                //[self.dataSource insertObject:model atIndex:index];
+                //[self.tableView reloadData];
+            }
         };
-        //-------------------------------------------------
-        if (nativArray) {
-            UIView *view1 = nativArray.firstObject;
-            [self->nativView1 addSubview:view1];
-            if (nativArray.count>1) {
-                UIView *view2 = nativArray.lastObject;
-                [self->nativView2 addSubview:view2];
-        }
-        }else{
-            self->blockLabel3.text=@"未获取到广告素材";
-        }
 ```
 
 

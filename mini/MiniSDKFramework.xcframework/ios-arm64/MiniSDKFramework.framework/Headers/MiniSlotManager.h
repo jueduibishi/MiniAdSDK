@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-/// 激励视频
+/// 小程序激励视频
 @interface MiniSlotManager : NSObject
 @property(nonatomic,assign)BOOL isReadToPlay;//广告加载完成
 

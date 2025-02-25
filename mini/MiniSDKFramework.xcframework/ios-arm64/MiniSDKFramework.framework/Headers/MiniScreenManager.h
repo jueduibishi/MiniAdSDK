@@ -11,6 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 小程序插屏广告
 @interface MiniScreenManager : NSObject
 @property(nonatomic,assign)BOOL isReadToPlay;//广告加载完成
 

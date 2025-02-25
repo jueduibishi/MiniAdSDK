@@ -6,7 +6,7 @@
 	<dict>
 		<key>CSJAdSDK.bundle/Info.plist</key>
 		<data>
-		1y8K10YYVITecyIf8h84njH0YLE=
+		LswDm5ae/iAz1pChcD5xNp/YuI8=
 		</data>
 		<key>CSJAdSDK.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -14,23 +14,23 @@
 		</data>
 		<key>CSJAdSDK.bundle/backup_ugen_dsl_1473.json</key>
 		<data>
-		MP1Jd9og/nOpTw7aFMF0az0wOYU=
+		Iq7KKkRrauXVz97PTSmPg56XEzg=
 		</data>
 		<key>CSJAdSDK.bundle/backup_ugen_dsl_1487.json</key>
 		<data>
-		zDJ+XFsL8/8CAPhQEntzJ2jX73w=
+		V2c02o19Ww1JcT164TMQcN11Vh0=
 		</data>
 		<key>CSJAdSDK.bundle/backup_ugen_dsl_1489.json</key>
 		<data>
-		tUDOvrlrSuRnYBLW5A1IUmog3Ys=
+		cgXS34MrgeV/aws3/BcZLq2+Jbc=
 		</data>
 		<key>CSJAdSDK.bundle/backup_ugen_dsl_5867.json</key>
 		<data>
-		0/E8BtC4q+nMJXRKB+1Pi7yyO0E=
+		PPtdWOvz2oXbnCm55TBoOTGjOAg=
 		</data>
 		<key>CSJAdSDK.bundle/backup_ugen_dsl_7563.json</key>
 		<data>
-		U9CXEgn+oN6p0L1P5RDN6aQgVPA=
+		DKCJpEhHGAaEr7YO4zB2eOzW38s=
 		</data>
 		<key>CSJAdSDK.bundle/bu_adStar.png</key>
 		<data>
@@ -393,11 +393,11 @@
 		</data>
 		<key>CSJAdSDK.bundle/uchain_dsl.bin</key>
 		<data>
-		zm8PdJ79fdiVD6c04pnfwjkyKzc=
+		VxwQ2w+O6dAlPZ2nMYJW6m4M7Yg=
 		</data>
 		<key>CSJAdSDK.bundle/version.txt</key>
 		<data>
-		oCOrdc5qR4LyJFVrS4fUUEEOp6A=
+		V/njVfTrnJS6SQCunSpvg87C0yg=
 		</data>
 		<key>CSJAdSDK.bundle/zh-Hans.lproj/BULanguage.strings</key>
 		<dict>
@@ -419,11 +419,11 @@
 		</dict>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/Info.plist</key>
 		<data>
-		cXIdSnCJp2Dby8AzfpkL60V1mdY=
+		xm5ZEqxS7aAEpi8h/pgWG4jF/uI=
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeDirectory</key>
 		<data>
-		NsDkylVZo3Dg+Ol+rBD6/NOX7S4=
+		y26tkdgEOAfGIjuoWrx1epr6M88=
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -431,11 +431,11 @@
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		biCVVY2hr4kaPHflrXPFpM+lK24=
+		1r96iGHIksWRODpAuCAOYW0RoB8=
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeResources</key>
 		<data>
-		wuvTizfNBKkV72cWzAHrPJuVl8c=
+		Ws5NOOsCygGtzSmaK9vCsogkrUw=
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeSignature</key>
 		<data>
@@ -443,11 +443,15 @@
 		</data>
 		<key>Headers/AdErrorCode.h</key>
 		<data>
-		v1d3HjFLFSphthMcr91kPzUOXl8=
+		RGEdr1mfJX4/ipRChzr1chrhZmo=
+		</data>
+		<key>Headers/H5SlotManager.h</key>
+		<data>
+		JbmDNbYKdsXVXOwJYAHNF6ZdmHI=
 		</data>
 		<key>Headers/MiniBannerManager.h</key>
 		<data>
-		IX8tXhzpmP88MjIRb/AYNGVYc4E=
+		rYpSY6lbT5Es7jxQ8tz/MHHpqq0=
 		</data>
 		<key>Headers/MiniSDKFramework.h</key>
 		<data>
@@ -455,19 +459,31 @@
 		</data>
 		<key>Headers/MiniScreenManager.h</key>
 		<data>
-		qpgPFoDkjIVqwPLln8OzAWEIOMs=
+		b5yW2OXYsQM28bkGtHqNWbAjoVM=
 		</data>
 		<key>Headers/MiniSlotManager.h</key>
 		<data>
-		gHKbeGqJ6tU8lsdmZhQLMY719yw=
+		KWnBRQOIhZM3q20xrmbm+y00FH8=
+		</data>
+		<key>Headers/MobileBannerManager.h</key>
+		<data>
+		oan6BFPWZ/TeGP1Qioya9cnClNI=
+		</data>
+		<key>Headers/MobileNativManager.h</key>
+		<data>
+		8UGSVViYnOHnrNjZGdtvzEe3zO4=
+		</data>
+		<key>Headers/MobileSlotManager.h</key>
+		<data>
+		5fuUoZDdtRLBTSC5AYASjlR6RrM=
 		</data>
 		<key>Headers/SdkManager.h</key>
 		<data>
-		By+4LRJZbZT+jZSq67ku76xc/cA=
+		Jqa5nzSPBTG/hi01T+eh5sfupj0=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		4tN5VeHivL+f704ApYhWTzwKGlk=
+		2ZcG6dXV+nsubibS3jeo4JM09Vk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -480,7 +496,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			OtHR4IwjmMWb/PY4V9yNz0lmHsVzio1NXS1k/JOF4i4=
+			ECek2Lf1NHSkqJ5H8MknXXfefaS2r1a49fOqBcvNXtU=
 			</data>
 		</dict>
 		<key>CSJAdSDK.bundle/PrivacyInfo.xcprivacy</key>
@@ -494,35 +510,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			mgaaip0qHArra8h/ljEit52ASpdyR4GfkIAwWJARZuI=
+			a18PiRqLt47GtlfjVYzdW03TTBw27bNoS+BklMTav0s=
 			</data>
 		</dict>
 		<key>CSJAdSDK.bundle/backup_ugen_dsl_1487.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iMkEcAWNRJ5JTlecHZ/mLnVhTVl3fpaku59yEw0N41s=
+			qORtfeGJutrG/AQ5ir80bIH7Sa4zJ6Lo/EheB4oMVyI=
 			</data>
 		</dict>
 		<key>CSJAdSDK.bundle/backup_ugen_dsl_1489.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RhwBnB4mC1PKSmMSIyyen5v2DvP/11aNWmCXKyaVoKE=
+			fHna5NvfvY4F3+ijfejDa2R25hG5yOMa2cnVlgZpVJU=
 			</data>
 		</dict>
 		<key>CSJAdSDK.bundle/backup_ugen_dsl_5867.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/FB4wxTPjhy5Pevq3DUBI+hvagGWyNhnAJMzczAtGAQ=
+			iJMpdud0Kjn76BpiHisC98eLRGBhJ1IlY5+IIsxdmoI=
 			</data>
 		</dict>
 		<key>CSJAdSDK.bundle/backup_ugen_dsl_7563.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8cRKsEE1tDpc7Hz4OJJgK8F5V6iuZzXAP2oSZUbQSf0=
+			TcxqQEgVk+ZH4EksXwzxO+nW7vTs1mWKCxluCf35wQ4=
 			</data>
 		</dict>
 		<key>CSJAdSDK.bundle/bu_adStar.png</key>
@@ -1137,14 +1153,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			38DXphb1AujjmD+pyxDXeC/iGZSGc5LIr6XZGFzIo7A=
+			SBsCtpWrS7xskx3GYITGChpiBgCf8u/pBZesqUbZ9Bw=
 			</data>
 		</dict>
 		<key>CSJAdSDK.bundle/version.txt</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wf7dkCHtV/zP8SO9suaux0BqCpWb41o8yPIW3x1VCBs=
+			RQqYouTED8nwyU3jAsiZu6SXtnUTvWuufU7uF4/3IXI=
 			</data>
 		</dict>
 		<key>CSJAdSDK.bundle/zh-Hans.lproj/BULanguage.strings</key>
@@ -1194,14 +1210,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xSlILsCrCp+Tsi6a+BXaXDpUl2JS54zxOzTyICIlPRQ=
+			QehoZkRstCqqknU+Lt6oCAmWBPfbbgeNjdLWlyFyv2Y=
 			</data>
 		</dict>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			POGWDug5/9Xt7GZnA/TLlCGuG8FcM7z4L886tH5ATAo=
+			V663rfDRd1UKcYHNN80fZjI0lNtxE0Cht5HR9WMI4Qs=
 			</data>
 		</dict>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeRequirements</key>
@@ -1215,14 +1231,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			dALz/+vwRF3tp/ns1fOGo50tb0SSWbaUWZv52N/f0dQ=
+			kblYoEgbxiwb/DLtTphW83KneUfyLS2LPC86dX54v7Y=
 			</data>
 		</dict>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AYpa4HykmVkNGuEpP5AMQSXd3zELnDq++puqx5Xw4cY=
+			xsE7ofT1lfYfBwRuR/zFD9I6EvS4Q7CuD15gzoheYyg=
 			</data>
 		</dict>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeSignature</key>
@@ -1236,14 +1252,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hguKPsF/SkVeKSjBjnilsAQwR+j4zBfKAo2wmlNqP6E=
+			pC9pKqCsZkxODd8mG+TXMyzL65CTTHrftYiG2kDwDtk=
+			</data>
+		</dict>
+		<key>Headers/H5SlotManager.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Etm9mEJlm2hNoRE6EN2mJSdMTH6FnbkX1XDYM56Ympk=
 			</data>
 		</dict>
 		<key>Headers/MiniBannerManager.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			svY2hJmJDSyuoHtHViUJJp56pARDiHQeIdhnbEQv93Q=
+			VviHJk34+JS6C6B0dAXttswe1WuMqIdBJmgOabVlKoM=
 			</data>
 		</dict>
 		<key>Headers/MiniSDKFramework.h</key>
@@ -1257,21 +1280,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			z9CEfYyp5mrSLMfYH8+EB5vFORD6JEXK1oZVUxoOJx0=
+			gmJyFYOjIg5dGwfXuB/j+CBNyiLJry7za97upcUtyqk=
 			</data>
 		</dict>
 		<key>Headers/MiniSlotManager.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gfVEFvEqzvZcoQiE0xihkB7qmFJdZH1/zLdd5inE200=
+			UuUqZwzCnn2tBFgr2j+SFD5HeowoZ5YXvxNShCBxQow=
+			</data>
+		</dict>
+		<key>Headers/MobileBannerManager.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ynf6qpjyXgOOI8rvQepvwz6jba8pkzKb2yxWTgoBZm4=
+			</data>
+		</dict>
+		<key>Headers/MobileNativManager.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			4xn7kVsS7n+B6X9tG+9ddTAftT1XehepKgzq8thn8bI=
+			</data>
+		</dict>
+		<key>Headers/MobileSlotManager.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			InPtTGpZK05fXkpBIAMG4Ct8120jo8tVXkiDQxskvqw=
 			</data>
 		</dict>
 		<key>Headers/SdkManager.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9NJzu40AaNVPZ1tzXJ8hPqkDfDwVOJWgUrLTLvZFoUw=
+			f29LNyYgVSOzmQHBfInMLSXq6mG24Crv/rXNEZVjJaI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

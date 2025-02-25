@@ -9,10 +9,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM(NSInteger,clientType){
-    client_youxihe=1,//游戏盒
-    client_kuaibao,//快爆
-};
+#pragma mark-通用定义
+
+//服务器接口
 typedef NS_ENUM(NSInteger,serverType){
     serverOnlineType=0,//正式网
     serverTestType,//测试
@@ -40,7 +39,7 @@ typedef NS_ENUM(int,bannerErrorCode){
     bannerLoadSuccessCode,//广告加载成功
     bannerClickCode,//广告点击
     bannerCloseCode,//广告关闭
-};
+};//banner广告错误
 
 typedef NS_ENUM(int,screenErrorCode){
     screenInitFaildCode=0,//无广告位id，初始化失败
@@ -55,8 +54,40 @@ typedef NS_ENUM(int,screenErrorCode){
     screenSkipCode,//广告被跳过
 };
 
-@interface AdErrorCode : NSObject
+typedef NS_ENUM(int,NativErrorCode){
+    nativInitFaildCode=0,//无广告位id，初始化失败
+    nativLoadFailCode,//广告加载错误
+    nativLoadSuccessCode,//广告加载成功
+    nativDidBecomeVisibleCode,//广告展示
+    nativDidClickCode,//广告点击成功
+};//原生(信息流)广告错误
+#pragma mark-小程序
+typedef NS_ENUM(NSInteger,clientType){
+    client_youxihe=1,//游戏盒
+    client_kuaibao,//快爆
+};
+#pragma mark-手游
+//手游广告位类型-目前支持Banner、(信息流)、激励视频
+typedef NS_ENUM(NSInteger,mobileADType){
+    mobileADType_Banner=1,//Banner广告
+    mobileADType_Start,//2开屏广告
+    mobileADType_Insert,//3插屏广告
+    mobileADType_Native,//4原生(信息流)广告
+    mobileADType_Slot,//5激励视频广告
+    mobileADType_Full,//6全屏视频广告
+};
+//手游渠道类型-目前仅支持Gromore
+typedef NS_ENUM(NSInteger,mobileChannelType){
+    mobileChannelType_GDT=1,//广点通-优量汇
+    mobileChannelType_LD,//2乐逗
+    mobileChannelType_mobvista,//3mobvista
+    mobileChannelType_4399,//4-4399媒体
+    mobileChannelType_toutiao,//5今日头条
+    mobileChannelType_Gromore=9,//9Gromore
+};
 
+
+@interface AdErrorCode : NSObject
 @end
 
 NS_ASSUME_NONNULL_END

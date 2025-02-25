@@ -6,12 +6,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <MiniSDKFramework/AdErrorCode.h>
 #import <UIKit/UIKit.h>
+#import <MiniSDKFramework/AdErrorCode.h>
+
 
 NS_ASSUME_NONNULL_BEGIN
 
-/// banner广告
+/// 小程序banner广告
 @interface MiniBannerManager : NSObject
 @property(nonatomic,assign)BOOL isReadToPlay;//广告加载完成
 @property(nonatomic,copy)adHandel bannerBlock;
