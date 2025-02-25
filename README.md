@@ -386,12 +386,12 @@ manager.showAdBlock = ^(NSArray<UIView *> * _Nullable adModelArray) {
 
 广告加载
 ```
-        H5SlotManager *manager = [H5SlotManager shareInstance];
-        manager.didRewardBlock = ^(int code, NSString * _Nonnull result) {
-            NSLog(@"%d,%@",code, result);
-            self->blockLabel1.text=result;
-        };
-        [manager loadRewardADWithPost:TestH5PostID horizontal:YES];
+H5SlotManager *manager = [H5SlotManager shareInstance];
+manager.didRewardBlock = ^(int code, NSString * _Nonnull result) {
+    NSLog(@"%d,%@",code, result);
+    self->blockLabel1.text=result;
+};
+[manager loadRewardADWithPost:TestH5PostID horizontal:YES];
 ```
 广告展示
 ```
