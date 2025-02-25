@@ -10,6 +10,13 @@
 | 0.2.0 | 默认支持穿山甲:6.6.1.5，以下自行引入<br> 优量汇:`pod 'GDTMobSDK', '4.15.10.0'`<br> 百度:`pod 'BaiduMobAdSDK', '5.370.1'`<br>  快手:`pod 'KSAdSDK', '3.3.71.0'` | 
 | 0.1.7 | 默认支持穿山甲:6.4.1.0，以下自行引入<br> 优量汇:`pod 'GDTMobSDK', '4.15.0'`<br> 百度:`pod 'BaiduMobAdSDK', '5.370'`<br>  快手:`pod 'KSAdSDK', '3.3.67.0'` |  
 | 0.1.6 | 默认支持穿山甲:6.4.1.0，以下自行引入<br> 优量汇:`pod 'GDTMobSDK', '4.15.0'`<br> 百度:`pod 'BaiduMobAdSDK', '5.370'`<br>  快手:`pod 'KSAdSDK', '3.3.67.0'` | 
+# 集成错误若干解决方案
+## 报错：真机运行报Unable to install 
+
+方案：选项Demo —— Targets —— Build Phases —— Embed Framworks 点击“➕”，添加刚才导入的Pods_Demo.framework,后面的Code Sign On Co...打勾。
+## 报错：Sandbox: rsync(18801) deny(1) file-read-data...MiniSDKFramework.framework/_CodeSignature等
+
+方案：Targets-build settings - user script sandboxing 设置为No
 # 接入指引，请添加source，否则可能走cdn的配置。
 ```
 source 'https://github.com/CocoaPods/Specs.git'
@@ -100,7 +107,8 @@ pod 'KSAdSDK', '3.3.71.0'
 M1之后的arm架构的Mac创建的xcode项目必须修改下Target——Build Settings——Excluded Architectures——Any iOS Simulator SDK设置为arm64。
 
 ## 3、其他配置
-Targets-build settings - user script sandboxing 设置为No
+Targets-build settings - user script sandboxing 设置为NO
+
 
 # 类型和错误码说明
 
