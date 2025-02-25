@@ -39,12 +39,10 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - gameID: gameid
 ///   - bundleID: bundleID，如cn.m4399.operate1209.m4399
 ///   - personalAD: 个性化广告
-///   - version: sdk版本号
 ///   - block: Complete
 +(void)initMobileID:(NSString*)gameID
            bundleID:(NSString*)bundleID
          personalAD:(BOOL)personalAD
-             sdkVer:(NSString*)version
            Complete:(resultHandel)block;
 
 /// 初始化-h5

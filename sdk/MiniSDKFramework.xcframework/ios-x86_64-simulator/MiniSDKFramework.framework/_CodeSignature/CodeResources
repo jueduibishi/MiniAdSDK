@@ -423,7 +423,7 @@
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeDirectory</key>
 		<data>
-		AEEAtWnyjgWNDtUZ4gASMZ+JYqE=
+		YUBf4fiZ/Mc0w+eP06sUAygy400=
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -431,7 +431,7 @@
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		L1pSG/TMmBIRlBl/rHFLcLP6fpY=
+		32Ob3vHJdh/quNDGLGeksZGIzUA=
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -479,7 +479,7 @@
 		</data>
 		<key>Headers/SdkManager.h</key>
 		<data>
-		Jqa5nzSPBTG/hi01T+eh5sfupj0=
+		SYKS7ivps6JSrgzquupIct+5yjo=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -1217,7 +1217,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cpfg6fG7JpqHly44lEy5HncfuznHXxrE+SELlrbB2Ks=
+			4KkTFV7PKTh2NnGi5vYKfePb/X8Wze0C03LHIarures=
 			</data>
 		</dict>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeRequirements</key>
@@ -1231,7 +1231,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ulPvVguICXbgjTSGgctNrr5s7yUzUINFSFx0XXqlbxo=
+			ahy5CYcCacKcNdj55dCDQ64XDXYRHfVNGVOOuhFnIGA=
 			</data>
 		</dict>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeResources</key>
@@ -1315,7 +1315,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			f29LNyYgVSOzmQHBfInMLSXq6mG24Crv/rXNEZVjJaI=
+			0Lauf8unoMmOfly0zlfMo9G0VmZzGAaASOpDnbXLI4M=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

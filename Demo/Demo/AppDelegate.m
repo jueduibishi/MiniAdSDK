@@ -111,7 +111,7 @@
 
 /// 手游初始化
 -(void)mobileRegister{
-    [SdkManager initMobileID:@"4868" bundleID:@"cn.4399.gamehotspot" personalAD:YES sdkVer:@"0.0.7" Complete:^(BOOL success, NSString * _Nullable errorString) {
+    [SdkManager initMobileID:@"4868" bundleID:@"cn.4399.gamehotspot" personalAD:YES  Complete:^(BOOL success, NSString * _Nullable errorString) {
         NSString *title;
         if (success) {
             title = @"广告初始化成功";

@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "MiniAdSDK"
-  spec.version      = "0.1.9"
+  spec.version      = "0.2.0"
   spec.summary      = "广告集成."
 
   # This description is used to generate tags and improve search results.
