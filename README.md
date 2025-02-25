@@ -1,5 +1,5 @@
 # MiniAdSDK
-广告集成，最低支持iOS11，支持模拟器+真机联调。<br>为了解决sdk冲突问题，最新版本只保留基础的穿山甲集成，其他平台支持需要自行引入。<br>故不再更新仅支持真机打包的MiniAdSDKipa和手动导入版本。
+广告集成，最低支持iOS11，支持模拟器+真机联调。<br>为了解决sdk冲突问题，最新版本只保留基础的穿山甲集成，其他平台支持需要自行引入。
 # 版本说明 
 ## 最新支持手游和H5，基于穿山甲6.6.1.5，群里已更，线上待发布。
 ## 0.1.7更新说明
@@ -168,11 +168,11 @@ serverType type = [SdkManager serverType];
 192.168.62.200 t.union.4399.cn
 152.136.23.204 ot-union.4399.cn
 ```
-注意，真机测试连电脑分享的网络时需要开启代理。
+# 注意，真机测试连电脑分享的网络时需要开启代理。
 
 # 广告SDK初始化
 
-## 3种初始化方法任选一种执行即可。也可根据业务需求在多处执行，SDK会自己处理重复初始化的逻辑问题。
+## 三种初始化方法任选一种执行即可。也可根据业务需求在多处执行，SDK会自己处理重复初始化的逻辑问题。
        
 ### 小程序初始化示例
 
@@ -181,30 +181,31 @@ serverType type = [SdkManager serverType];
         if (success) {
             NSLog(@"初始化成功");
         }else{
-        }}];    
+        }
+}];    
 ```
 ### 手游初始化示例
 
 ```
-    [SdkManager initMobileID:@"4868" bundleID:@"cn.4399.gamehotspot" personalAD:YES sdkVer:@"0.0.7" Complete:^(BOOL success, NSString * _Nullable errorString) {
+[SdkManager initMobileID:@"4868" bundleID:@"cn.4399.gamehotspot" personalAD:YES sdkVer:@"0.0.7" Complete:^(BOOL success, NSString * _Nullable errorString) {
         NSString *title;
-        if (success) {
-            title = @"广告初始化成功";
-        }else{
-            title = [NSString stringWithFormat:@"来自手游初始化：%@",errorString];
-        }
-    }];
+    if (success) {
+        title = @"广告初始化成功";
+    }else{
+        title = [NSString stringWithFormat:@"来自手游初始化：%@",errorString];
+    }
+}];
 ```
 ### H5初始化示例
 ```
-    [SdkManager initH5ID:TestH5AppID personalAD:YES Complete:^(BOOL success, NSString * _Nullable errorString) {
-        NSString *title;
-        if (success) {
-            title = @"广告初始化成功";
-        }else{
-            title = [NSString stringWithFormat:@"来自h5初始化：：%@",errorString];
-        }
-    }];
+[SdkManager initH5ID:TestH5AppID personalAD:YES Complete:^(BOOL success, NSString * _Nullable errorString) {
+    NSString *title;
+    if (success) {
+        title = @"广告初始化成功";
+    }else{
+        title = [NSString stringWithFormat:@"来自h5初始化：：%@",errorString];
+    }
+}];
 ```
 # 小程序广告集成
 ## 激励视频广告
@@ -228,7 +229,7 @@ BOOL isReadToPlay;//广告加载完成
 ```
 MiniSlotManager *manager = [MiniSlotManager shareInstance];
 manager.didRewardBlock = ^(int code, NSString * _Nonnull result) {
-            NSLog(@"%d,%@",code, result);
+    NSLog(@"%d,%@",code, result);
 };
 [manager loadRewardAD:YES];
 if (manager.isReadToPlay) {
@@ -263,11 +264,11 @@ BOOL isReadToPlay;//广告加载完成
 ### 代码示例
 ```
 MiniBannerManager *manager = [MiniBannerManager shareInstance];
-        manager.bannerBlock = ^(int code, NSString * _Nonnull result) {
-            NSLog(@"%d,%@",code, result);
-        };
-        UILabel *label = [self.view viewWithTag:bannerAdViewtag];
-        [manager loadBannerAD:self showView:label size:CGSizeMake(320, 50)];
+manager.bannerBlock = ^(int code, NSString * _Nonnull result) {
+    NSLog(@"%d,%@",code, result);
+};
+UILabel *label = [self.view viewWithTag:bannerAdViewtag];
+[manager loadBannerAD:self showView:label size:CGSizeMake(320, 50)];
         
 if (manager.isReadToPlay) {
     [manager showAd];
@@ -296,7 +297,7 @@ BOOL isReadToPlay;//广告加载完成
 ```
 MiniScreenManager *manager = [MiniScreenManager shareInstance];
 manager.screenBlock = ^(int code, NSString * _Nonnull result) {
-            NSLog(@"%d,%@",code, result);
+    NSLog(@"%d,%@",code, result);
 };
 [manager loadScreenAD];
 
@@ -311,71 +312,71 @@ else{
 ### 激励视频
 广告加载
 ```
-        MobileSlotManager *manager = [MobileSlotManager shareInstance];
-        manager.didRewardBlock = ^(int code, NSString * _Nonnull result) {
-            NSLog(@"%d,%@",code, result);
-            self->blockLabel1.text=result;
-        };
-        [manager loadRewardADWithUserID:TestMobileSlotUserID horizontal:YES];
+MobileSlotManager *manager = [MobileSlotManager shareInstance];
+manager.didRewardBlock = ^(int code, NSString * _Nonnull result) {
+    NSLog(@"%d,%@",code, result);
+    self->blockLabel1.text=result;
+};
+[manager loadRewardADWithUserID:TestMobileSlotUserID horizontal:YES];
 ```
 
 广告展示
 ```
-        MobileSlotManager *manager = [MobileSlotManager shareInstance];
-        manager.didRewardBlock = ^(int code, NSString * _Nonnull result) {
-            NSLog(@"%d,%@",code, result);
-            self->blockLabel1.text=result;
-        };
-        if (manager.isReadToPlay) {
-            [manager showAd:self];
-        }
-        else{
-            self->blockLabel1.text=@"激励广告加载未完成";
-        }
+MobileSlotManager *manager = [MobileSlotManager shareInstance];
+manager.didRewardBlock = ^(int code, NSString * _Nonnull result) {
+    NSLog(@"%d,%@",code, result);
+    self->blockLabel1.text=result;
+};
+if (manager.isReadToPlay) {
+    [manager showAd:self];
+}
+else{
+    self->blockLabel1.text=@"激励广告加载未完成";
+}
 ```
 ### banner广告
 广告加载
 ```
-        MobileBannerManager *manager = [MobileBannerManager shareInstance];
-        manager.bannerBlock = ^(int code, NSString * _Nonnull result) {
-            NSLog(@"%d,%@",code, result);
-            self->blockLabel2.text=result;
-        };
-        UILabel *label = [self.view viewWithTag:bannerAdViewtag];
-        [manager loadBannerAD:self userID:TestMobileBannerUserID showView:label size:CGSizeMake(320, 50)];
+MobileBannerManager *manager = [MobileBannerManager shareInstance];
+manager.bannerBlock = ^(int code, NSString * _Nonnull result) {
+    NSLog(@"%d,%@",code, result);
+    self->blockLabel2.text=result;
+};
+UILabel *label = [self.view viewWithTag:bannerAdViewtag];
+[manager loadBannerAD:self userID:TestMobileBannerUserID showView:label size:CGSizeMake(320, 50)];
 ```
 广告展示
 ```
-        MobileBannerManager *manager = [MobileBannerManager shareInstance];
-        if (manager.isReadToPlay) {
-            [manager showAd];
-        }else{
-            self->blockLabel2.text=@"banner广告加载未完成";
-        }
+MobileBannerManager *manager = [MobileBannerManager shareInstance];
+if (manager.isReadToPlay) {
+    [manager showAd];
+}else{
+    self->blockLabel2.text=@"banner广告加载未完成";
+}
 ```
 ### 原生(信息流)广告
 
 ## 注意，信息流广告一次最多加载并返回3个广告素材，根据showAdArrayBlock返回的数据插入到UITableViewController的数据源中进行展示。加载和展示是按顺序直接进行的，一般不分开。
 广告加载和展示
 ```
-        MobileNativManager *manager = [MobileNativManager shareInstance];
-        manager.nativeBlock = ^(int code, NSString * _Nonnull result) {
-            NSLog(@"%d,%@",code, result);
-            self->blockLabel3.text=result;
-        };
-        [manager loadNativAD:self userID:TestMobileNativeUserID size:CGSizeMake(320, 50) loadMax:2];
-        manager.showAdBlock = ^(NSArray<UIView *> * _Nullable adModelArray) {
-            if (adModelArray) {
-                [self->nativView1 addSubview:adModelArray.firstObject];
-                //...
-                //...
-                //代码示例，循环和其他逻辑略
-                //XXmodel *model = [[XXmodel alloc]init];
-                //model.adView = adModelArray.firstObject;
-                //[self.dataSource insertObject:model atIndex:index];
-                //[self.tableView reloadData];
-            }
-        };
+MobileNativManager *manager = [MobileNativManager shareInstance];
+manager.nativeBlock = ^(int code, NSString * _Nonnull result) {
+    NSLog(@"%d,%@",code, result);
+    self->blockLabel3.text=result;
+};
+[manager loadNativAD:self userID:TestMobileNativeUserID size:CGSizeMake(320, 50) loadMax:2];
+manager.showAdBlock = ^(NSArray<UIView *> * _Nullable adModelArray) {
+    if (adModelArray) {
+        [self->nativView1 addSubview:adModelArray.firstObject];
+        //...
+        //...
+        //代码示例，循环和其他逻辑略
+        //XXmodel *model = [[XXmodel alloc]init];
+        //model.adView = adModelArray.firstObject;
+        //[self.dataSource insertObject:model atIndex:index];
+        //[self.tableView reloadData];
+    }
+};
 ```
 
 
@@ -394,33 +395,33 @@ else{
 ```
 广告展示
 ```
-        H5SlotManager *manager = [H5SlotManager shareInstance];
-        manager.didRewardBlock = ^(int code, NSString * _Nonnull result) {
-            NSLog(@"%d,%@",code, result);
-            self->blockLabel1.text=result;
-        };
-        if (manager.isReadToPlay) {
-            [manager showAd:self];
-        }
-        else{
-            self->blockLabel1.text=@"激励广告加载未完成";
-        }
+H5SlotManager *manager = [H5SlotManager shareInstance];
+manager.didRewardBlock = ^(int code, NSString * _Nonnull result) {
+    NSLog(@"%d,%@",code, result);
+    self->blockLabel1.text=result;
+};
+if (manager.isReadToPlay) {
+    [manager showAd:self];
+}
+else{
+    self->blockLabel1.text=@"激励广告加载未完成";
+}
 ```
 # 注意：若不进行提前初始化和预加载素材，则可合在一起使用
 
 ```
-    [SdkManager initH5ID:TestH5AppID personalAD:YES Complete:^(BOOL success, NSString * _Nullable errorString) {
-        H5SlotManager *manager = [H5SlotManager shareInstance];
-        WeakObj(manager)
-        manager.didRewardBlock = ^(int code, NSString * _Nonnull result) {
-            NSLog(@"%d,%@",code, result);
-            self->blockLabel1.text=result;
-            StrongObj(manager)
-            if (code == slotLoadSuccessCode) {
-                [manager showAd:self];
-            }
-        };
-        [manager loadRewardADWithPost:TestH5PostID horizontal:YES];
+[SdkManager initH5ID:TestH5AppID personalAD:YES Complete:^(BOOL success, NSString * _Nullable errorString) {
+    H5SlotManager *manager = [H5SlotManager shareInstance];
+    WeakObj(manager)
+    manager.didRewardBlock = ^(int code, NSString * _Nonnull result) {
+        NSLog(@"%d,%@",code, result);
+        self->blockLabel1.text=result;
+        StrongObj(manager)
+        if (code == slotLoadSuccessCode) {
+            [manager showAd:self];
+        }
+    };
+    [manager loadRewardADWithPost:TestH5PostID horizontal:YES];
         
-    }];
+}];
 ```
