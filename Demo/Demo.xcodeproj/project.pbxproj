@@ -17,6 +17,7 @@
 		0BD0C8D82D6EE5B10003E85F /* TestID.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0C8D62D6EE5B10003E85F /* TestID.m */; };
 		0BD0C8D92D6EE5B10003E85F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0BD0C8D72D6EE5B10003E85F /* Settings.bundle */; };
 		0BD0C8DB2D6EE5CA0003E85F /* MiniSDKFramework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD0C8DA2D6EE5CA0003E85F /* MiniSDKFramework.xcframework */; };
+		0BD0C8DD2D6EF6500003E85F /* MiniSDKFramework.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD0C8DA2D6EE5CA0003E85F /* MiniSDKFramework.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ED85E77203CF796E07401DF5 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D34385F5DB5815C9E0696299 /* Pods_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				0BD0C8DD2D6EF6500003E85F /* MiniSDKFramework.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;

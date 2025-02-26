@@ -35,15 +35,6 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self requestIDFA];
     });
-    //直接执行来测试同时初始化
-    [TableVC mobileRegister];
-    [TableVC miniRegister];
-    [TableVC h5Register];
-    
-    //延迟来测试不同页面重复注册
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        [TableVC h5Register];
-    });
     
     
     return YES;
