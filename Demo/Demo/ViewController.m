@@ -8,6 +8,7 @@
 #import "ViewController.h"
 #import <MiniSDKFramework/SdkManager.h>
 #import "AppDelegate.h"
+#import "TableVC.h"
 
 #define screenViewTag 400
 #define gameidViewTag 401
@@ -38,6 +39,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    if (self.type == adType_mini) {
+        [TableVC miniRegister];
+    }else if (self.type == adType_mobile){
+        [TableVC mobileRegister];
+    }else{
+        [TableVC h5Register];
+    }
     [self testMini];
     [self testMobile];
     
@@ -87,62 +95,6 @@
 }
 -(void)testMini{
     if (self.type == adType_mini) {
-        UILabel *tishLabel = [self createLabel:@"以下初始化设置，需要保存后重启app生效" withFontSize:16];
-        tishLabel.frame = CGRectMake(20, 90, 500, 30);
-        [self.view addSubview:tishLabel];
-        
-        UILabel *screenlabel = [self createLabel:@"竖屏id700315 横屏id 700319" withFontSize:16];
-        screenlabel.textColor=[UIColor blueColor];
-        screenlabel.userInteractionEnabled = YES;
-        screenlabel.frame = CGRectMake(20, 150, 220, 30);
-        [self.view addSubview:screenlabel];
-        
-        UITextField *gameField = [self createTextFieldWithFrame:CGRectMake(240, 150, 150, 30) superView:self.view backgroundColor:[UIColor clearColor] fontSize:16 textColor:[UIColor blackColor]];
-
-        gameField.text = [ViewController userDefaultsObjectByKey:gameidKey];
-        gameField.placeholder =@"请输入游戏id";
-        gameField.tag = gameidViewTag;
-        gameField.layer.borderWidth=1.0;
-        gameField.layer.borderColor=[UIColor grayColor].CGColor;
-        gameField.layer.cornerRadius =8.0;
-        
-
-        UILabel *clientlabel = [self createLabel:@"平台ID 1025、1028等" withFontSize:16];
-        clientlabel.textColor=[UIColor blueColor];
-        clientlabel.frame = CGRectMake(20, 200, 200, 30);
-        [self.view addSubview:clientlabel];
-        
-        UITextField *clientField = [self createTextFieldWithFrame:CGRectMake(240, 200, 150, 30) superView:self.view backgroundColor:[UIColor clearColor] fontSize:16 textColor:[UIColor blackColor]];
-        clientField.text = [ViewController userDefaultsObjectByKey:clientKey];
-        clientField.placeholder =@"请输入平台ID";
-        clientField.tag = clientViewTag;
-        clientField.layer.borderWidth=1.0;
-        clientField.layer.borderColor=[UIColor grayColor].CGColor;
-        clientField.layer.cornerRadius =8.0;
-        
-        //-------------------------------------------------
-        
-        UIButton *saveButton = [self createButton:@"保存设置" Target:self Sel:@selector(buttonClick:) font:12 tag:99];
-        saveButton.frame = CGRectMake(100, 260, 100, 50);
-        [self.view addSubview:saveButton];
-        
-        //-------------------------------------------------
-
-        UILabel *platformLabel = [self createLabel:@"开关打开为快爆，关闭为游戏盒，需要重启" withFontSize:16];
-        platformLabel.frame = CGRectMake(20, 400, 500, 30);
-        platformLabel.userInteractionEnabled = YES;
-        platformLabel.textColor=[UIColor blueColor];
-        [self.view addSubview:platformLabel];
-        
-        UISwitch *platformSwitch = [[UISwitch alloc]initWithFrame:CGRectMake(350, 400, 70, 30)];
-        NSString *gamePlatform = [[NSUserDefaults standardUserDefaults] objectForKey:gameplatformKey];
-        if (gamePlatform.integerValue == 0) {
-            platformSwitch.on = NO;
-        }else{
-            platformSwitch.on = YES;
-        }
-        [platformSwitch addTarget:self action:@selector(switchValueChanged:) forControlEvents:UIControlEventValueChanged];
-        [self.view addSubview:platformSwitch];
         
         //-------------------------------------------------
         UIButton *loadButton2 = [self createButton:@"加载广告" Target:self Sel:@selector(buttonClick:) font:12 tag:101];
@@ -228,7 +180,8 @@
 #pragma mark -h5激励视频 一次性点击展示(无预加载)
 /// h5激励视频 一次性点击展示
 -(void)h5SlotOnceShow{
-    [SdkManager initH5ID:TestH5AppID personalAD:YES Complete:^(BOOL success, NSString * _Nullable errorString) {
+    
+    [SdkManager initH5ID:[TestID shareInstance].h5AppID personalAD:YES Complete:^(BOOL success, NSString * _Nullable errorString) {
         H5SlotManager *manager = [H5SlotManager shareInstance];
         WeakObj(manager)
         manager.didRewardBlock = ^(int code, NSString * _Nonnull result) {
@@ -240,7 +193,7 @@
             }
         };
         UISwitch *myswitch = [self.view viewWithTag:screenViewTag];
-        [manager loadRewardADWithPost:TestH5PostID horizontal:myswitch.isOn];
+        [manager loadRewardADWithPost:[TestID shareInstance].h5PostID horizontal:myswitch.isOn];
         
     }];
 }
@@ -248,22 +201,7 @@
 #pragma mark -点击
 -(void)buttonClick:(UIButton*)sender{
     NSInteger tag = sender.tag;
-    if (tag == 99) {
-        UITextField *clientField = [self.view viewWithTag:clientViewTag];
-        if (clientField.text!=nil || clientField.text.length>0) {
-            [ViewController setUserDefaults:clientField.text forKey:clientKey];
-        }else{
-            [ViewController setUserDefaults:@"1025" forKey:clientKey];
-        }
-        UITextField *gameField = [self.view viewWithTag:gameidViewTag];
-        if (gameField.text!=nil || gameField.text.length>0) {
-            [ViewController setUserDefaults:gameField.text forKey:gameidKey];
-        }else{
-            [ViewController setUserDefaults:@"700315" forKey:gameidKey];
-        }
-        UIButton *button =[self.view viewWithTag:99];
-        [button setTitle:@"重启生效" forState:UIControlStateNormal];
-    }
+    
     if (tag == 100) {
         [self slotLoad];
     }
@@ -305,7 +243,7 @@
             self->blockLabel1.text=result;
         };
         UISwitch *myswitch = [self.view viewWithTag:screenViewTag];
-        [manager loadRewardADWithUserID:TestMobileSlotUserID horizontal:myswitch.isOn];
+        [manager loadRewardADWithUserID:[TestID shareInstance].mobileSlotUserID horizontal:myswitch.isOn];
     }else if (self.type == adType_h5){
         H5SlotManager *manager = [H5SlotManager shareInstance];
         manager.didRewardBlock = ^(int code, NSString * _Nonnull result) {
@@ -313,7 +251,7 @@
             self->blockLabel1.text=result;
         };
         UISwitch *myswitch = [self.view viewWithTag:screenViewTag];
-        [manager loadRewardADWithPost:TestH5PostID horizontal:myswitch.isOn];
+        [manager loadRewardADWithPost:[TestID shareInstance].h5PostID horizontal:myswitch.isOn];
     }
 }
 -(void)slotShow{
@@ -376,7 +314,7 @@
             self->blockLabel2.text=result;
         };
         UILabel *label = [self.view viewWithTag:bannerAdViewtag];
-        [manager loadBannerAD:self userID:TestMobileBannerUserID showView:label size:CGSizeMake(320, 50)];
+        [manager loadBannerAD:self userID:[TestID shareInstance].mobileBannerUserID showView:label size:CGSizeMake(320, 50)];
     }
 }
 
@@ -413,7 +351,7 @@
             NSLog(@"%d,%@",code, result);
             self->blockLabel3.text=result;
         };
-        [manager loadNativAD:self userID:TestMobileNativeUserID size:CGSizeMake(320, 50) loadMax:2];
+        [manager loadNativAD:self userID:[TestID shareInstance].mobileNativeUserID size:CGSizeMake(320, 50) loadMax:2];
         manager.showAdBlock = ^(NSArray<UIView *> * _Nullable adModelArray) {
             if (adModelArray) {
                 [self->nativView1 addSubview:adModelArray.firstObject];
@@ -424,7 +362,6 @@
                 //model.adView = adModelArray.firstObject;
                 //[self.dataSource insertObject:model atIndex:index];
                 //[self.tableView reloadData];
-                
             }
         };
     }else if (self.type == adType_h5){
@@ -446,16 +383,6 @@
     }
 }
 
-#pragma mark -
-#pragma mark -开关
--(void)switchValueChanged:(UISwitch*)swith{
-    BOOL isOn = swith.isOn;
-    if (isOn) {
-        [ViewController setUserDefaults:@"1" forKey:gameplatformKey];
-    }else{
-        [ViewController setUserDefaults:@"0" forKey:gameplatformKey];
-    }
-}
 #pragma mark -
 #pragma mark -fun
 -(UIButton*)createButton:(NSString*)title Target:(id)t_target Sel:(SEL)t_sel  font:(NSInteger)fontsize tag:(NSInteger)t_tag
@@ -538,10 +465,9 @@
         default:
             break;
     }
-    NSString *gamePlatform = [[NSUserDefaults standardUserDefaults] objectForKey:gameplatformKey];
-    NSString *titleAppen = [NSString stringWithFormat:@"%@,服务器为游戏盒",title];
-    if (gamePlatform.integerValue == 1) {
-        titleAppen = [NSString stringWithFormat:@"%@,服务器为好游快爆",title];
+    NSString *titleAppen = [NSString stringWithFormat:@"%@,服务器为好游快爆",title];
+    if ([TestID shareInstance].miniClient) {
+        titleAppen = [NSString stringWithFormat:@"%@,服务器为游戏盒",title];
     }
     UIAlertController *alertCon = [UIAlertController alertControllerWithTitle:titleAppen message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *actionOn = [UIAlertAction actionWithTitle:@"线上接口" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {

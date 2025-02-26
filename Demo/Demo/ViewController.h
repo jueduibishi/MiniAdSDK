@@ -7,9 +7,6 @@
 
 #import <UIKit/UIKit.h>
 
-#define clientKey @"clientkey"
-#define gameidKey @"gameidkey"
-#define gameplatformKey @"gameplatformKey"
 
 typedef NS_ENUM(NSInteger,adType){
     adType_mini=0,//小程序

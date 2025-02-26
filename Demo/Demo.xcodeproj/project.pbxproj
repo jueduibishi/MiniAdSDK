@@ -14,6 +14,9 @@
 		0B5C03652C85B76700C30092 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B5C03642C85B76700C30092 /* Assets.xcassets */; };
 		0B5C03682C85B76700C30092 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B5C03662C85B76700C30092 /* LaunchScreen.storyboard */; };
 		0B5C036B2C85B76700C30092 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5C036A2C85B76700C30092 /* main.m */; };
+		0BD0C8D82D6EE5B10003E85F /* TestID.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0C8D62D6EE5B10003E85F /* TestID.m */; };
+		0BD0C8D92D6EE5B10003E85F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0BD0C8D72D6EE5B10003E85F /* Settings.bundle */; };
+		0BD0C8DB2D6EE5CA0003E85F /* MiniSDKFramework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD0C8DA2D6EE5CA0003E85F /* MiniSDKFramework.xcframework */; };
 		ED85E77203CF796E07401DF5 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D34385F5DB5815C9E0696299 /* Pods_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +46,10 @@
 		0B5C03672C85B76700C30092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B5C03692C85B76700C30092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B5C036A2C85B76700C30092 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0BD0C8D52D6EE5B10003E85F /* TestID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestID.h; sourceTree = "<group>"; };
+		0BD0C8D62D6EE5B10003E85F /* TestID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestID.m; sourceTree = "<group>"; };
+		0BD0C8D72D6EE5B10003E85F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		0BD0C8DA2D6EE5CA0003E85F /* MiniSDKFramework.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MiniSDKFramework.xcframework; path = ../../sdk/MiniSDKFramework.xcframework; sourceTree = "<group>"; };
 		6619A636FF7140D5E78AE81A /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		C047BAE77EF04A75EC6E0C6D /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		D34385F5DB5815C9E0696299 /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BD0C8DB2D6EE5CA0003E85F /* MiniSDKFramework.xcframework in Frameworks */,
 				ED85E77203CF796E07401DF5 /* Pods_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +104,10 @@
 				0B5C035F2C85B76500C30092 /* ViewController.m */,
 				0B340C1A2D6C6EF400B84370 /* TableVC.h */,
 				0B340C192D6C6EF400B84370 /* TableVC.m */,
+				0BD0C8D72D6EE5B10003E85F /* Settings.bundle */,
+				0BD0C8D52D6EE5B10003E85F /* TestID.h */,
+				0BD0C8D62D6EE5B10003E85F /* TestID.m */,
+				0BD0C8DA2D6EE5CA0003E85F /* MiniSDKFramework.xcframework */,
 				0B5C03612C85B76500C30092 /* Main.storyboard */,
 				0B5C03642C85B76700C30092 /* Assets.xcassets */,
 				0B5C03662C85B76700C30092 /* LaunchScreen.storyboard */,
@@ -172,6 +184,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BD0C8D92D6EE5B10003E85F /* Settings.bundle in Resources */,
 				0B5C03682C85B76700C30092 /* LaunchScreen.storyboard in Resources */,
 				0B5C03652C85B76700C30092 /* Assets.xcassets in Resources */,
 				0B5C03632C85B76500C30092 /* Main.storyboard in Resources */,
@@ -213,6 +226,7 @@
 				0B5C03602C85B76500C30092 /* ViewController.m in Sources */,
 				0B340C1B2D6C6EF400B84370 /* TableVC.m in Sources */,
 				0B5C035A2C85B76500C30092 /* AppDelegate.m in Sources */,
+				0BD0C8D82D6EE5B10003E85F /* TestID.m in Sources */,
 				0B5C036B2C85B76700C30092 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
