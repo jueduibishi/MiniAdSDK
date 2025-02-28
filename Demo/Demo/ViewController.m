@@ -377,6 +377,7 @@
             self->blockLabel3.text=@"插屏广告加载未完成";
         }
     }else if (self.type == adType_mobile){
+        blockLabel3.text = @"信息流一般不做预加载，获取到素材后直接刷新页面";
         NSLog(@"信息流一般不做预加载，获取到素材后直接刷新页面");
     }else if (self.type == adType_h5){
         
