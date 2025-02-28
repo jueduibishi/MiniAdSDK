@@ -66,6 +66,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     cell.textLabel.text = self.mainArray[indexPath.row];
+    if ([cell.textLabel.text isEqualToString:@"以下设置，修改后需重启app"]) {
+        cell.textLabel.textColor = [UIColor redColor];
+    }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
