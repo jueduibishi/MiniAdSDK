@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 加载原生(信息流)广告
 /// - Parameters:
 ///   - curVC: 返回rootVC
-///   - userID: 用户id
+///   - userID: 用户ID即渠道ID
 ///   - adSize: 320*50*
 ///   - maxCount: 一次性加载的素材数量，1~3个
 -(void)loadNativAD:(UIViewController*)curVC

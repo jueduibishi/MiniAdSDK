@@ -423,7 +423,7 @@
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeDirectory</key>
 		<data>
-		SaoNs9PhGQRHgzSg3erDZ2NY13Y=
+		Yav8YH5azWeOjiY8GxM/jXahNLc=
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -431,7 +431,7 @@
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		Dniyj90dbun7rFfb7nMq7IGPLw8=
+		XiDecWt2MMBFhY0sjVGQsUaKi78=
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -459,7 +459,7 @@
 		</data>
 		<key>Headers/MiniScreenManager.h</key>
 		<data>
-		b5yW2OXYsQM28bkGtHqNWbAjoVM=
+		U8n5d6pj3Hyf4VvrEniQDHyHPeg=
 		</data>
 		<key>Headers/MiniSlotManager.h</key>
 		<data>
@@ -467,15 +467,15 @@
 		</data>
 		<key>Headers/MobileBannerManager.h</key>
 		<data>
-		oan6BFPWZ/TeGP1Qioya9cnClNI=
+		kdZ5G9woBB5Er4ykOBCEM1gJXoY=
 		</data>
 		<key>Headers/MobileNativManager.h</key>
 		<data>
-		8UGSVViYnOHnrNjZGdtvzEe3zO4=
+		e+8I+iGA9A+shpiM5NZdzZdB3DY=
 		</data>
 		<key>Headers/MobileSlotManager.h</key>
 		<data>
-		5fuUoZDdtRLBTSC5AYASjlR6RrM=
+		gkLFNdReKZKzEcoRQihcPnf/YiI=
 		</data>
 		<key>Headers/SdkManager.h</key>
 		<data>
@@ -1217,7 +1217,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tCeEdZtG45lY2m7HC1ZqMmPzGVD2baFgTfV7/CrxAuc=
+			MlALosCv6Wamin9VaAEav47er6KfsCn6s8UQnKBCzVY=
 			</data>
 		</dict>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeRequirements</key>
@@ -1231,7 +1231,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+zXyOlDizTMikew8YK32Z1HGaEr6rs7/0ou656A3IEA=
+			GhFEXzeqek3plMQL1qp/j2y6FgiBgB3QWiWUS1vSzog=
 			</data>
 		</dict>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeResources</key>
@@ -1280,7 +1280,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gmJyFYOjIg5dGwfXuB/j+CBNyiLJry7za97upcUtyqk=
+			ev2xxhsbJQpC0hsDljJrDWzVp0jkfmUA79aNKdwUESc=
 			</data>
 		</dict>
 		<key>Headers/MiniSlotManager.h</key>
@@ -1294,21 +1294,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ynf6qpjyXgOOI8rvQepvwz6jba8pkzKb2yxWTgoBZm4=
+			s10xfSePdoobrTjl1POrYj5HAeB5fDelLF43KH6xBAA=
 			</data>
 		</dict>
 		<key>Headers/MobileNativManager.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4xn7kVsS7n+B6X9tG+9ddTAftT1XehepKgzq8thn8bI=
+			6AAjwwkVSKKH5dD+8D6DfMeUefHz2qk8Ihg+louXbtE=
 			</data>
 		</dict>
 		<key>Headers/MobileSlotManager.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			InPtTGpZK05fXkpBIAMG4Ct8120jo8tVXkiDQxskvqw=
+			nblpbgNC3rxpVMmubqwe8WY7YKglFn9lFp0hzwZAbBk=
 			</data>
 		</dict>
 		<key>Headers/SdkManager.h</key>

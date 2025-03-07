@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 加载banner广告
 /// - Parameters:
 ///   - curVC: 初始化返回rootVC
-///   - userID: 用户id
+///   - userID: 用户ID即渠道ID
 ///   - onView: 显示的view
 ///   - adSize: 320*50*
 -(void)loadBannerAD:(UIViewController*)curVC

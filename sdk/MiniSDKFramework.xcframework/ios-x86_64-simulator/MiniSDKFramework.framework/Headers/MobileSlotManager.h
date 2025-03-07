@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 加载激励视频
 /// - Parameters:
-///   - userID: 用户ID
+///   - userID: 用户ID即渠道ID
 ///   - isHorizontal: 是否横屏
 -(void)loadRewardADWithUserID:(NSString*)userID
          horizontal:(BOOL)isHorizontal;
