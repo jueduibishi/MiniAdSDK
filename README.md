@@ -6,6 +6,7 @@
 | 版本历史 | 支持平台 |  功能 | 更新时间 | 
 |:--------:|:------------:|:------------:|:------------:|  
 | 待更 | 待更 | -- |-- |
+| 0.2.1 | 默认支持穿山甲:6.6.1.5，自行引入<br> 优量汇:`pod 'GDTMobSDK', '4.15.10.0'`<br> 百度:`pod 'BaiduMobAdSDK', '5.370.1'`<br>  快手:`pod 'KSAdSDK', '3.3.71.0'` | 优化获取信息流广告高度 |2025年3月24日 |
 | 0.2.0 | 默认支持穿山甲:6.6.1.5，自行引入<br> 优量汇:`pod 'GDTMobSDK', '4.15.10.0'`<br> 百度:`pod 'BaiduMobAdSDK', '5.370.1'`<br>  快手:`pod 'KSAdSDK', '3.3.71.0'` | 支持数据统计 |2025年3月7日 |
 | 0.1.9 | 默认支持穿山甲:6.6.1.5，自行引入<br> 优量汇:`pod 'GDTMobSDK', '4.15.10.0'`<br> 百度:`pod 'BaiduMobAdSDK', '5.370.1'`<br>  快手:`pod 'KSAdSDK', '3.3.71.0'` | 支持手游和H5 |2025年2月28日 |
 | 0.1.7 | 默认支持穿山甲:6.4.1.0，自行引入<br> 优量汇:`pod 'GDTMobSDK', '4.15.0'`<br> 百度:`pod 'BaiduMobAdSDK', '5.370'`<br>  快手:`pod 'KSAdSDK', '3.3.67.0'` | 拆分支持的平台，按需引入 | 2024年11月18日 |  
@@ -40,64 +41,64 @@ pod 'KSAdSDK', '3.3.71.0'
 ## 1、在项目的Info.plist文件中添加以下字段
 ```
 <dict>
-    <key>NSAppTransportSecurity</key>
-    <dict>
-        <key>NSAllowsArbitraryLoads</key>
-        <true/>
-    </dict>
-    <key>NSPrivacyAccessedAPITypes</key>
-    <array>
-        <dict>
-            <key>NSPrivacyAccessedAPIType</key>
-            <string>NSPrivacyAccessedAPICategoryFileTimestamp</string>
-            <key>NSPrivacyAccessedAPITypeReasons</key>
-            <array>
-                <string>C617.1</string>
-            </array>
-        </dict>
-        <dict>
-            <key>NSPrivacyAccessedAPIType</key>
-            <string>NSPrivacyAccessedAPICategorySystemBootTime</string>
-            <key>NSPrivacyAccessedAPITypeReasons</key>
-            <array>
-                <string>35F9.1</string>
-            </array>
-        </dict>
-        <dict>
-            <key>NSPrivacyAccessedAPIType</key>
-            <string>NSPrivacyAccessedAPICategoryDiskSpace</string>
-            <key>NSPrivacyAccessedAPITypeReasons</key>
-            <array>
-                <string>7D9E.1</string>
-                <string>E174.1</string>
-            </array>
-        </dict>
-        <dict>
-            <key>NSPrivacyAccessedAPIType</key>
-            <string>NSPrivacyAccessedAPICategoryUserDefaults</string>
-            <key>NSPrivacyAccessedAPITypeReasons</key>
-            <array>
-                <string>CA92.1</string>
-            </array>
-        </dict>
-    </array>
-    <key>SKAdNetworkItems</key>
-    <array>
-        <dict>
-            <key>SKAdNetworkIdentifier</key>
-            <string>238da6jt44.skadnetwork</string>
-        </dict>
-        <dict>
-            <key>SKAdNetworkIdentifier</key>
-            <string>22mmun2rn5.skadnetwork</string>
-        </dict>
-        <dict>
-            <key>SKAdNetworkIdentifier</key>
-            <string>cstr6suwn9.skadnetwork</string>
-        </dict>
-    </array>
-    <key>NSUserTrackingUsageDescription</key>
-    <string>为了提供个性化的广告体验，我们需要您的同意来跟踪您的活动。</string>
+<key>NSAppTransportSecurity</key>
+<dict>
+<key>NSAllowsArbitraryLoads</key>
+<true/>
+</dict>
+<key>NSPrivacyAccessedAPITypes</key>
+<array>
+<dict>
+<key>NSPrivacyAccessedAPIType</key>
+<string>NSPrivacyAccessedAPICategoryFileTimestamp</string>
+<key>NSPrivacyAccessedAPITypeReasons</key>
+<array>
+<string>C617.1</string>
+</array>
+</dict>
+<dict>
+<key>NSPrivacyAccessedAPIType</key>
+<string>NSPrivacyAccessedAPICategorySystemBootTime</string>
+<key>NSPrivacyAccessedAPITypeReasons</key>
+<array>
+<string>35F9.1</string>
+</array>
+</dict>
+<dict>
+<key>NSPrivacyAccessedAPIType</key>
+<string>NSPrivacyAccessedAPICategoryDiskSpace</string>
+<key>NSPrivacyAccessedAPITypeReasons</key>
+<array>
+<string>7D9E.1</string>
+<string>E174.1</string>
+</array>
+</dict>
+<dict>
+<key>NSPrivacyAccessedAPIType</key>
+<string>NSPrivacyAccessedAPICategoryUserDefaults</string>
+<key>NSPrivacyAccessedAPITypeReasons</key>
+<array>
+<string>CA92.1</string>
+</array>
+</dict>
+</array>
+<key>SKAdNetworkItems</key>
+<array>
+<dict>
+<key>SKAdNetworkIdentifier</key>
+<string>238da6jt44.skadnetwork</string>
+</dict>
+<dict>
+<key>SKAdNetworkIdentifier</key>
+<string>22mmun2rn5.skadnetwork</string>
+</dict>
+<dict>
+<key>SKAdNetworkIdentifier</key>
+<string>cstr6suwn9.skadnetwork</string>
+</dict>
+</array>
+<key>NSUserTrackingUsageDescription</key>
+<string>为了提供个性化的广告体验，我们需要您的同意来跟踪您的活动。</string>
 </dict>
 ```
 ## 2、模拟器配置
@@ -128,20 +129,20 @@ ATT(App Tracking Transparency), 适用于请求用户权限，访问与应用相
 在代码层面请求授权，建议最好在SDK初始化之前请求授权。  
 
 ```
- - (void)requestIDFA {
-    if (@available(iOS 14, *)) {
-        [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
-            if (status == ATTrackingManagerAuthorizationStatusDenied) {
-                NSLog(@"StatusDenied");
-            }else if (status == ATTrackingManagerAuthorizationStatusAuthorized) {
-                NSLog(@"Authorized");
-            }else if (status == ATTrackingManagerAuthorizationStatusRestricted) {
-                NSLog(@"Restricted");
-            }else if (status == ATTrackingManagerAuthorizationStatusNotDetermined) {
-                NSLog(@"NotDetermined");
-            }
-        }];
-    }
+- (void)requestIDFA {
+if (@available(iOS 14, *)) {
+[ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
+if (status == ATTrackingManagerAuthorizationStatusDenied) {
+NSLog(@"StatusDenied");
+}else if (status == ATTrackingManagerAuthorizationStatusAuthorized) {
+NSLog(@"Authorized");
+}else if (status == ATTrackingManagerAuthorizationStatusRestricted) {
+NSLog(@"Restricted");
+}else if (status == ATTrackingManagerAuthorizationStatusNotDetermined) {
+NSLog(@"NotDetermined");
+}
+}];
+}
 }
 ```
 
@@ -179,38 +180,38 @@ serverType type = [SdkManager serverType];
 # 广告SDK初始化
 
 ## 三种初始化方法任选一种执行即可。也可根据业务需求在多处执行，SDK会自己处理重复初始化的逻辑问题。
-       
+
 ### 小程序初始化示例
 
 ```
 [SdkManager initType:client_youxihe gameID:gameid platformID:platformid personalAD:YES Complete:^(BOOL success, NSString * _Nullable errorString) {
-        if (success) {
-            NSLog(@"初始化成功");
-        }else{
-        }
+if (success) {
+NSLog(@"初始化成功");
+}else{
+}
 }];    
 ```
 ### 手游初始化示例
 
 ```
 [SdkManager initMobileID:@"4868" bundleID:@"cn.4399.gamehotspot" personalAD:YES Complete:^(BOOL success, NSString * _Nullable errorString) {
-        NSString *title;
-    if (success) {
-        title = @"广告初始化成功";
-    }else{
-        title = [NSString stringWithFormat:@"来自手游初始化：%@",errorString];
-    }
+NSString *title;
+if (success) {
+title = @"广告初始化成功";
+}else{
+title = [NSString stringWithFormat:@"来自手游初始化：%@",errorString];
+}
 }];
 ```
 ### H5初始化示例
 ```
 [SdkManager initH5ID:TestH5AppID personalAD:YES Complete:^(BOOL success, NSString * _Nullable errorString) {
-    NSString *title;
-    if (success) {
-        title = @"广告初始化成功";
-    }else{
-        title = [NSString stringWithFormat:@"来自h5初始化：：%@",errorString];
-    }
+NSString *title;
+if (success) {
+title = @"广告初始化成功";
+}else{
+title = [NSString stringWithFormat:@"来自h5初始化：：%@",errorString];
+}
 }];
 ```
 # 小程序广告集成
@@ -235,14 +236,14 @@ BOOL isReadToPlay;//广告加载完成
 ```
 MiniSlotManager *manager = [MiniSlotManager shareInstance];
 manager.didRewardBlock = ^(int code, NSString * _Nonnull result) {
-    NSLog(@"%d,%@",code, result);
+NSLog(@"%d,%@",code, result);
 };
 [manager loadRewardAD:YES];
 if (manager.isReadToPlay) {
-    [manager showAd:self];
+[manager showAd:self];
 }
 else{
-     NSLog(@"激励广告加载未完成");
+NSLog(@"激励广告加载未完成");
 }  
 ```
 
@@ -257,8 +258,8 @@ else{
 ///   - onView: 显示的view
 ///   - adSize: 320*50*
 -(void)loadBannerAD:(UIViewController*)curVC
-           showView:(UIView*)onView
-               size:(CGSize)adSize;
+showView:(UIView*)onView
+size:(CGSize)adSize;
 
 ///显示广告
 -(void)showAd;
@@ -271,16 +272,16 @@ BOOL isReadToPlay;//广告加载完成
 ```
 MiniBannerManager *manager = [MiniBannerManager shareInstance];
 manager.bannerBlock = ^(int code, NSString * _Nonnull result) {
-    NSLog(@"%d,%@",code, result);
+NSLog(@"%d,%@",code, result);
 };
 UILabel *label = [self.view viewWithTag:bannerAdViewtag];
 [manager loadBannerAD:self showView:label size:CGSizeMake(320, 50)];
-        
+
 if (manager.isReadToPlay) {
-    [manager showAd];
+[manager showAd];
 }
 else{
-     NSLog(@"banner广告加载未完成");
+NSLog(@"banner广告加载未完成");
 }     
 ```
 ## 插屏广告
@@ -303,15 +304,15 @@ BOOL isReadToPlay;//广告加载完成
 ```
 MiniScreenManager *manager = [MiniScreenManager shareInstance];
 manager.screenBlock = ^(int code, NSString * _Nonnull result) {
-    NSLog(@"%d,%@",code, result);
+NSLog(@"%d,%@",code, result);
 };
 [manager loadScreenAD];
 
 if (manager.isReadToPlay) {
-    [manager showAd:self];
+[manager showAd:self];
 }
 else{
-     NSLog(@"插屏广告加载未完成");
+NSLog(@"插屏广告加载未完成");
 }
 ```
 ## 手游广告集成
@@ -320,8 +321,8 @@ else{
 ```
 MobileSlotManager *manager = [MobileSlotManager shareInstance];
 manager.didRewardBlock = ^(int code, NSString * _Nonnull result) {
-    NSLog(@"%d,%@",code, result);
-    self->blockLabel1.text=result;
+NSLog(@"%d,%@",code, result);
+self->blockLabel1.text=result;
 };
 [manager loadRewardADWithUserID:TestMobileSlotUserID horizontal:YES];
 ```
@@ -330,14 +331,14 @@ manager.didRewardBlock = ^(int code, NSString * _Nonnull result) {
 ```
 MobileSlotManager *manager = [MobileSlotManager shareInstance];
 manager.didRewardBlock = ^(int code, NSString * _Nonnull result) {
-    NSLog(@"%d,%@",code, result);
-    self->blockLabel1.text=result;
+NSLog(@"%d,%@",code, result);
+self->blockLabel1.text=result;
 };
 if (manager.isReadToPlay) {
-    [manager showAd:self];
+[manager showAd:self];
 }
 else{
-    self->blockLabel1.text=@"激励广告加载未完成";
+self->blockLabel1.text=@"激励广告加载未完成";
 }
 ```
 ### banner广告
@@ -345,8 +346,8 @@ else{
 ```
 MobileBannerManager *manager = [MobileBannerManager shareInstance];
 manager.bannerBlock = ^(int code, NSString * _Nonnull result) {
-    NSLog(@"%d,%@",code, result);
-    self->blockLabel2.text=result;
+NSLog(@"%d,%@",code, result);
+self->blockLabel2.text=result;
 };
 UILabel *label = [self.view viewWithTag:bannerAdViewtag];
 [manager loadBannerAD:self userID:TestMobileBannerUserID showView:label size:CGSizeMake(320, 50)];
@@ -355,9 +356,9 @@ UILabel *label = [self.view viewWithTag:bannerAdViewtag];
 ```
 MobileBannerManager *manager = [MobileBannerManager shareInstance];
 if (manager.isReadToPlay) {
-    [manager showAd];
+[manager showAd];
 }else{
-    self->blockLabel2.text=@"banner广告加载未完成";
+self->blockLabel2.text=@"banner广告加载未完成";
 }
 ```
 ### 原生(信息流)广告
@@ -367,21 +368,28 @@ if (manager.isReadToPlay) {
 ```
 MobileNativManager *manager = [MobileNativManager shareInstance];
 manager.nativeBlock = ^(int code, NSString * _Nonnull result) {
-    NSLog(@"%d,%@",code, result);
-    self->blockLabel3.text=result;
+NSLog(@"%d,%@",code, result);
+self->blockLabel3.text=result;
 };
 [manager loadNativAD:self userID:TestMobileNativeUserID size:CGSizeMake(320, 50) loadMax:2];
 manager.showAdBlock = ^(NSArray<UIView *> * _Nullable adModelArray) {
-    if (adModelArray) {
-        [self->nativView1 addSubview:adModelArray.firstObject];
-        //...
-        //...
-        //代码示例，循环和其他逻辑略
-        //XXmodel *model = [[XXmodel alloc]init];
-        //model.adView = adModelArray.firstObject;
-        //[self.dataSource insertObject:model atIndex:index];
-        //[self.tableView reloadData];
-    }
+if (adModelArray) {
+[self->nativView1 addSubview:adModelArray.firstObject];
+//...
+//...
+//代码示例，循环和其他逻辑略
+//XXmodel *model = [[XXmodel alloc]init];
+//model.adView = adModelArray.firstObject;
+//[self.dataSource insertObject:model atIndex:index];
+//[self.tableView reloadData];
+}
+//渲染成功时回调
+manager.adSizeBlock = ^(NSArray<MobileNativeModel *> * _Nullable adSizeArray) {
+for (NSInteger i=0; i<adSizeArray.count; i++) {
+MobileNativeModel *nativeModel = adSizeArray[i];
+NSLog(@"信息流广告高度为:%f",nativeModel.adSize.height);
+}
+};
 };
 ```
 
@@ -394,8 +402,8 @@ manager.showAdBlock = ^(NSArray<UIView *> * _Nullable adModelArray) {
 ```
 H5SlotManager *manager = [H5SlotManager shareInstance];
 manager.didRewardBlock = ^(int code, NSString * _Nonnull result) {
-    NSLog(@"%d,%@",code, result);
-    self->blockLabel1.text=result;
+NSLog(@"%d,%@",code, result);
+self->blockLabel1.text=result;
 };
 [manager loadRewardADWithPost:TestH5PostID horizontal:YES];
 ```
@@ -403,31 +411,31 @@ manager.didRewardBlock = ^(int code, NSString * _Nonnull result) {
 ```
 H5SlotManager *manager = [H5SlotManager shareInstance];
 manager.didRewardBlock = ^(int code, NSString * _Nonnull result) {
-    NSLog(@"%d,%@",code, result);
-    self->blockLabel1.text=result;
+NSLog(@"%d,%@",code, result);
+self->blockLabel1.text=result;
 };
 if (manager.isReadToPlay) {
-    [manager showAd:self];
+[manager showAd:self];
 }
 else{
-    self->blockLabel1.text=@"激励广告加载未完成";
+self->blockLabel1.text=@"激励广告加载未完成";
 }
 ```
 # 注意：若不进行提前初始化和预加载素材，则可合在一起使用
 
 ```
 [SdkManager initH5ID:TestH5AppID personalAD:YES Complete:^(BOOL success, NSString * _Nullable errorString) {
-    H5SlotManager *manager = [H5SlotManager shareInstance];
-    WeakObj(manager)
-    manager.didRewardBlock = ^(int code, NSString * _Nonnull result) {
-        NSLog(@"%d,%@",code, result);
-        self->blockLabel1.text=result;
-        StrongObj(manager)
-        if (code == slotLoadSuccessCode) {
-            [manager showAd:self];
-        }
-    };
-    [manager loadRewardADWithPost:TestH5PostID horizontal:YES];
-        
+H5SlotManager *manager = [H5SlotManager shareInstance];
+WeakObj(manager)
+manager.didRewardBlock = ^(int code, NSString * _Nonnull result) {
+NSLog(@"%d,%@",code, result);
+self->blockLabel1.text=result;
+StrongObj(manager)
+if (code == slotLoadSuccessCode) {
+[manager showAd:self];
+}
+};
+[manager loadRewardADWithPost:TestH5PostID horizontal:YES];
+
 }];
 ```

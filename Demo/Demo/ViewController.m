@@ -364,6 +364,12 @@
                 //[self.tableView reloadData];
             }
         };
+        manager.adSizeBlock = ^(NSArray<MobileNativeModel *> * _Nullable adSizeArray) {
+            for (NSInteger i=0; i<adSizeArray.count; i++) {
+                MobileNativeModel *nativeModel = adSizeArray[i];
+                NSLog(@"信息流广告高度为:%f",nativeModel.adSize.height);
+            }
+        };
     }else if (self.type == adType_h5){
         
     }

@@ -12,7 +12,6 @@
 #import "TableVC.h"
 
 @interface AppDelegate ()
-
 @end
 
 @implementation AppDelegate
@@ -56,6 +55,4 @@
         }];
     }
 }
-
-
 @end

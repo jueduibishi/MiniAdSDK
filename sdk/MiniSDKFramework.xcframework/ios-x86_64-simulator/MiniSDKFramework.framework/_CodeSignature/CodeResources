@@ -423,7 +423,7 @@
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeDirectory</key>
 		<data>
-		Yav8YH5azWeOjiY8GxM/jXahNLc=
+		S7gpR9BGUFBbdg7kcyXBinrom1c=
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -431,7 +431,7 @@
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		XiDecWt2MMBFhY0sjVGQsUaKi78=
+		V2rCuPo9V7/nL9aAdOUu1WOjjt0=
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -471,7 +471,11 @@
 		</data>
 		<key>Headers/MobileNativManager.h</key>
 		<data>
-		e+8I+iGA9A+shpiM5NZdzZdB3DY=
+		y6Dtn021GxONF+jYMiReJNhoE4s=
+		</data>
+		<key>Headers/MobileNativeModel.h</key>
+		<data>
+		RKrz2WfGPFErouxHme8IHl/TmHc=
 		</data>
 		<key>Headers/MobileSlotManager.h</key>
 		<data>
@@ -479,7 +483,7 @@
 		</data>
 		<key>Headers/SdkManager.h</key>
 		<data>
-		SYKS7ivps6JSrgzquupIct+5yjo=
+		EOihWZ2rAbJf86IA9Aky2+w70ew=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -1217,7 +1221,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MlALosCv6Wamin9VaAEav47er6KfsCn6s8UQnKBCzVY=
+			U6oj1fnJiHxSanNurPGvgQlCsiB9U+JzPDHKsYSvxU8=
 			</data>
 		</dict>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeRequirements</key>
@@ -1231,7 +1235,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GhFEXzeqek3plMQL1qp/j2y6FgiBgB3QWiWUS1vSzog=
+			er+lxb5gg60usHMbBv5up3NRGDHgrJwxPioINQEqhvQ=
 			</data>
 		</dict>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeResources</key>
@@ -1301,7 +1305,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6AAjwwkVSKKH5dD+8D6DfMeUefHz2qk8Ihg+louXbtE=
+			H1VUfjJeXT8R95mb4Np3qngiiJLDsgUbKpHom0e8H2s=
+			</data>
+		</dict>
+		<key>Headers/MobileNativeModel.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			eUAr3c1JaDqCM85WSlLBedkwTqgZynzYhW3RD3VMOQM=
 			</data>
 		</dict>
 		<key>Headers/MobileSlotManager.h</key>
@@ -1315,7 +1326,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0Lauf8unoMmOfly0zlfMo9G0VmZzGAaASOpDnbXLI4M=
+			WXFdNEUewb/wEAJzGoxnUPNOHEdyrYxCcaT0Swxmw4A=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
