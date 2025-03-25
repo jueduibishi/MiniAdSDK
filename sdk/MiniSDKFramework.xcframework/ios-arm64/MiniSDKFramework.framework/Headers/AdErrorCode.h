@@ -60,6 +60,8 @@ typedef NS_ENUM(int,NativErrorCode){
     nativLoadSuccessCode,//广告加载成功
     nativDidBecomeVisibleCode,//广告展示
     nativDidClickCode,//广告点击成功
+    nativRendSucCode,//渲染成功
+    nativRendFailCode//渲染失败
 };//原生(信息流)广告错误
 #pragma mark-小程序
 typedef NS_ENUM(NSInteger,clientType){

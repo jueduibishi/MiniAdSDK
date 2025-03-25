@@ -423,7 +423,7 @@
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeDirectory</key>
 		<data>
-		S7gpR9BGUFBbdg7kcyXBinrom1c=
+		q8QTfqIB72baYtWYBrjr0hvk70o=
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -431,7 +431,7 @@
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		V2rCuPo9V7/nL9aAdOUu1WOjjt0=
+		SyNZjPqmLFpnmWE7Y8X6UeFwUYk=
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -443,7 +443,7 @@
 		</data>
 		<key>Headers/AdErrorCode.h</key>
 		<data>
-		RGEdr1mfJX4/ipRChzr1chrhZmo=
+		lFmYqOKbajfAkGSSuU4wzB10aR0=
 		</data>
 		<key>Headers/H5SlotManager.h</key>
 		<data>
@@ -471,11 +471,11 @@
 		</data>
 		<key>Headers/MobileNativManager.h</key>
 		<data>
-		y6Dtn021GxONF+jYMiReJNhoE4s=
+		ISzGacYavJogzPwFzaBmPCMu5Tk=
 		</data>
 		<key>Headers/MobileNativeModel.h</key>
 		<data>
-		RKrz2WfGPFErouxHme8IHl/TmHc=
+		x/kHdR/dfrAzVPsz4kLzerl9Nbo=
 		</data>
 		<key>Headers/MobileSlotManager.h</key>
 		<data>
@@ -1221,7 +1221,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			U6oj1fnJiHxSanNurPGvgQlCsiB9U+JzPDHKsYSvxU8=
+			iPTZwh4KbUVWFEuBrOz44m2koa4gzl3ooLoL+/2+yEI=
 			</data>
 		</dict>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeRequirements</key>
@@ -1235,7 +1235,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			er+lxb5gg60usHMbBv5up3NRGDHgrJwxPioINQEqhvQ=
+			YHEtH3wY+8gc6Ymn1hHfbzR0z/SsBtYnU1nXUhe5W2o=
 			</data>
 		</dict>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeResources</key>
@@ -1256,7 +1256,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pC9pKqCsZkxODd8mG+TXMyzL65CTTHrftYiG2kDwDtk=
+			/UQDX9Q3FOVUEr2ffTH/I51iJJj91ogH6sNRaEjvwlU=
 			</data>
 		</dict>
 		<key>Headers/H5SlotManager.h</key>
@@ -1305,14 +1305,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			H1VUfjJeXT8R95mb4Np3qngiiJLDsgUbKpHom0e8H2s=
+			6R5b5tMzQg2wDP+UIU1qN7Mw54r1EKMCqsNwAaRgbow=
 			</data>
 		</dict>
 		<key>Headers/MobileNativeModel.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eUAr3c1JaDqCM85WSlLBedkwTqgZynzYhW3RD3VMOQM=
+			t097aTd/SqMtk1GFvd5kVopMrU3cRhst68EnJC+5YrA=
 			</data>
 		</dict>
 		<key>Headers/MobileSlotManager.h</key>

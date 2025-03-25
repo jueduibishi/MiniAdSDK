@@ -6,7 +6,7 @@
 | 版本历史 | 支持平台 |  功能 | 更新时间 | 
 |:--------:|:------------:|:------------:|:------------:|  
 | 待更 | 待更 | -- |-- |
-| 0.2.1 | 默认支持穿山甲:6.6.1.5，自行引入<br> 优量汇:`pod 'GDTMobSDK', '4.15.10.0'`<br> 百度:`pod 'BaiduMobAdSDK', '5.370.1'`<br>  快手:`pod 'KSAdSDK', '3.3.71.0'` | 优化获取信息流广告高度 |2025年3月24日 |
+| 0.2.2 | 默认支持穿山甲:6.6.1.5，自行引入<br> 优量汇:`pod 'GDTMobSDK', '4.15.10.0'`<br> 百度:`pod 'BaiduMobAdSDK', '5.370.1'`<br>  快手:`pod 'KSAdSDK', '3.3.71.0'` | 优化获取信息流广告高度 |2025年3月25日 |
 | 0.2.0 | 默认支持穿山甲:6.6.1.5，自行引入<br> 优量汇:`pod 'GDTMobSDK', '4.15.10.0'`<br> 百度:`pod 'BaiduMobAdSDK', '5.370.1'`<br>  快手:`pod 'KSAdSDK', '3.3.71.0'` | 支持数据统计 |2025年3月7日 |
 | 0.1.9 | 默认支持穿山甲:6.6.1.5，自行引入<br> 优量汇:`pod 'GDTMobSDK', '4.15.10.0'`<br> 百度:`pod 'BaiduMobAdSDK', '5.370.1'`<br>  快手:`pod 'KSAdSDK', '3.3.71.0'` | 支持手游和H5 |2025年2月28日 |
 | 0.1.7 | 默认支持穿山甲:6.4.1.0，自行引入<br> 优量汇:`pod 'GDTMobSDK', '4.15.0'`<br> 百度:`pod 'BaiduMobAdSDK', '5.370'`<br>  快手:`pod 'KSAdSDK', '3.3.67.0'` | 拆分支持的平台，按需引入 | 2024年11月18日 |  
@@ -372,24 +372,16 @@ NSLog(@"%d,%@",code, result);
 self->blockLabel3.text=result;
 };
 [manager loadNativAD:self userID:TestMobileNativeUserID size:CGSizeMake(320, 50) loadMax:2];
-manager.showAdBlock = ^(NSArray<UIView *> * _Nullable adModelArray) {
-if (adModelArray) {
-[self->nativView1 addSubview:adModelArray.firstObject];
+manager.showAdBlock = ^(NSArray<MobileNativeModel *> * _Nullable adNativeArray) {
+if (adNativeArray) {
+[self->nativView1 addSubview:adNativeArray.firstObject.adView];
+NSLog(@"%f,%f",adNativeArray.firstObject.adSize.width,adNativeArray.firstObject.adSize.height);
 //...
 //...
 //代码示例，循环和其他逻辑略
-//XXmodel *model = [[XXmodel alloc]init];
-//model.adView = adModelArray.firstObject;
-//[self.dataSource insertObject:model atIndex:index];
+//[self.dataSource insertObject:adNativeArray.firstObject atIndex:index];
 //[self.tableView reloadData];
 }
-//渲染成功时回调
-manager.adSizeBlock = ^(NSArray<MobileNativeModel *> * _Nullable adSizeArray) {
-for (NSInteger i=0; i<adSizeArray.count; i++) {
-MobileNativeModel *nativeModel = adSizeArray[i];
-NSLog(@"信息流广告高度为:%f",nativeModel.adSize.height);
-}
-};
 };
 ```
 
