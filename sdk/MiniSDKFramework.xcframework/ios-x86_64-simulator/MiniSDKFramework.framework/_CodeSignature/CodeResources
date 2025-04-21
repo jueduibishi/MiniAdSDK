@@ -417,13 +417,37 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>Frameworks/BUAdSDK.framework/Versions/A/BUAdSDK</key>
+		<data>
+		yNF4ksXHZOQbLUmGW9o8qJKbSi4=
+		</data>
+		<key>Frameworks/CSJMBaiduAdapter.framework/Versions/A/CSJMBaiduAdapter</key>
+		<data>
+		7IvBCV/Ewj0qFzUxVeTy72WYW+k=
+		</data>
+		<key>Frameworks/CSJMGdtAdapter.framework/Versions/A/CSJMGdtAdapter</key>
+		<data>
+		zqN7k14M26WtX4KL6Th4ql2RK5I=
+		</data>
+		<key>Frameworks/CSJMKsAdapter.framework/Versions/A/CSJMKsAdapter</key>
+		<data>
+		lTlq5HWEAzTjxMoQAvx7eZcpfxE=
+		</data>
+		<key>Frameworks/CSJMediation.framework/Versions/A/CSJMediation</key>
+		<data>
+		XqIRzLM7dZ1pxO7kfmhIolV08+w=
+		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/Info.plist</key>
 		<data>
-		xm5ZEqxS7aAEpi8h/pgWG4jF/uI=
+		HR2k5d4SR9vTTR4XiVo5z1U/Glc=
+		</data>
+		<key>Frameworks/Pods_MiniSDKFramework.framework/Pods_MiniSDKFramework</key>
+		<data>
+		8h20xvDHJ6ZnBuijEutaAH4acRA=
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeDirectory</key>
 		<data>
-		q8QTfqIB72baYtWYBrjr0hvk70o=
+		ny5ZVvPjoxllhFOlOHIE/9VEABU=
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -431,11 +455,11 @@
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		SyNZjPqmLFpnmWE7Y8X6UeFwUYk=
+		2UJAcFopoj0NJAxfnglvEhMyEnk=
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeResources</key>
 		<data>
-		Ws5NOOsCygGtzSmaK9vCsogkrUw=
+		CwRYEXs3gWKa+29B0TxRpexe6CI=
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeSignature</key>
 		<data>
@@ -487,7 +511,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		2ZcG6dXV+nsubibS3jeo4JM09Vk=
+		+ZxvTkUF4BgGTvYc5eegUdpX4HY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1185,25 +1209,85 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>Frameworks/BUAdSDK.framework/BUAdSDK</key>
+		<dict>
+			<key>symlink</key>
+			<string>Versions/Current/BUAdSDK</string>
+		</dict>
+		<key>Frameworks/BUAdSDK.framework/Versions/A/BUAdSDK</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			a138+3FNlXoedUdDM0zAO76X+eKNOUuJfOA2F1//CxA=
+			</data>
+		</dict>
 		<key>Frameworks/BUAdSDK.framework/Versions/Current</key>
 		<dict>
 			<key>symlink</key>
 			<string>A</string>
+		</dict>
+		<key>Frameworks/CSJMBaiduAdapter.framework/CSJMBaiduAdapter</key>
+		<dict>
+			<key>symlink</key>
+			<string>Versions/Current/CSJMBaiduAdapter</string>
+		</dict>
+		<key>Frameworks/CSJMBaiduAdapter.framework/Versions/A/CSJMBaiduAdapter</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			zb0fsNMVwe0quHxgD54lPFxr5cv41g4ZdTe2sD6a1tY=
+			</data>
 		</dict>
 		<key>Frameworks/CSJMBaiduAdapter.framework/Versions/Current</key>
 		<dict>
 			<key>symlink</key>
 			<string>A</string>
 		</dict>
+		<key>Frameworks/CSJMGdtAdapter.framework/CSJMGdtAdapter</key>
+		<dict>
+			<key>symlink</key>
+			<string>Versions/Current/CSJMGdtAdapter</string>
+		</dict>
+		<key>Frameworks/CSJMGdtAdapter.framework/Versions/A/CSJMGdtAdapter</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			uVt3STDgpiwkewCJsnrE2k8q440DKDntN1t1da4A9Xw=
+			</data>
+		</dict>
 		<key>Frameworks/CSJMGdtAdapter.framework/Versions/Current</key>
 		<dict>
 			<key>symlink</key>
 			<string>A</string>
 		</dict>
+		<key>Frameworks/CSJMKsAdapter.framework/CSJMKsAdapter</key>
+		<dict>
+			<key>symlink</key>
+			<string>Versions/Current/CSJMKsAdapter</string>
+		</dict>
+		<key>Frameworks/CSJMKsAdapter.framework/Versions/A/CSJMKsAdapter</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			apWD/TNWRtu1+W4szueGDQvlkDAQV4G0G15+17aLkjE=
+			</data>
+		</dict>
 		<key>Frameworks/CSJMKsAdapter.framework/Versions/Current</key>
 		<dict>
 			<key>symlink</key>
 			<string>A</string>
+		</dict>
+		<key>Frameworks/CSJMediation.framework/CSJMediation</key>
+		<dict>
+			<key>symlink</key>
+			<string>Versions/Current/CSJMediation</string>
+		</dict>
+		<key>Frameworks/CSJMediation.framework/Versions/A/CSJMediation</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			GDVo/JKbDEh4mVK+IOn/csUVyFmP1omA07CRGSawsdI=
+			</data>
 		</dict>
 		<key>Frameworks/CSJMediation.framework/Versions/Current</key>
 		<dict>
@@ -1214,14 +1298,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QehoZkRstCqqknU+Lt6oCAmWBPfbbgeNjdLWlyFyv2Y=
+			fOe4oQ9ZytQeNKa7vPEipEd1F+6pkT8+TKgL/FaZ/VM=
+			</data>
+		</dict>
+		<key>Frameworks/Pods_MiniSDKFramework.framework/Pods_MiniSDKFramework</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			JJnGz++0soKprqqox88aJH9r7utkI4V4wePdh869q4M=
 			</data>
 		</dict>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iPTZwh4KbUVWFEuBrOz44m2koa4gzl3ooLoL+/2+yEI=
+			KyL//ICSj5c/2KPRsWUEd3owYmURjMH/ha6V1qEL4nE=
 			</data>
 		</dict>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeRequirements</key>
@@ -1235,14 +1326,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YHEtH3wY+8gc6Ymn1hHfbzR0z/SsBtYnU1nXUhe5W2o=
+			Qr8B/GW44eV4ik6qSAus0Fx+rAUCkhMKOq1OYOQ5axA=
 			</data>
 		</dict>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xsE7ofT1lfYfBwRuR/zFD9I6EvS4Q7CuD15gzoheYyg=
+			paNXEKAWz3bKDFuV7OnKlZfSnOhjf2IadHnJB9A0odg=
 			</data>
 		</dict>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeSignature</key>
