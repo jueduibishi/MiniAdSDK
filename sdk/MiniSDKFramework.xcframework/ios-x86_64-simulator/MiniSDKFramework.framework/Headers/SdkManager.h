@@ -14,6 +14,8 @@
 #import <MiniSDKFramework/MobileSlotManager.h>
 #import <MiniSDKFramework/MobileBannerManager.h>
 #import <MiniSDKFramework/MobileNativManager.h>
+#import <MiniSDKFramework/MobileNativeModel.h>
+
 typedef void(^resultHandel)(BOOL success,NSString * _Nullable errorString);
 
 NS_ASSUME_NONNULL_BEGIN

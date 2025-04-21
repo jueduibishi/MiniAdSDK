@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "MiniAdSDK"
-  spec.version      = "0.2.0"
+  spec.version      = "0.2.2"
   spec.summary      = "广告集成."
 
   # This description is used to generate tags and improve search results.
@@ -63,9 +63,6 @@ Pod::Spec.new do |spec|
   #  If this Pod runs only on iOS or OS X, then specify the platform and
   #  the deployment target. You can optionally include the target after the platform.
   #
-
-    spec.platform     = :ios
-    spec.platform     = :ios, "11.0"
 
   #  When using multiple platforms
    spec.ios.deployment_target = "11.0"

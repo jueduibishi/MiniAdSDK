@@ -8,13 +8,14 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <MiniSDKFramework/AdErrorCode.h>
+#import "MobileNativeModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /// 手游原生(信息流)广告
 @interface MobileNativManager : NSObject
 @property(nonatomic,copy)adHandel nativeBlock;
-@property(nonatomic,copy)void (^showAdBlock)(NSArray <UIView*>* _Nullable adViewArray);//广告加载完成可展示
+@property(nonatomic,copy)void (^showAdBlock)(NSArray <MobileNativeModel*>* _Nullable adNativeArray);//广告加载并渲染完成
 +(instancetype)shareInstance;
 
 

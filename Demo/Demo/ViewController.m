@@ -352,15 +352,14 @@
             self->blockLabel3.text=result;
         };
         [manager loadNativAD:self userID:[TestID shareInstance].mobileNativeUserID size:CGSizeMake(320, 50) loadMax:2];
-        manager.showAdBlock = ^(NSArray<UIView *> * _Nullable adModelArray) {
-            if (adModelArray) {
-                [self->nativView1 addSubview:adModelArray.firstObject];
+        manager.showAdBlock = ^(NSArray<MobileNativeModel *> * _Nullable adNativeArray) {
+            if (adNativeArray) {
+                [self->nativView1 addSubview:adNativeArray.firstObject.adView];
+                NSLog(@"%f,%f",adNativeArray.firstObject.adSize.width,adNativeArray.firstObject.adSize.height);
                 //...
                 //...
                 //代码示例，循环和其他逻辑略
-                //XXmodel *model = [[XXmodel alloc]init];
-                //model.adView = adModelArray.firstObject;
-                //[self.dataSource insertObject:model atIndex:index];
+                //[self.dataSource insertObject:adNativeArray.firstObject atIndex:index];
                 //[self.tableView reloadData];
             }
         };
