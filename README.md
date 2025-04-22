@@ -7,11 +7,7 @@
 |:--------:|:------------:|:------------:|:------------:|  
 | 待更 | 待更 | -- |-- |
 | 0.2.3 | 默认支持穿山甲:6.6.1.5，自行引入<br> 优量汇:`pod 'GDTMobSDK', '4.15.10.0'`<br> 百度:`pod 'BaiduMobAdSDK', '5.370.1'`<br>  快手:`pod 'KSAdSDK', '3.3.71.0'` | 优化初始化回调 |2025年4月21日 |
-| 0.2.2 | 默认支持穿山甲:6.6.1.5，自行引入<br> 优量汇:`pod 'GDTMobSDK', '4.15.10.0'`<br> 百度:`pod 'BaiduMobAdSDK', '5.370.1'`<br>  快手:`pod 'KSAdSDK', '3.3.71.0'` | 优化获取信息流广告高度 |2025年3月25日 |
-| 0.2.0 | 默认支持穿山甲:6.6.1.5，自行引入<br> 优量汇:`pod 'GDTMobSDK', '4.15.10.0'`<br> 百度:`pod 'BaiduMobAdSDK', '5.370.1'`<br>  快手:`pod 'KSAdSDK', '3.3.71.0'` | 支持数据统计 |2025年3月7日 |
-| 0.1.9 | 默认支持穿山甲:6.6.1.5，自行引入<br> 优量汇:`pod 'GDTMobSDK', '4.15.10.0'`<br> 百度:`pod 'BaiduMobAdSDK', '5.370.1'`<br>  快手:`pod 'KSAdSDK', '3.3.71.0'` | 支持手游和H5 |2025年2月28日 |
-| 0.1.7 | 默认支持穿山甲:6.4.1.0，自行引入<br> 优量汇:`pod 'GDTMobSDK', '4.15.0'`<br> 百度:`pod 'BaiduMobAdSDK', '5.370'`<br>  快手:`pod 'KSAdSDK', '3.3.67.0'` | 拆分支持的平台，按需引入 | 2024年11月18日 |  
-| 0.1.6 | 默认支持穿山甲:6.4.1.0，<br>优量汇:'4.15.0'<br> 百度:'5.370'<br>  快手:'3.3.67.0' | 小程序广告sdk，支持百度、快手和优量汇 |2024年9月12日 | 
+
 # 集成错误若干解决方案
 ## 报错：真机运行报Unable to install 
 
@@ -414,21 +410,11 @@ else{
 self->blockLabel1.text=@"激励广告加载未完成";
 }
 ```
-# 注意：若不进行提前初始化和预加载素材，则可合在一起使用
+# 更新日历
+| 版本历史 | 支持平台 |  功能 | 更新时间 | 
 
-```
-[SdkManager initH5ID:TestH5AppID personalAD:YES Complete:^(BOOL success, NSString * _Nullable errorString) {
-H5SlotManager *manager = [H5SlotManager shareInstance];
-WeakObj(manager)
-manager.didRewardBlock = ^(int code, NSString * _Nonnull result) {
-NSLog(@"%d,%@",code, result);
-self->blockLabel1.text=result;
-StrongObj(manager)
-if (code == slotLoadSuccessCode) {
-[manager showAd:self];
-}
-};
-[manager loadRewardADWithPost:TestH5PostID horizontal:YES];
-
-}];
-```
+| 0.2.2 | 默认支持穿山甲:6.6.1.5，自行引入<br> 优量汇:`pod 'GDTMobSDK', '4.15.10.0'`<br> 百度:`pod 'BaiduMobAdSDK', '5.370.1'`<br>  快手:`pod 'KSAdSDK', '3.3.71.0'` | 优化获取信息流广告高度 |2025年3月25日 |
+| 0.2.0 | 默认支持穿山甲:6.6.1.5，自行引入<br> 优量汇:`pod 'GDTMobSDK', '4.15.10.0'`<br> 百度:`pod 'BaiduMobAdSDK', '5.370.1'`<br>  快手:`pod 'KSAdSDK', '3.3.71.0'` | 支持数据统计 |2025年3月7日 |
+| 0.1.9 | 默认支持穿山甲:6.6.1.5，自行引入<br> 优量汇:`pod 'GDTMobSDK', '4.15.10.0'`<br> 百度:`pod 'BaiduMobAdSDK', '5.370.1'`<br>  快手:`pod 'KSAdSDK', '3.3.71.0'` | 支持手游和H5 |2025年2月28日 |
+| 0.1.7 | 默认支持穿山甲:6.4.1.0，自行引入<br> 优量汇:`pod 'GDTMobSDK', '4.15.0'`<br> 百度:`pod 'BaiduMobAdSDK', '5.370'`<br>  快手:`pod 'KSAdSDK', '3.3.67.0'` | 拆分支持的平台，按需引入 | 2024年11月18日 |  
+| 0.1.6 | 默认支持穿山甲:6.4.1.0，<br>优量汇:'4.15.0'<br> 百度:'5.370'<br>  快手:'3.3.67.0' | 小程序广告sdk，支持百度、快手和优量汇 |2024年9月12日 | 
