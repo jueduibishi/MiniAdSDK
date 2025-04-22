@@ -16,8 +16,6 @@
 		0B5C036B2C85B76700C30092 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5C036A2C85B76700C30092 /* main.m */; };
 		0BD0C8D82D6EE5B10003E85F /* TestID.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0C8D62D6EE5B10003E85F /* TestID.m */; };
 		0BD0C8D92D6EE5B10003E85F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0BD0C8D72D6EE5B10003E85F /* Settings.bundle */; };
-		0BD0C8DB2D6EE5CA0003E85F /* MiniSDKFramework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD0C8DA2D6EE5CA0003E85F /* MiniSDKFramework.xcframework */; };
-		0BD0C8DD2D6EF6500003E85F /* MiniSDKFramework.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD0C8DA2D6EE5CA0003E85F /* MiniSDKFramework.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ED85E77203CF796E07401DF5 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D34385F5DB5815C9E0696299 /* Pods_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +26,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0BD0C8DD2D6EF6500003E85F /* MiniSDKFramework.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,7 +48,6 @@
 		0BD0C8D52D6EE5B10003E85F /* TestID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestID.h; sourceTree = "<group>"; };
 		0BD0C8D62D6EE5B10003E85F /* TestID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestID.m; sourceTree = "<group>"; };
 		0BD0C8D72D6EE5B10003E85F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		0BD0C8DA2D6EE5CA0003E85F /* MiniSDKFramework.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MiniSDKFramework.xcframework; path = ../../sdk/MiniSDKFramework.xcframework; sourceTree = "<group>"; };
 		6619A636FF7140D5E78AE81A /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		C047BAE77EF04A75EC6E0C6D /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		D34385F5DB5815C9E0696299 /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,7 +58,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BD0C8DB2D6EE5CA0003E85F /* MiniSDKFramework.xcframework in Frameworks */,
 				ED85E77203CF796E07401DF5 /* Pods_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,7 +104,6 @@
 				0BD0C8D72D6EE5B10003E85F /* Settings.bundle */,
 				0BD0C8D52D6EE5B10003E85F /* TestID.h */,
 				0BD0C8D62D6EE5B10003E85F /* TestID.m */,
-				0BD0C8DA2D6EE5CA0003E85F /* MiniSDKFramework.xcframework */,
 				0B5C03612C85B76500C30092 /* Main.storyboard */,
 				0B5C03642C85B76700C30092 /* Assets.xcassets */,
 				0B5C03662C85B76700C30092 /* LaunchScreen.storyboard */,
@@ -139,6 +133,7 @@
 				0B5C03522C85B76500C30092 /* Frameworks */,
 				0B5C03532C85B76500C30092 /* Resources */,
 				0B340C1E2D6C6F0C00B84370 /* Embed Frameworks */,
+				AAF246FDADCC99ABBF018AEF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -216,6 +211,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAF246FDADCC99ABBF018AEF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
