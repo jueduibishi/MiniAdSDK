@@ -1,16 +1,3 @@
-PODS:
-  - MiniAdSDK (0.2.3)
-
-DEPENDENCIES:
-  - MiniAdSDK
-
-SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - MiniAdSDK
-
-SPEC CHECKSUMS:
-  MiniAdSDK: 03f337283beee5d7b11a3ee90dbc7fcf9565917f
-
-PODFILE CHECKSUM: 53ddee3d03a583ca6c543e85cfa663ff86da8dc1
+PODFILE CHECKSUM: 528300bd540f54edc9450e4bc4ef69110bdce052
 
 COCOAPODS: 1.16.2

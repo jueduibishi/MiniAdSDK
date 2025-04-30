@@ -6,8 +6,8 @@ target 'Demo' do
   use_frameworks!
 
   # Pods for Demo
-pod 'MiniAdSDK'
-#pod 'GDTMobSDK', '4.15.10'#优量汇
-#pod 'BaiduMobAdSDK', '5.370'
-#pod 'KSAdSDK', '3.3.71'
+#pod 'MiniAdSDK'
+#pod 'GDTMobSDK', '4.15.30'
+#pod 'BaiduMobAdSDK', '5.38'
+#pod 'KSAdSDK', '3.3.75'
 end
