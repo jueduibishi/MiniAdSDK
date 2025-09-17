@@ -7,7 +7,8 @@ target 'Demo' do
 
   # Pods for Demo
 #pod 'MiniAdSDK'
-#pod 'GDTMobSDK', '4.15.30'
-#pod 'BaiduMobAdSDK', '5.38'
-#pod 'KSAdSDK', '3.3.75'
+# 引入使用到的ADN SDK，开发者请按需引入
+# pod 'GDTMobSDK', '4.15.40'
+# pod 'BaiduMobAdSDK', '5.39'
+# pod 'KSAdSDK', '3.3.76'
 end

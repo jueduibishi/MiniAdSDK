@@ -6,7 +6,7 @@
 	<dict>
 		<key>CSJAdSDK.bundle/Info.plist</key>
 		<data>
-		HT7st4GiUb9onRwD4XpHfpwRs7E=
+		MDH0zCfMKDz2kChvJZsY9MCZ+L4=
 		</data>
 		<key>CSJAdSDK.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>CSJAdSDK.bundle/bu_dynamic_default.json</key>
 		<data>
-		DAeP39VTu0dkkHCXvZ0qDi9/ePs=
+		ma9QiG/dWeVDJZkcTGq4zWAU0yI=
 		</data>
 		<key>CSJAdSDK.bundle/bu_dynamic_user.png</key>
 		<data>
@@ -317,9 +317,13 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>CSJAdSDK.bundle/heart_beat.json</key>
+		<data>
+		BYy0J7+EmI+Ws9wp1Q8LQ2XUGOY=
+		</data>
 		<key>CSJAdSDK.bundle/image_assets.json</key>
 		<data>
-		1NOILQatbZ0f57NnC3BSokUvrJ4=
+		/5uVpY+9lZYxdf8asLfRkwicqcM=
 		</data>
 		<key>CSJAdSDK.bundle/ja.lproj/BULanguage.strings</key>
 		<dict>
@@ -385,7 +389,7 @@
 		</data>
 		<key>CSJAdSDK.bundle/version.txt</key>
 		<data>
-		qDPaONT3ZydR9zKwgFjdXW6QbSg=
+		5zv6toh3sTSV6mwN1eKvycT7Qlw=
 		</data>
 		<key>CSJAdSDK.bundle/zh-Hans.lproj/BULanguage.strings</key>
 		<dict>
@@ -407,35 +411,35 @@
 		</dict>
 		<key>Frameworks/BUAdSDK.framework/BUAdSDK</key>
 		<data>
-		A6KzzcdQm/nNc7GPkPKbch7bbNg=
+		bWHHJ8W8PX1vltPeGvBpLDSf0sQ=
 		</data>
-		<key>Frameworks/CSJMBaiduAdapter.framework/Versions/A/CSJMBaiduAdapter</key>
+		<key>Frameworks/CSJMBaiduAdapter.framework/CSJMBaiduAdapter</key>
 		<data>
-		UCBUSjIL7NJBsvoGtwOvhsObWU8=
+		L5louuXkb6P86aywBIsYA2GFyhY=
 		</data>
-		<key>Frameworks/CSJMGdtAdapter.framework/Versions/A/CSJMGdtAdapter</key>
+		<key>Frameworks/CSJMGdtAdapter.framework/CSJMGdtAdapter</key>
 		<data>
-		f3QER38kkyvDRlUnplVGi9y0eDI=
+		omVVEAFi7PsV/tvMuQUHA8QeQbI=
 		</data>
 		<key>Frameworks/CSJMKsAdapter.framework/CSJMKsAdapter</key>
 		<data>
-		qkfe6P6Njz7EFlCfUdDfaIKdkCA=
+		hYlbt1WYh6TuBqSilxBp4fgXnrE=
 		</data>
 		<key>Frameworks/CSJMediation.framework/CSJMediation</key>
 		<data>
-		Z7/EckV9eZ8ILJAkVTppv5d64vg=
+		nbOnyuJHqxG4oRhYRItE9ggwMYE=
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/Info.plist</key>
 		<data>
-		Yn5p1bR86uIKoll3oCOFQBfACgc=
+		VgWCteixwFbMbKH06oQemDy1bc0=
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/Pods_MiniSDKFramework</key>
 		<data>
-		I3ZIqt6uZEUtkr98rsbywXXEgKM=
+		yZ4YU7EcWfTbET8YzhPNV7FVHns=
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeDirectory</key>
 		<data>
-		7QaWsxMnOuF/IiesQTZRal9SbKQ=
+		poyVOFTSJ5lsOZ+OUywj48eHyp0=
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -443,11 +447,11 @@
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		WmVJr0UXE2Wlljrc2bhwJ5vL+Ps=
+		AMEEuo3EiKTqmVf2jFMHFPQPJ2Y=
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeResources</key>
 		<data>
-		4bmCAmtpo7u2aiHvD5OMGgCgVNE=
+		1xomwitkzjAwYNkOPjABUBF9NuI=
 		</data>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeSignature</key>
 		<data>
@@ -499,7 +503,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		E09Sb4YGL2DQytipJjhYtnRBRP0=
+		pXohS8fG9D7GcmuyCHCSp5pkTaE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -512,7 +516,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			r4QDUmitwYsPbmnsEVV7P2OZKv+sBTHKaITDIFTLxkg=
+			H/ZpW4hYwZe4KJzzgG9iOMMIelmWEzrjNVSk93mCaos=
 			</data>
 		</dict>
 		<key>CSJAdSDK.bundle/PrivacyInfo.xcprivacy</key>
@@ -645,7 +649,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			mfk5o3jiQhVzaRiwpLEYGUOTuXqnrcu2Dfxdo+GotJ4=
+			j4tqAwu+h6IiJE48EXwjPvfWNOFP5NkHmYDchlQJ7gs=
 			</data>
 		</dict>
 		<key>CSJAdSDK.bundle/bu_dynamic_user.png</key>
@@ -1049,11 +1053,18 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>CSJAdSDK.bundle/heart_beat.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			lG0WlJ0MNn9g6gLsFd1ed8gzepkQn5iPzzAuULTcOKA=
+			</data>
+		</dict>
 		<key>CSJAdSDK.bundle/image_assets.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QEdDslvZbP4I5lHP1NIBR51MtM2enwshApMXUtv8eJs=
+			fEFQMUuHScRxgdE9MaLc2W2aqqdyFA1fWRuiSSsotG4=
 			</data>
 		</dict>
 		<key>CSJAdSDK.bundle/ja.lproj/BULanguage.strings</key>
@@ -1155,7 +1166,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FVIHpvALUCb+mzv6QuEmVlga8m1i5xsRE8P5iYn1mZQ=
+			ZQLx+EzeQNDN/0VlBnParrihr+OpBhR/tqfBqR7MOPg=
 			</data>
 		</dict>
 		<key>CSJAdSDK.bundle/zh-Hans.lproj/BULanguage.strings</key>
@@ -1180,76 +1191,56 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9C+Zhzf5tnMPDXle5FyZ8QjHAyVo8xqeTi1/DzPe18Q=
+			3a9/hu1UEihtPMVyzB7pa2Y13Oyt4Cq1NYK37k1XuFM=
 			</data>
 		</dict>
 		<key>Frameworks/CSJMBaiduAdapter.framework/CSJMBaiduAdapter</key>
 		<dict>
-			<key>symlink</key>
-			<string>Versions/Current/CSJMBaiduAdapter</string>
-		</dict>
-		<key>Frameworks/CSJMBaiduAdapter.framework/Versions/A/CSJMBaiduAdapter</key>
-		<dict>
 			<key>hash2</key>
 			<data>
-			f9h07Fq9AI16AKUHWqzr5kdIEUMenFG9tyZVx3gFt64=
+			nD9zDLUivthYvmSdFHIfRGhDOySsuWcpd5EtT8/t2i0=
 			</data>
-		</dict>
-		<key>Frameworks/CSJMBaiduAdapter.framework/Versions/Current</key>
-		<dict>
-			<key>symlink</key>
-			<string>A</string>
 		</dict>
 		<key>Frameworks/CSJMGdtAdapter.framework/CSJMGdtAdapter</key>
 		<dict>
-			<key>symlink</key>
-			<string>Versions/Current/CSJMGdtAdapter</string>
-		</dict>
-		<key>Frameworks/CSJMGdtAdapter.framework/Versions/A/CSJMGdtAdapter</key>
-		<dict>
 			<key>hash2</key>
 			<data>
-			tR5r7epiwRZO6iK+eIo9GboCs5Imzdw/YeROIdHKgzk=
+			+/Pe3g0diSN3wpSvqLr7aGyUfr7nbPwethnMB2pM6M4=
 			</data>
-		</dict>
-		<key>Frameworks/CSJMGdtAdapter.framework/Versions/Current</key>
-		<dict>
-			<key>symlink</key>
-			<string>A</string>
 		</dict>
 		<key>Frameworks/CSJMKsAdapter.framework/CSJMKsAdapter</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JBMakN1r5yTvPf0fKuCQiGXBwxWL+ejXoSrsliBikGU=
+			nLbRSdkpidoDUPHwgvjoKhd2zwsZ0TZ7C/0jB6cNIH8=
 			</data>
 		</dict>
 		<key>Frameworks/CSJMediation.framework/CSJMediation</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jv3uM68Qjh7k4QZEWLHBGrqkw01sFI0uknFMC+JXU/4=
+			q2B6J057q59XQHLTHr7N9I1nMvDPomcRwo7tqSiYH1k=
 			</data>
 		</dict>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+9VLDxEsHzmYQJBc+2j4gIlDJsIvnQoW7no5iWfeaqs=
+			DS3LBxWu442cgB4wNeGc7Cej9GYvAauwA8VryeOdh/A=
 			</data>
 		</dict>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/Pods_MiniSDKFramework</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LtobGmXwvg1ZFfOVPQDJA9R6JEmU6S3Ek7aoPd5Q1qA=
+			b6gB1pXtWFrk+tbu+GLAnaVEQDCqmTVVQIoi3vOMXcY=
 			</data>
 		</dict>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Q4XcPQHYKZSFfLt4dBrDvIY1Fj/UmNg0IQkhZoS54UE=
+			+mQiOSBdMg8jn5CJl5qJx7MGvzPqkc8jhZMVt9DoEtI=
 			</data>
 		</dict>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeRequirements</key>
@@ -1263,14 +1254,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vD9k1tghruhZ1Arh+daUHygKXTUNLdr1GREPDKCGf0E=
+			9nBDtw1Rt3jxDLdYMQxPAo+8qDoIHnsiApo6bLhUe0w=
 			</data>
 		</dict>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uuSiem5T5cta3SgnTH6Bosp1o1qgKNavIMuuBjDAaeU=
+			qv1b1kgJw2o5v3nKU2dIjmWAJSe7hwbF4wvT3Bz9LoQ=
 			</data>
 		</dict>
 		<key>Frameworks/Pods_MiniSDKFramework.framework/_CodeSignature/CodeSignature</key>
