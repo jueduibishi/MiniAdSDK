@@ -23,15 +23,15 @@ pod 'MiniAdSDK'
 ## 以下为支持平台可选配置
 若需要支持优量汇，请按以下代码引入：
 ```
-pod 'GDTMobSDK', '4.15.30'
+pod 'GDTMobSDK', '4.15.40'
 ```
 若需要支持百度，请按以下代码引入：
 ```
-pod 'BaiduMobAdSDK', '5.38'
+pod 'BaiduMobAdSDK', '5.39'
 ```
 若需要支持快手，请按以下代码引入：
 ```
-pod 'KSAdSDK', '3.3.75'
+pod 'KSAdSDK', '3.3.76'
 ```
 # 配置
 
