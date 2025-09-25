@@ -102,7 +102,7 @@ pod 'KSAdSDK', '4.6.30.1'
 ## 2、模拟器支持
 
 0.2.5之后的版本不再支持模拟器
-```
+
 
 ## 3、其他配置
 Targets-build settings - user script sandboxing 设置为NO
