@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "MiniAdSDK"
-  spec.version      = "0.2.5"
+  spec.version      = "0.2.6"
   spec.summary      = "广告集成."
 
   # This description is used to generate tags and improve search results.
@@ -137,6 +137,6 @@ Pod::Spec.new do |spec|
   # spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # spec.dependency "KSAdSDK", "3.3.66.3"
+  spec.dependency "BUTTSDKFramework", "~> 1.46.2.7-premium"
 
 end
