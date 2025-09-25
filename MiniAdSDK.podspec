@@ -65,7 +65,7 @@ Pod::Spec.new do |spec|
   #
 
   #  When using multiple platforms
-   spec.ios.deployment_target = "11.0"
+   spec.ios.deployment_target = "12.0"
   # spec.osx.deployment_target = "10.7"
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"
@@ -90,7 +90,7 @@ Pod::Spec.new do |spec|
   #
 
   #spec.source_files  = "Classes/**/*"
-  spec.vendored_frameworks = "sdk/MiniSDKFramework.xcframework"
+  spec.vendored_frameworks = "sdk/MiniSDKFramework.framework"
   #spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
@@ -135,6 +135,6 @@ Pod::Spec.new do |spec|
   # spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  spec.dependency "BUTTSDKFramework"
+  spec.dependency 'BUTTSDKFramework', '~> 1.46.2.7-premium'
 
 end
