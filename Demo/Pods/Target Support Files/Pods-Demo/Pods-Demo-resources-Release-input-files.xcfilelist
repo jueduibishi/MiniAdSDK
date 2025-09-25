@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-resources.sh
-${PODS_ROOT}/BaiduMobAdSDK/baidumobadsdk.bundle
+${PODS_ROOT}/BUTTSDKFramework/TTSDKFramework/TTSDKLiveBase/Resources/VeLive.bundle
+${PODS_ROOT}/BUTTSDKFramework/TTSDKFramework/TTSDKPlayerCoreLiveLite/Resources/ttplayer.metallib

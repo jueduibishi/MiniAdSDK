@@ -1,3 +1,55 @@
-PODFILE CHECKSUM: 528300bd540f54edc9450e4bc4ef69110bdce052
+PODS:
+  - BUTTSDKFramework (1.46.2.7-premium):
+    - BUTTSDKFramework/LivePull-Lite (= 1.46.2.7-premium)
+  - BUTTSDKFramework/Core (1.46.2.7-premium)
+  - BUTTSDKFramework/LiveBase (1.46.2.7-premium):
+    - BUTTSDKFramework/Core
+    - BUTTSDKFramework/Reachability
+  - BUTTSDKFramework/LivePlayer/Base (1.46.2.7-premium):
+    - BUTTSDKFramework/Core
+    - BUTTSDKFramework/LiveBase
+    - BUTTSDKFramework/Reachability
+  - BUTTSDKFramework/LivePlayer/Lite (1.46.2.7-premium):
+    - BUTTSDKFramework/LivePlayer/Base
+    - BUTTSDKFramework/PlayerCore/LiveLite
+  - BUTTSDKFramework/LivePull-Lite (1.46.2.7-premium):
+    - BUTTSDKFramework/LivePlayer/Lite
+    - BUTTSDKFramework/Strategy/Lite
+  - BUTTSDKFramework/PlayerCore/Base (1.46.2.7-premium):
+    - BUTTSDKFramework/Core
+    - BUTTSDKFramework/Tools
+  - BUTTSDKFramework/PlayerCore/LiveLite (1.46.2.7-premium):
+    - BUTTSDKFramework/PlayerCore/Base
+    - BUTTSDKFramework/TTFFmpeg/LiveLite
+  - BUTTSDKFramework/Reachability (1.46.2.7-premium)
+  - BUTTSDKFramework/SSL (1.46.2.7-premium)
+  - BUTTSDKFramework/Strategy/Core (1.46.2.7-premium):
+    - BUTTSDKFramework/LiveBase
+    - BUTTSDKFramework/Reachability
+  - BUTTSDKFramework/Strategy/Lite (1.46.2.7-premium):
+    - BUTTSDKFramework/LivePlayer/Lite
+    - BUTTSDKFramework/Strategy/Core
+  - BUTTSDKFramework/Tools (1.46.2.7-premium):
+    - BUTTSDKFramework/SSL
+  - BUTTSDKFramework/TTFFmpeg/Base (1.46.2.7-premium):
+    - BUTTSDKFramework/Tools
+  - BUTTSDKFramework/TTFFmpeg/LiveLite (1.46.2.7-premium):
+    - BUTTSDKFramework/TTFFmpeg/Base
+  - MiniAdSDK (0.2.6)
+
+DEPENDENCIES:
+  - BUTTSDKFramework (~> 1.46.2.7-premium)
+  - MiniAdSDK
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - BUTTSDKFramework
+    - MiniAdSDK
+
+SPEC CHECKSUMS:
+  BUTTSDKFramework: b5d45b40003335843f05088c2373cef0b5638a9e
+  MiniAdSDK: 2c44eb78837130c075ad78c9dce5eefa9e1e7352
+
+PODFILE CHECKSUM: 12917d19518702ece22e56dea943d1ef73fca4e0
 
 COCOAPODS: 1.16.2

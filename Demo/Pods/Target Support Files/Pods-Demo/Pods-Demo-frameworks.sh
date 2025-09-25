@@ -176,14 +176,32 @@ code_sign_if_enabled() {
 }
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/GDTMobSDK/GDTMobSDK.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/GDTMobSDK/Tquic.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/KSAdSDK/KSAdSDK.framework"
+  install_framework "${PODS_ROOT}/MiniAdSDK/sdk/MiniSDKFramework.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/BUTTSDKFramework/Core/TTSDKCore.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/BUTTSDKFramework/LiveBase/TTSDKLiveBase.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/BUTTSDKFramework/LivePlayer/Lite/TTSDKLivePlayerLite.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/BUTTSDKFramework/PlayerCore/LiveLite/TTSDKPlayerCoreLiveLite.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/BUTTSDKFramework/Reachability/TTSDKReachability.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/BUTTSDKFramework/SSL/ttboringssl.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/BUTTSDKFramework/SSL/ttcrypto.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/BUTTSDKFramework/Strategy/Lite/TTSDKStrategyLite.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/BUTTSDKFramework/TTFFmpeg/LiveLite/TTFFmpeg.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/BUTTSDKFramework/TTFFmpeg/LiveLite/TTSDKTTFFmpegLiveLite.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/BUTTSDKFramework/Tools/TTSDKTools.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/GDTMobSDK/GDTMobSDK.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/GDTMobSDK/Tquic.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/KSAdSDK/KSAdSDK.framework"
+  install_framework "${PODS_ROOT}/MiniAdSDK/sdk/MiniSDKFramework.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/BUTTSDKFramework/Core/TTSDKCore.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/BUTTSDKFramework/LiveBase/TTSDKLiveBase.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/BUTTSDKFramework/LivePlayer/Lite/TTSDKLivePlayerLite.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/BUTTSDKFramework/PlayerCore/LiveLite/TTSDKPlayerCoreLiveLite.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/BUTTSDKFramework/Reachability/TTSDKReachability.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/BUTTSDKFramework/SSL/ttboringssl.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/BUTTSDKFramework/SSL/ttcrypto.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/BUTTSDKFramework/Strategy/Lite/TTSDKStrategyLite.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/BUTTSDKFramework/TTFFmpeg/LiveLite/TTFFmpeg.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/BUTTSDKFramework/TTFFmpeg/LiveLite/TTSDKTTFFmpegLiveLite.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/BUTTSDKFramework/Tools/TTSDKTools.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

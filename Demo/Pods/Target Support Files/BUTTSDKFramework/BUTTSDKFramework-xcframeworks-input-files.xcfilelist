@@ -1,0 +1,12 @@
+${PODS_ROOT}/Target Support Files/BUTTSDKFramework/BUTTSDKFramework-xcframeworks.sh
+${PODS_ROOT}/BUTTSDKFramework/TTSDKFramework/TTSDKCore/TTSDKCore.xcframework
+${PODS_ROOT}/BUTTSDKFramework/TTSDKFramework/TTSDKLiveBase/TTSDKLiveBase.xcframework
+${PODS_ROOT}/BUTTSDKFramework/TTSDKFramework/TTSDKLivePlayerLite/TTSDKLivePlayerLite.xcframework
+${PODS_ROOT}/BUTTSDKFramework/TTSDKFramework/TTSDKPlayerCoreLiveLite/TTSDKPlayerCoreLiveLite.xcframework
+${PODS_ROOT}/BUTTSDKFramework/TTSDKFramework/TTSDKReachability/TTSDKReachability.xcframework
+${PODS_ROOT}/BUTTSDKFramework/TTSDKFramework/TTSDKSSL/ttboringssl.xcframework
+${PODS_ROOT}/BUTTSDKFramework/TTSDKFramework/TTSDKSSL/ttcrypto.xcframework
+${PODS_ROOT}/BUTTSDKFramework/TTSDKFramework/TTSDKStrategyLite/TTSDKStrategyLite.xcframework
+${PODS_ROOT}/BUTTSDKFramework/TTSDKFramework/TTSDKTTFFmpegLiveLite/TTFFmpeg.xcframework
+${PODS_ROOT}/BUTTSDKFramework/TTSDKFramework/TTSDKTTFFmpegLiveLite/TTSDKTTFFmpegLiveLite.xcframework
+${PODS_ROOT}/BUTTSDKFramework/TTSDKFramework/TTSDKTools/TTSDKTools.xcframework
