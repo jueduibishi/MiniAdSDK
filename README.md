@@ -1,5 +1,5 @@
 # MiniAdSDK
-广告集成，最低支持iOS11，支持模拟器+真机联调。<br>想支持百度、优量汇和快手平台，请自行引入相关sdk。
+广告集成，最低支持iOS12，仅支持真机。<br>想支持百度、优量汇和快手平台，请自行引入相关sdk。
 # 版本说明 
 ##0.2.7版本sdk需依赖BUTTSDKFramework
 
@@ -100,12 +100,7 @@ pod 'KSAdSDK', '4.6.30.1'
 ```
 ## 2、模拟器支持
 
-英特尔芯片的Mac创建的demo项目可以直接运行。  
-由于GDTMobSDK不支持arm64的模拟器，所以必须做如下设置。  
-M1之后的arm架构的Mac创建的xcode项目必须修改下Target——Build Settings——Excluded Architectures——Any iOS Simulator SDK设置为arm64。
-```
-若真机运行，可不设置此项。
-若没有使用优量汇，可不设置此项。
+0.2.5之后的版本不再支持模拟器
 ```
 
 ## 3、其他配置
