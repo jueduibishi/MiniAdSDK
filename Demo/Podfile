@@ -6,7 +6,7 @@ target 'Demo' do
   use_frameworks!
 
   # Pods for Demo
-#  pod 'MiniAdSDK'
+  pod 'MiniAdSDK'
   pod 'BUTTSDKFramework', '~> 1.46.2.7-premium'
 # 引入使用到的ADN SDK，开发者请按需引入
 # pod 'GDTMobSDK', '4.15.40'
