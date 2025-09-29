@@ -8,8 +8,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <MiniSDKFramework/AdErrorCode.h>
-//#import "MobileNativeModel.h"
-#import <MiniSDKFramework/MobileNativeModel.h>
+#import "MobileNativeModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
