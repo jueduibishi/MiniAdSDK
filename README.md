@@ -103,9 +103,8 @@ Targets-build settings - user script sandboxing 设置为NO
 # 类型和错误码说明
 
 详情见
-```
-AdErrorCode.h
-```
+
+[AdErrorCode.h](https://raw.githubusercontent.com/jueduibishi/MiniAdSDK/refs/heads/main/sdk/MiniSDKFramework.framework/Headers/AdErrorCode.h)
 # SDK使用说明
 
 ## iOS14适配说明
