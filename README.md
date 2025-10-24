@@ -22,9 +22,9 @@ source 'https://github.com/CocoaPods/Specs.git'
 pod 'MiniAdSDK'
 pod 'BUTTSDKFramework', '~> 1.46.2.7-premium'
 # 以下为支持平台可选配置
-pod 'GDTMobSDK', '4.15.41'
-pod 'BaiduMobAdSDK', '5.394'
-pod 'KSAdSDK', '4.6.30.1'
+pod 'GDTMobSDK', '4.15.60'
+pod 'BaiduMobAdSDK', '10.02'
+pod 'KSAdSDK', '4.9.20.1'
 ```
 # 配置
 
