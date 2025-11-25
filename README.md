@@ -9,13 +9,7 @@
 | 待更 | 待更 | -- |-- |
 | 0.2.8 | 默认支持穿山甲:7.1.1.5 <br> 自行引入优量汇、百度、快手 <br> 优量汇:`pod 'GDTMobSDK', '4.15.60'`<br> 百度:`pod 'BaiduMobAdSDK', '10.02'`<br>  快手:`pod 'KSAdSDK', '4.9.20.1'` | 升级主sdk，优化初始化相关数据缓存 |2025年10月24日 |
 
-# 集成错误若干解决方案
-## 报错：真机运行报Unable to install 
 
-方案：选项Demo —— Targets —— Build Phases —— Embed Framworks —— 导入的Pods_Demo.framework,后面的Code Sign On Co...打勾。
-## 报错：Sandbox: rsync(18801) deny(1) file-read-data...MiniSDKFramework.framework/_CodeSignature等
-
-方案：Targets-build settings - user script sandboxing 设置为No
 # 接入指引，请添加source，否则可能走cdn的配置。
 ```
 source 'https://github.com/CocoaPods/Specs.git'
@@ -105,6 +99,15 @@ Targets-build settings - user script sandboxing 设置为NO
 详情见
 
 [AdErrorCode.h](https://raw.githubusercontent.com/jueduibishi/MiniAdSDK/refs/heads/main/sdk/MiniSDKFramework.framework/Headers/AdErrorCode.h)
+
+# 集成错误若干解决方案
+## 报错：真机运行报Unable to install 
+
+方案：选项Demo —— Targets —— Build Phases —— Embed Framworks —— 导入的Pods_Demo.framework,后面的Code Sign On Co...打勾。
+## 报错：Sandbox: rsync(18801) deny(1) file-read-data...MiniSDKFramework.framework/_CodeSignature等
+
+方案：Targets-build settings - user script sandboxing 设置为No
+
 # SDK使用说明
 
 ## iOS14适配说明
