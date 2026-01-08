@@ -1,5 +1,4 @@
 PODS:
-  - BaiduMobAdSDK (5.39)
   - BUTTSDKFramework (1.46.2.7-premium):
     - BUTTSDKFramework/LivePull-Lite (= 1.46.2.7-premium)
   - BUTTSDKFramework/Core (1.46.2.7-premium)
@@ -36,32 +35,21 @@ PODS:
     - BUTTSDKFramework/Tools
   - BUTTSDKFramework/TTFFmpeg/LiveLite (1.46.2.7-premium):
     - BUTTSDKFramework/TTFFmpeg/Base
-  - GDTMobSDK (4.15.40)
-  - KSAdSDK (3.3.76)
   - MiniAdSDK (0.2.7)
 
 DEPENDENCIES:
-  - BaiduMobAdSDK (= 5.39)
   - BUTTSDKFramework (~> 1.46.2.7-premium)
-  - GDTMobSDK (= 4.15.40)
-  - KSAdSDK (= 3.3.76)
   - MiniAdSDK
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
-    - BaiduMobAdSDK
     - BUTTSDKFramework
-    - GDTMobSDK
-    - KSAdSDK
     - MiniAdSDK
 
 SPEC CHECKSUMS:
-  BaiduMobAdSDK: 522ceeed33720220b90188e7750ea659db30c257
   BUTTSDKFramework: b5d45b40003335843f05088c2373cef0b5638a9e
-  GDTMobSDK: ec2e9b392268a556e4d5e6ade6d00885d76a2cc5
-  KSAdSDK: 360e6e5f7aa510f1fac3a610f9e092778bd71b24
   MiniAdSDK: c840a8157d1e167942be398f1627c63f55577cb9
 
-PODFILE CHECKSUM: 13a3d4b98301e983f0dc119d9c76de8dd009eba3
+PODFILE CHECKSUM: 9b32942c17fb55c69b4f7a0daf982bb34fbc00f3
 
 COCOAPODS: 1.16.2
