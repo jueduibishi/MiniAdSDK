@@ -1,5 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-frameworks.sh
-${PODS_ROOT}/MiniAdSDK/sdk/MiniSDKFramework.framework
 ${PODS_XCFRAMEWORKS_BUILD_DIR}/BUTTSDKFramework/Core/TTSDKCore.framework/TTSDKCore
 ${PODS_XCFRAMEWORKS_BUILD_DIR}/BUTTSDKFramework/LiveBase/TTSDKLiveBase.framework/TTSDKLiveBase
 ${PODS_XCFRAMEWORKS_BUILD_DIR}/BUTTSDKFramework/LivePlayer/Lite/TTSDKLivePlayerLite.framework/TTSDKLivePlayerLite

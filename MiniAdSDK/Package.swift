@@ -16,9 +16,8 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "MiniAdSDK"
-        ),
-        .binaryTarget(name: "MiniSDKFramework", path: "sdk/MiniSDKFramework.xcframework"),
+        .target(name: "MiniAdSDK"),
+        .binaryTarget(name: "MiniSDKFramework", url: "https://github.com/jueduibishi/MiniAdSDK/tree/main/MiniAdSDK/Sources/MiniSDKFramework.zip", checksum: "85ea7179963de50f979d123ebfb6afccad6949ca76df155ed57970a2dac6c6bd")
+        
     ]
 )
