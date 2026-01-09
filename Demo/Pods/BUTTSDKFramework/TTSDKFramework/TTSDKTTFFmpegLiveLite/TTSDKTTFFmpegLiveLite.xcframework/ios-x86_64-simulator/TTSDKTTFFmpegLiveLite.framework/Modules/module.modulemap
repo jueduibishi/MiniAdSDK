@@ -1,0 +1,5 @@
+framework module TTSDKTTFFmpegLiveLite {
+  umbrella header "TTSDKTTFFmpegLiveLite.h"
+  export *
+  module * { export * }
+}
