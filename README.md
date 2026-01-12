@@ -1,6 +1,16 @@
 # MiniAdSDK
 广告集成，最低支持运行在iOS12上，仅支持真机。<br>想支持百度、优量汇和快手平台，请自行引入相关sdk。
-# 版本说明 当前0.2.9版本
+# 版本说明 当前0.2.9版本，0.2.9之后引入方式变更，具体见下方代码。
+# 接入指引，请添加source，否则可能走cdn的配置。
+```
+source 'https://github.com/CocoaPods/Specs.git'
+pod "MiniAdSDK", :git => "https://github.com/jueduibishi/MiniAdSDK.git", :tag => '0.2.9'
+pod 'BUTTSDKFramework', '~> 1.46.2.7-premium'
+# 以下为支持平台可选配置
+pod 'GDTMobSDK', '4.15.60'
+pod 'BaiduMobAdSDK', '10.02.1'
+pod 'KSAdSDK', '4.9.20.1'
+```
 ## 0.2.7（包括）版本之后sdk需依赖BUTTSDKFramework
 ## 0.2.7（包括）版本之后不支持iOS12.0——功能异常，仅可正常编译。iOS13以上功能正常。
 
@@ -10,16 +20,7 @@
 | 0.2.8 | 默认支持穿山甲:7.3.0.7 <br> 自行引入优量汇、百度、快手 <br> 优量汇:`pod 'GDTMobSDK', '4.15.60'`<br> 百度:`pod 'BaiduMobAdSDK', '10.02'`<br>  快手:`pod 'KSAdSDK', '4.9.20.1'` | 升级主sdk，优化内存 |2026年1月8日 |
 
 
-# 接入指引，请添加source，否则可能走cdn的配置。
-```
-source 'https://github.com/CocoaPods/Specs.git'
-pod 'MiniAdSDK'
-pod 'BUTTSDKFramework', '~> 1.46.2.7-premium'
-# 以下为支持平台可选配置
-pod 'GDTMobSDK', '4.15.60'
-pod 'BaiduMobAdSDK', '10.02.1'
-pod 'KSAdSDK', '4.9.20.1'
-```
+
 # 配置
 
 ## 1、在项目的Info.plist文件中添加以下字段
