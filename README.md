@@ -109,6 +109,9 @@ Targets-build settings - user script sandboxing 设置为NO
 
 方案：Targets-build settings - user script sandboxing 设置为No
 
+##h5游戏播放广告后无声音
+
+
 # SDK使用说明
 
 ## iOS14适配说明

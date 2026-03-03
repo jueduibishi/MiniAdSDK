@@ -1,11 +1,11 @@
+
+//  LRViewController.h
+//  Demo
 //
-//  ViewController.m
-//  AdUnionSDK
-//
-//  Created by 杨益凡 on 2024/8/28.
+//  Created by l on 2026/3/3.
 //
 
-#import "ViewController.h"
+#import "LRViewController.h"
 #import <MiniSDKFramework/SdkManager.h>
 #import "AppDelegate.h"
 #import "TableVC.h"
@@ -16,11 +16,13 @@
 #define bannerAdViewtag 403
 #define kuaibaoTag 404
 
+#define topSpace 64
+
 #define WeakObj(obj) __weak typeof(obj) obj##Weak = obj;
 #define StrongObj(obj) __strong typeof(obj) obj = obj##Weak;
 
 
-@interface ViewController (){
+@interface LRViewController (){
     UILabel *blockLabel1;
     UILabel *blockLabel2;
     UILabel *blockLabel3;
@@ -33,13 +35,18 @@
 
 @end
 
-@implementation ViewController
+@implementation LRViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"广告";
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"返回"
+                                                                     style:UIBarButtonItemStylePlain
+                                                                    target:self
+                                                                    action:@selector(backAction)];
+    self.navigationItem.leftBarButtonItem = backItem;
     if (self.type == adType_mini) {
         [TableVC miniRegister];
     }else if (self.type == adType_mobile){
@@ -51,13 +58,13 @@
     [self testMobile];
     
     UILabel *oneLabel = [self createLabel:@"打开横屏，关闭竖屏，即时生效，不用重启" withFontSize:16];
-    oneLabel.frame = CGRectMake(20, 350, 500, 30);
+    oneLabel.frame = CGRectMake(140, self.view.frame.size.height-30, 500, 30);
     oneLabel.userInteractionEnabled = YES;
     oneLabel.textColor=[UIColor blueColor];
     oneLabel.tag = bannerAdViewtag;
     [self.view addSubview:oneLabel];
     
-    UISwitch *mySwitch = [[UISwitch alloc]initWithFrame:CGRectMake(350, 350, 70, 30)];
+    UISwitch *mySwitch = [[UISwitch alloc]initWithFrame:CGRectMake(470, self.view.frame.size.height-30, 70, 30)];
     mySwitch.on = NO;
     mySwitch.tag = screenViewTag;
     [self.view addSubview:mySwitch];
@@ -66,7 +73,7 @@
     //-------------------------------------------------
     
     UIButton *loadButton1 = [self createButton:@"加载广告" Target:self Sel:@selector(buttonClick:) font:12 tag:100];
-    loadButton1.frame = CGRectMake(20, 450, 100, 50);
+    loadButton1.frame = CGRectMake(20, topSpace, 100, 50);
     
     [self.view addSubview:loadButton1];
     
@@ -74,7 +81,7 @@
     //-------------------------------------------------
     
     UIButton *slotButton = [self createButton:@"激励广告" Target:self Sel:@selector(buttonClick:) font:12 tag:110];
-    slotButton.frame = CGRectMake(20, 550, 100, 50);
+    slotButton.frame = CGRectMake(20, topSpace+100, 100, 50);
     
     [self.view addSubview:slotButton];
     
@@ -82,7 +89,7 @@
     
     //-------------------------------------------------
     blockLabel1 = [self createLabel:@"" withFontSize:12];
-    blockLabel1.frame = CGRectMake(20, 620, 100, 60);
+    blockLabel1.frame = CGRectMake(20, topSpace+150, 100, 60);
     blockLabel1.textColor=[UIColor blackColor];
     
     
@@ -94,27 +101,30 @@
     
     [self.view addSubview:changeButton];
 }
+- (void)backAction {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 -(void)testMini{
     if (self.type == adType_mini) {
         
         //-------------------------------------------------
         UIButton *loadButton2 = [self createButton:@"加载广告" Target:self Sel:@selector(buttonClick:) font:12 tag:101];
-        loadButton2.frame = CGRectMake(140, 450, 100, 50);
+        loadButton2.frame = CGRectMake(140, topSpace, 100, 50);
         
         [self.view addSubview:loadButton2];
         
         UIButton *loadButton3 = [self createButton:@"加载广告" Target:self Sel:@selector(buttonClick:) font:12 tag:102];
-        loadButton3.frame = CGRectMake(260, 450, 100, 50);
+        loadButton3.frame = CGRectMake(260, topSpace, 100, 50);
         
         [self.view addSubview:loadButton3];
         
         UIButton *bannerButton = [self createButton:@"banner广告" Target:self Sel:@selector(buttonClick:) font:12 tag:111];
-        bannerButton.frame = CGRectMake(140, 550, 100, 50);
+        bannerButton.frame = CGRectMake(140, topSpace+100, 100, 50);
         
         [self.view addSubview:bannerButton];
         
         UIButton *fullButton = [self createButton:@"插屏广告" Target:self Sel:@selector(buttonClick:) font:12 tag:112];
-        fullButton.frame = CGRectMake(260, 550, 100, 50);
+        fullButton.frame = CGRectMake(260, topSpace+100, 100, 50);
         
         [self.view addSubview:fullButton];
         
@@ -122,11 +132,11 @@
 
         
         blockLabel2 = [self createLabel:@"" withFontSize:12];
-        blockLabel2.frame = CGRectMake(140, 620, 100, 60);
+        blockLabel2.frame = CGRectMake(140, topSpace+150, 100, 60);
         blockLabel2.textColor=[UIColor blackColor];
         
         blockLabel3 = [self createLabel:@"" withFontSize:12];
-        blockLabel3.frame = CGRectMake(260, 620, 100, 60);
+        blockLabel3.frame = CGRectMake(260, topSpace+150, 100, 60);
         blockLabel3.textColor=[UIColor blackColor];
         
         [self.view addSubview:blockLabel2];
@@ -143,22 +153,22 @@
         //-------------------------------------------------
 
         UIButton *loadButton2 = [self createButton:@"加载广告" Target:self Sel:@selector(buttonClick:) font:12 tag:101];
-        loadButton2.frame = CGRectMake(140, 450, 100, 50);
+        loadButton2.frame = CGRectMake(140, topSpace, 100, 50);
         
         [self.view addSubview:loadButton2];
         
         UIButton *loadButton3 = [self createButton:@"加载广告" Target:self Sel:@selector(buttonClick:) font:12 tag:102];
-        loadButton3.frame = CGRectMake(260, 450, 100, 50);
+        loadButton3.frame = CGRectMake(260, topSpace, 100, 50);
         
         [self.view addSubview:loadButton3];
         
         UIButton *bannerButton = [self createButton:@"banner广告" Target:self Sel:@selector(buttonClick:) font:12 tag:111];
-        bannerButton.frame = CGRectMake(140, 550, 100, 50);
+        bannerButton.frame = CGRectMake(140, topSpace+100, 100, 50);
         
         [self.view addSubview:bannerButton];
         
         UIButton *fullButton = [self createButton:@"信息流广告" Target:self Sel:@selector(buttonClick:) font:12 tag:112];
-        fullButton.frame = CGRectMake(260, 550, 100, 50);
+        fullButton.frame = CGRectMake(260, topSpace+100, 100, 50);
         
         [self.view addSubview:fullButton];
         
@@ -166,11 +176,11 @@
 
         
         blockLabel2 = [self createLabel:@"" withFontSize:12];
-        blockLabel2.frame = CGRectMake(140, 620, 100, 60);
+        blockLabel2.frame = CGRectMake(140, topSpace+150, 100, 60);
         blockLabel2.textColor=[UIColor blackColor];
         
         blockLabel3 = [self createLabel:@"" withFontSize:12];
-        blockLabel3.frame = CGRectMake(260, 620, 100, 60);
+        blockLabel3.frame = CGRectMake(260, 620, 150, 60);
         blockLabel3.textColor=[UIColor blackColor];
         
         [self.view addSubview:blockLabel2];
@@ -489,4 +499,18 @@
     [alertCon addAction:actioncancel];
     [self presentViewController:alertCon animated:YES completion:nil];
 }
+#pragma mark -
+#pragma mark -横屏
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskLandscape;
+}
+
+- (BOOL)shouldAutorotate {
+    return YES;
+}
+
+- (UIInterfaceOrientation) preferredInterfaceOrientationForPresentation {
+    return UIInterfaceOrientationLandscapeLeft;
+}
 @end
+

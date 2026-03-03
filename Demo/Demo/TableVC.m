@@ -7,7 +7,10 @@
 
 #import "TableVC.h"
 #import "ViewController.h"
+#import "LRViewController.h"
 #import <MiniSDKFramework/SdkManager.h>
+#import "BaseNavigationController.h"
+
 
 #define cellIdentifier @"cellIdentifier"
 
@@ -33,6 +36,9 @@
     self.mainArray = @[@"小程序广告",
                        @"手游广告",
                        @"h5广告",
+                       @"横屏进入小程序广告",
+                       @"横屏进入手游广告",
+                       @"横屏进入h5广告",
                        @"以下设置，修改后需重启app",
                        [NSString stringWithFormat:@"小程序appID：%@",[TestID shareInstance].miniAppID],
                        [NSString stringWithFormat:@"小程序平台：%@",[TestID shareInstance].miniClient?@"游戏盒":@"快爆"],
@@ -81,7 +87,15 @@
         vc.type = indexPath.row;
         vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
-    }else{
+        
+    }else if (indexPath.row<6){
+        LRViewController *vc = [[LRViewController alloc]init];
+        vc.title = self.mainArray[indexPath.row];
+        vc.type = indexPath.row-3;
+        BaseNavigationController *nav = [[BaseNavigationController alloc]initWithRootViewController:vc];
+        [self presentViewController:nav animated:YES completion:nil];
+    }
+    else{
         if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]]) {
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString] options:@{
                 UIApplicationOpenURLOptionUniversalLinksOnly: @NO
