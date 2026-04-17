@@ -1,5 +1,0 @@
-framework module TTSDKTools {
-  umbrella header "TTSDKTools.h"
-  export *
-  module * { export * }
-}

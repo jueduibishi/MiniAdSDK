@@ -1,17 +1,15 @@
 # MiniAdSDK
 广告集成，最低支持运行在iOS12上，仅支持真机。<br>想支持百度、优量汇和快手平台，请自行引入相关sdk。
-# 版本说明 当前0.3.0版本，0.2.9之后引入方式变更，具体见下方代码。
+# 版本说明 当前0.3.0版本，引入方式变更，具体见下方代码。
 # 接入指引，请添加source，否则可能走cdn的配置。
 ```
 source 'https://github.com/CocoaPods/Specs.git'
 pod "MiniAdSDK", :git => "https://github.com/jueduibishi/MiniAdSDK.git", :tag => '0.3.0'
-pod 'BUTTSDKFramework', '~> 1.46.2.7-premium'
 # 以下为支持平台可选配置
 pod 'GDTMobSDK', '4.15.75'
 pod 'BaiduMobAdSDK', '10.032'
 pod 'KSAdSDK', '4.12.20.1'
 ```
-## 0.2.7（包括）版本之后sdk需依赖BUTTSDKFramework
 ## 0.2.7（包括）版本之后不支持iOS12.0——功能异常，仅可正常编译。iOS13以上功能正常。
 
 | 版本历史 | 支持平台 |  功能 | 更新时间 | 
@@ -183,6 +181,9 @@ serverType type = [SdkManager serverType];
 ### 小程序初始化示例
 
 ```
+    UserConfigModel *userConfig = [[UserConfigModel alloc]init];
+    userConfig.uid = @"123456";//此处传入用户的uid
+    [SdkManager setUserConfig:userConfig];
 [SdkManager initType:client_youxihe gameID:gameid platformID:platformid personalAD:YES Complete:^(BOOL success, NSString * _Nullable errorString) {
 if (success) {
 NSLog(@"初始化成功");
@@ -193,6 +194,9 @@ NSLog(@"初始化成功");
 ### 手游初始化示例
 
 ```
+    UserConfigModel *userConfig = [[UserConfigModel alloc]init];
+    userConfig.uid = @"123456";//此处传入用户的uid
+    [SdkManager setUserConfig:userConfig];
 [SdkManager initMobileID:@"4868" bundleID:@"cn.4399.gamehotspot" personalAD:YES Complete:^(BOOL success, NSString * _Nullable errorString) {
 NSString *title;
 if (success) {

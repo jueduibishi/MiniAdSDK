@@ -1,14 +1,13 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '11.0'
+ platform :ios, '13.0'
 source 'https://github.com/CocoaPods/Specs.git'
 target 'Demo' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
   # Pods for Demo
-#  pod 'MiniAdSDK'
   pod "MiniAdSDK", :git => "https://github.com/jueduibishi/MiniAdSDK.git", :tag => '0.3.0'
-  pod 'BUTTSDKFramework', '~> 1.46.2.7-premium'
+
 # 引入使用到的ADN SDK，开发者请按需引入
 #pod 'GDTMobSDK', '4.15.75'
 #pod 'BaiduMobAdSDK', '10.032'
