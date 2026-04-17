@@ -7,8 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-//#import <MiniSDKFramework/AdErrorCode.h>
-#import "AdErrorCode.h"
+#import <MiniSDKFramework/AdErrorCode.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

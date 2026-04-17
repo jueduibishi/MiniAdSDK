@@ -16,8 +16,9 @@
 		0B5C036B2C85B76700C30092 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5C036A2C85B76700C30092 /* main.m */; };
 		0BD0C8D82D6EE5B10003E85F /* TestID.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0C8D62D6EE5B10003E85F /* TestID.m */; };
 		0BD0C8D92D6EE5B10003E85F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0BD0C8D72D6EE5B10003E85F /* Settings.bundle */; };
-		ED85E77203CF796E07401DF5 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D34385F5DB5815C9E0696299 /* Pods_Demo.framework */; };
 		EE3649B82E85381A0038AB56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3649B72E85381A0038AB56 /* SceneDelegate.swift */; };
+		EE7F5BF92F9222F0007132AA /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D34385F5DB5815C9E0696299 /* Pods_Demo.framework */; };
+		EE7F5BFA2F9222F0007132AA /* Pods_Demo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D34385F5DB5815C9E0696299 /* Pods_Demo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EE823A8A2F5676E9000C960C /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE823A892F5676E9000C960C /* BaseNavigationController.m */; };
 		EE823A8D2F567CCC000C960C /* LRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE823A8C2F567CCC000C960C /* LRViewController.m */; };
 /* End PBXBuildFile section */
@@ -29,6 +30,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				EE7F5BFA2F9222F0007132AA /* Pods_Demo.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED85E77203CF796E07401DF5 /* Pods_Demo.framework in Frameworks */,
+				EE7F5BF92F9222F0007132AA /* Pods_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

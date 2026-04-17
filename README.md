@@ -1,15 +1,15 @@
 # MiniAdSDK
 广告集成，最低支持运行在iOS12上，仅支持真机。<br>想支持百度、优量汇和快手平台，请自行引入相关sdk。
-# 版本说明 当前0.2.9版本，0.2.9之后引入方式变更，具体见下方代码。
+# 版本说明 当前0.3.0版本，0.2.9之后引入方式变更，具体见下方代码。
 # 接入指引，请添加source，否则可能走cdn的配置。
 ```
 source 'https://github.com/CocoaPods/Specs.git'
-pod "MiniAdSDK", :git => "https://github.com/jueduibishi/MiniAdSDK.git", :tag => '0.2.9'
+pod "MiniAdSDK", :git => "https://github.com/jueduibishi/MiniAdSDK.git", :tag => '0.3.0'
 pod 'BUTTSDKFramework', '~> 1.46.2.7-premium'
 # 以下为支持平台可选配置
-pod 'GDTMobSDK', '4.15.60'
-pod 'BaiduMobAdSDK', '10.02.1'
-pod 'KSAdSDK', '4.9.20.1'
+pod 'GDTMobSDK', '4.15.75'
+pod 'BaiduMobAdSDK', '10.032'
+pod 'KSAdSDK', '4.12.20.1'
 ```
 ## 0.2.7（包括）版本之后sdk需依赖BUTTSDKFramework
 ## 0.2.7（包括）版本之后不支持iOS12.0——功能异常，仅可正常编译。iOS13以上功能正常。
@@ -17,7 +17,7 @@ pod 'KSAdSDK', '4.9.20.1'
 | 版本历史 | 支持平台 |  功能 | 更新时间 | 
 |:--------:|:------------:|:------------:|:------------:|  
 | 待更 | 待更 | -- |-- |
-| 0.2.9 | 默认支持穿山甲:7.3.0.7 <br> 自行引入优量汇、百度、快手 <br> 优量汇:`pod 'GDTMobSDK', '4.15.60'`<br> 百度:`pod 'BaiduMobAdSDK', '10.02'`<br>  快手:`pod 'KSAdSDK', '4.9.20.1'` | 升级主sdk，优化内存 |2026年1月12日 |
+| 0.3.0 | 默认支持穿山甲:7.5.0.7 <br> 自行引入优量汇、百度、快手 <br> 优量汇:`pod 'GDTMobSDK', '4.15.75.0'`<br> 百度:`pod 'BaiduMobAdSDK', '10.032.1'`<br>  快手:`pod 'KSAdSDK', '4.12.20.1.0'` | 升级主sdk，数据统计新增字段 |2026年4月17日 |
 
 
 
@@ -411,6 +411,7 @@ self->blockLabel1.text=@"激励广告加载未完成";
 # 更新日历
 | 版本历史 | 支持平台 |  功能 | 更新时间 | 
 |:--------:|:------------:|:------------:|:------------:|
+| 0.2.9 | 默认支持穿山甲:7.3.0.7 <br> 自行引入优量汇、百度、快手 <br> 优量汇:`pod 'GDTMobSDK', '4.15.60'`<br> 百度:`pod 'BaiduMobAdSDK', '10.02'`<br>  快手:`pod 'KSAdSDK', '4.9.20.1'` | 升级主sdk，优化内存 |2026年1月12日 |
 | 0.2.8 | 默认支持穿山甲:7.1.1.5 <br> 自行引入优量汇、百度、快手 <br> 优量汇:`pod 'GDTMobSDK', '4.15.60'`<br> 百度:`pod 'BaiduMobAdSDK', '10.02'`<br>  快手:`pod 'KSAdSDK', '4.9.20.1'` | 升级主sdk，优化初始化相关数据缓存 |2025年10月24日 |
 | 0.2.7 | 默认支持穿山甲:7.1.0.9 <br> 自行引入优量汇、百度、快手 <br> 优量汇:`pod 'GDTMobSDK', '4.15.41'`<br> 百度:`pod 'BaiduMobAdSDK', '5.394'`<br>  快手:`pod 'KSAdSDK', '4.6.30.1'` | 升级主sdk |2025年9月29日 |
 | 0.2.5 | 默认支持穿山甲:7.0.1.3 <br> 自行引入优量汇、百度、快手<br> 优量汇:`pod 'GDTMobSDK', '4.15.40.0'`<br> 百度:`pod 'BaiduMobAdSDK', '5.39'`<br>  快手:`pod 'KSAdSDK', '3.3.76'` | 优化数据解析，升级主sdk |2025年9月17日 |

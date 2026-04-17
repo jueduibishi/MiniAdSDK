@@ -108,7 +108,9 @@
 
 /// 小程序初始化
 +(void)miniRegister{
-
+    UserConfigModel *userConfig = [[UserConfigModel alloc]init];
+    userConfig.uid = @"4399";
+    [SdkManager setUserConfig:userConfig];
     NSString *platformid = [TestID shareInstance].miniPlatform;
     NSString *gameid = [TestID shareInstance].miniAppID;
     clientType type = [TestID shareInstance].miniClient?client_youxihe:client_kuaibao;
@@ -131,6 +133,9 @@
 
 /// 手游初始化
 +(void)mobileRegister{
+    UserConfigModel *userConfig = [[UserConfigModel alloc]init];
+    userConfig.uid = @"4399";
+    [SdkManager setUserConfig:userConfig];
     NSString *appid =[TestID shareInstance].mobileAppID;
     NSString *bundleid = [TestID shareInstance].mobileBundleID;
     [SdkManager initMobileID:appid bundleID:bundleid personalAD:YES Complete:^(BOOL success, NSString * _Nullable errorString) {
@@ -150,6 +155,9 @@
 }
 /// h5初始化
 +(void)h5Register{
+    UserConfigModel *userConfig = [[UserConfigModel alloc]init];
+    userConfig.uid = @"4399";
+    [SdkManager setUserConfig:userConfig];
     [SdkManager initH5ID:[TestID shareInstance].h5AppID personalAD:YES Complete:^(BOOL success, NSString * _Nullable errorString) {
         NSString *title;
         if (success) {

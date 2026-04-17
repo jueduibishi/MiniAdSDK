@@ -15,6 +15,7 @@
 #import <MiniSDKFramework/MobileBannerManager.h>
 #import <MiniSDKFramework/MobileNativManager.h>
 #import <MiniSDKFramework/MobileNativeModel.h>
+#import <MiniSDKFramework/UserConfigModel.h>
 
 typedef void(^resultHandel)(BOOL success,NSString * _Nullable errorString);
 
@@ -62,6 +63,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 服务器接口
 +(serverType)serverType;
+
+
+/// 配置用户信息
+/// - Parameter model: 主要是uid
++(void)setUserConfig:(UserConfigModel *)model;
 
 +(BOOL)isNotNil:(id)obj;
 @end
