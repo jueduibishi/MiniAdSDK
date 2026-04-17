@@ -19,8 +19,12 @@ pod 'KSAdSDK', '4.12.20.1'
 | 待更 | 待更 | -- |-- |
 | 0.3.0 | 默认支持穿山甲:7.5.0.7 <br> 自行引入优量汇、百度、快手 <br> 优量汇:`pod 'GDTMobSDK', '4.15.75.0'`<br> 百度:`pod 'BaiduMobAdSDK', '10.032.1'`<br>  快手:`pod 'KSAdSDK', '4.12.20.1.0'` | 升级主sdk，数据统计新增字段 |2026年4月17日 |
 
-
-
+## 0.3.0版本之后新增初始化时用户信息设定，示例如下
+```
+    UserConfigModel *userConfig = [[UserConfigModel alloc]init];
+    userConfig.uid = @"123456";//此处传入用户的uid
+    [SdkManager setUserConfig:userConfig];
+```
 # 配置
 
 ## 1、在项目的Info.plist文件中添加以下字段
