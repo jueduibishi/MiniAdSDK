@@ -90,7 +90,7 @@ Pod::Spec.new do |spec|
   #
 
   #spec.source_files  = "Classes/**/*"
-  spec.vendored_frameworks = "sdk/MiniSDKFramework.framework"
+  spec.vendored_frameworks = "sdk/MiniSDKFramework.xcframework"
   #spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
