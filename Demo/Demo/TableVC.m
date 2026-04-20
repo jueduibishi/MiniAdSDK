@@ -10,6 +10,7 @@
 #import "LRViewController.h"
 #import <MiniSDKFramework/SdkManager.h>
 #import "BaseNavigationController.h"
+#import "TestID.h"
 
 
 #define cellIdentifier @"cellIdentifier"
@@ -40,6 +41,7 @@
                        @"横屏进入手游广告",
                        @"横屏进入h5广告",
                        @"以下设置，修改后需重启app",
+                       [NSString stringWithFormat:@"用户49uid：%@",[TestID shareInstance].aduserid],
                        [NSString stringWithFormat:@"小程序appID：%@",[TestID shareInstance].miniAppID],
                        [NSString stringWithFormat:@"小程序平台：%@",[TestID shareInstance].miniClient?@"游戏盒":@"快爆"],
                        [NSString stringWithFormat:@"小程序系统代码：%@",[TestID shareInstance].miniPlatform],
@@ -109,7 +111,7 @@
 /// 小程序初始化
 +(void)miniRegister{
     UserConfigModel *userConfig = [[UserConfigModel alloc]init];
-    userConfig.uid = @"4399";
+    userConfig.uid = [TestID shareInstance].aduserid;
     [SdkManager setUserConfig:userConfig];
     NSString *platformid = [TestID shareInstance].miniPlatform;
     NSString *gameid = [TestID shareInstance].miniAppID;
@@ -134,7 +136,7 @@
 /// 手游初始化
 +(void)mobileRegister{
     UserConfigModel *userConfig = [[UserConfigModel alloc]init];
-    userConfig.uid = @"4399";
+    userConfig.uid = [TestID shareInstance].aduserid;
     [SdkManager setUserConfig:userConfig];
     NSString *appid =[TestID shareInstance].mobileAppID;
     NSString *bundleid = [TestID shareInstance].mobileBundleID;
@@ -156,7 +158,7 @@
 /// h5初始化
 +(void)h5Register{
     UserConfigModel *userConfig = [[UserConfigModel alloc]init];
-    userConfig.uid = @"4399";
+    userConfig.uid = [TestID shareInstance].aduserid;
     [SdkManager setUserConfig:userConfig];
     [SdkManager initH5ID:[TestID shareInstance].h5AppID personalAD:YES Complete:^(BOOL success, NSString * _Nullable errorString) {
         NSString *title;

@@ -110,4 +110,13 @@
     return _h5PostID;
 }
 
+#pragma mark -
+#pragma mark - 0.3.0版本 49uid
+
+-(NSString* _Nullable)aduserid{
+    _aduserid = [[NSUserDefaults standardUserDefaults] objectForKey:@"aduserid"];
+    
+    return _aduserid;
+}
+
 @end

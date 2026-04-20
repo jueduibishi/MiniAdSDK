@@ -6,6 +6,16 @@
 	<array>
 		<dict>
 			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>49uid</string>
+			<key>DefaultValue</key>
+			<string>4399</string>
+			<key>Key</key>
+			<string>aduserid</string>
+		</dict>
+		<dict>
+			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
 			<string>h5设置</string>

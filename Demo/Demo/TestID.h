@@ -32,6 +32,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic,copy)NSString *_Nullable tishText;
 
+@property(nonatomic,copy)NSString *_Nullable aduserid;//0.3.0版本 49uid
+
+
 @end
 
 NS_ASSUME_NONNULL_END
