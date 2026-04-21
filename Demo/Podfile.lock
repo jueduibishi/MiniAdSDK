@@ -1,22 +1,3 @@
-PODS:
-  - MiniAdSDK (0.3.0)
-
-DEPENDENCIES:
-  - MiniAdSDK (from `https://github.com/jueduibishi/MiniAdSDK.git`, tag `0.3.0`)
-
-EXTERNAL SOURCES:
-  MiniAdSDK:
-    :git: https://github.com/jueduibishi/MiniAdSDK.git
-    :tag: 0.3.0
-
-CHECKOUT OPTIONS:
-  MiniAdSDK:
-    :git: https://github.com/jueduibishi/MiniAdSDK.git
-    :tag: 0.3.0
-
-SPEC CHECKSUMS:
-  MiniAdSDK: 4959405157af6df00eead191a9380a074d4f92f9
-
-PODFILE CHECKSUM: 4089cc5d293a23f98c2397169eb145f2e10f4037
+PODFILE CHECKSUM: 493ddba4af9792144e64cd3c357120d83e381718
 
 COCOAPODS: 1.16.2

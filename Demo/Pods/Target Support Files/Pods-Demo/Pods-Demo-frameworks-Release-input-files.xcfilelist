@@ -1,2 +1,2 @@
 ${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-frameworks.sh
-${PODS_ROOT}/MiniAdSDK/sdk/MiniSDKFramework.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/MiniAdSDK/MiniSDKFramework.framework/MiniSDKFramework
