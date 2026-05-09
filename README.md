@@ -5,17 +5,18 @@
 ```
 source 'https://github.com/CocoaPods/Specs.git'
 pod "MiniAdSDK", :git => "https://github.com/jueduibishi/MiniAdSDK.git", :tag => '0.3.0'
+pod 'BUTTSDKFramework', '~> 1.48.2.3-premium'
 # 以下为支持平台可选配置
 pod 'GDTMobSDK', '4.15.75'
 pod 'BaiduMobAdSDK', '10.032'
 pod 'KSAdSDK', '4.12.20.1'
 ```
-## 0.2.7（包括）版本之后不支持iOS12.0——功能异常，仅可正常编译。iOS13以上功能正常。由于第三方sdk升级支持，0.3.0之后重新支持模拟器。
+## 0.2.7（包括）版本之后不支持iOS12.0——功能异常，仅可正常编译。iOS13以上功能正常。
 
 | 版本历史 | 支持平台 |  功能 | 更新时间 | 
 |:--------:|:------------:|:------------:|:------------:|  
 | 待更 | 待更 | -- |-- |
-| 0.3.0 | 默认支持穿山甲:7.5.0.7 <br> 自行引入优量汇、百度、快手 <br> 优量汇:`pod 'GDTMobSDK', '4.15.75'`<br> 百度:`pod 'BaiduMobAdSDK', '10.032'`<br>  快手:`pod 'KSAdSDK', '4.12.20.1'` | 升级主sdk，设定用户uid，优化统计，支持真机和模拟器 |2026年4月21日 |
+| 0.3.0 | 默认支持穿山甲:7.5.0.7 <br> 自行引入优量汇、百度、快手 <br> 优量汇:`pod 'GDTMobSDK', '4.15.75'`<br> 百度:`pod 'BaiduMobAdSDK', '10.032'`<br>  快手:`pod 'KSAdSDK', '4.12.20.1'` | 升级主sdk，设定用户uid，优化统计 |2026年5月9日 |
 
 ## 0.3.0版本之后新增初始化时用户信息设定，示例如下
 ```

@@ -17,9 +17,9 @@
 		0BD0C8D82D6EE5B10003E85F /* TestID.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0C8D62D6EE5B10003E85F /* TestID.m */; };
 		0BD0C8D92D6EE5B10003E85F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0BD0C8D72D6EE5B10003E85F /* Settings.bundle */; };
 		EE3649B82E85381A0038AB56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3649B72E85381A0038AB56 /* SceneDelegate.swift */; };
-		EE7F5BF92F9222F0007132AA /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D34385F5DB5815C9E0696299 /* Pods_Demo.framework */; };
 		EE823A8A2F5676E9000C960C /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE823A892F5676E9000C960C /* BaseNavigationController.m */; };
 		EE823A8D2F567CCC000C960C /* LRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE823A8C2F567CCC000C960C /* LRViewController.m */; };
+		EEBD511D2FAF30B2001CC069 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D34385F5DB5815C9E0696299 /* Pods_Demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -79,7 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE7F5BF92F9222F0007132AA /* Pods_Demo.framework in Frameworks */,
+				EEBD511D2FAF30B2001CC069 /* Pods_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +172,8 @@
 				0B5C03522C85B76500C30092 /* Frameworks */,
 				0B5C03532C85B76500C30092 /* Resources */,
 				0B340C1E2D6C6F0C00B84370 /* Embed Frameworks */,
+				C2261E741FF717B6E028BCDF /* [CP] Embed Pods Frameworks */,
+				0E0576896593EFF28F79AD77 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,6 +232,27 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0E0576896593EFF28F79AD77 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		1D443604579AC8964B4E1487 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -250,6 +273,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2261E741FF717B6E028BCDF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
