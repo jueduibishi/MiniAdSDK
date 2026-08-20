@@ -1,6 +1,0 @@
-framework module MiniSDKFramework {
-  umbrella header "MiniSDKFramework.h"
-  export *
-
-  module * { export * }
-}

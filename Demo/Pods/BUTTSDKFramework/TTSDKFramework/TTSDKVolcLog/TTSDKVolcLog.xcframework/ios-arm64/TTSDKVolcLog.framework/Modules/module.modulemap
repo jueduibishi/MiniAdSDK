@@ -1,5 +1,0 @@
-framework module TTSDKVolcLog {
-  umbrella header "TTSDKVolcLog.h"
-  export *
-  module * { export * }
-}

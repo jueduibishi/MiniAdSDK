@@ -1,5 +1,0 @@
-framework module TTSDKStrategyLite {
-  umbrella header "TTSDKStrategyLite.h"
-  export *
-  module * { export * }
-}
