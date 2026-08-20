@@ -32,17 +32,30 @@ PODS:
     - BUTTSDKFramework/Strategy/Core
   - BUTTSDKFramework/TTFFmpeg/LiveLite (1.48.2.3-premium)
   - BUTTSDKFramework/VolcLog (1.48.2.3-premium)
+  - MiniAdSDK (0.3.0)
 
 DEPENDENCIES:
   - BUTTSDKFramework (~> 1.48.2.3-premium)
+  - MiniAdSDK (from `https://github.com/jueduibishi/MiniAdSDK.git`, tag `0.3.0`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - BUTTSDKFramework
 
+EXTERNAL SOURCES:
+  MiniAdSDK:
+    :git: https://github.com/jueduibishi/MiniAdSDK.git
+    :tag: 0.3.0
+
+CHECKOUT OPTIONS:
+  MiniAdSDK:
+    :git: https://github.com/jueduibishi/MiniAdSDK.git
+    :tag: 0.3.0
+
 SPEC CHECKSUMS:
   BUTTSDKFramework: 34f8f8d541da07e79e9c479eb71336d1e4d90fdd
+  MiniAdSDK: a1ca64dfa7c02657e81801b91140b359e7abb007
 
-PODFILE CHECKSUM: b444f8ba9fe15caa6713cccb7381b56285c60792
+PODFILE CHECKSUM: 52fa3c109d4c54b18a95cc9f040b5ce37505f11d
 
 COCOAPODS: 1.16.2

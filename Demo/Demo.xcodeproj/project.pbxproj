@@ -56,8 +56,6 @@
 		D34385F5DB5815C9E0696299 /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE3649B62E85381A0038AB56 /* Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		EE3649B72E85381A0038AB56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EE7F5C1E2F922B79007132AA /* ttboringssl.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ttboringssl.xcframework; path = Pods/BUTTSDKFramework/TTSDKFramework/TTSDKSSL/ttboringssl.xcframework; sourceTree = "<group>"; };
-		EE7F5C1F2F922B79007132AA /* ttcrypto.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ttcrypto.xcframework; path = Pods/BUTTSDKFramework/TTSDKFramework/TTSDKSSL/ttcrypto.xcframework; sourceTree = "<group>"; };
 		EE7F5C202F922B79007132AA /* TTFFmpeg.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TTFFmpeg.xcframework; path = Pods/BUTTSDKFramework/TTSDKFramework/TTSDKTTFFmpegLiveLite/TTFFmpeg.xcframework; sourceTree = "<group>"; };
 		EE7F5C212F922B79007132AA /* TTSDKCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TTSDKCore.xcframework; path = Pods/BUTTSDKFramework/TTSDKFramework/TTSDKCore/TTSDKCore.xcframework; sourceTree = "<group>"; };
 		EE7F5C222F922B79007132AA /* TTSDKFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TTSDKFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,7 +64,6 @@
 		EE7F5C252F922B79007132AA /* TTSDKPlayerCoreLiveLite.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TTSDKPlayerCoreLiveLite.xcframework; path = Pods/BUTTSDKFramework/TTSDKFramework/TTSDKPlayerCoreLiveLite/TTSDKPlayerCoreLiveLite.xcframework; sourceTree = "<group>"; };
 		EE7F5C262F922B79007132AA /* TTSDKReachability.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TTSDKReachability.xcframework; path = Pods/BUTTSDKFramework/TTSDKFramework/TTSDKReachability/TTSDKReachability.xcframework; sourceTree = "<group>"; };
 		EE7F5C272F922B79007132AA /* TTSDKStrategyLite.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TTSDKStrategyLite.xcframework; path = Pods/BUTTSDKFramework/TTSDKFramework/TTSDKStrategyLite/TTSDKStrategyLite.xcframework; sourceTree = "<group>"; };
-		EE7F5C282F922B79007132AA /* TTSDKTools.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TTSDKTools.xcframework; path = Pods/BUTTSDKFramework/TTSDKFramework/TTSDKTools/TTSDKTools.xcframework; sourceTree = "<group>"; };
 		EE7F5C292F922B79007132AA /* TTSDKTTFFmpegLiveLite.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TTSDKTTFFmpegLiveLite.xcframework; path = Pods/BUTTSDKFramework/TTSDKFramework/TTSDKTTFFmpegLiveLite/TTSDKTTFFmpegLiveLite.xcframework; sourceTree = "<group>"; };
 		EE823A882F5676E9000C960C /* BaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		EE823A892F5676E9000C960C /* BaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
@@ -143,8 +140,6 @@
 		27694F4ED7F67820FE3E4551 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EE7F5C1E2F922B79007132AA /* ttboringssl.xcframework */,
-				EE7F5C1F2F922B79007132AA /* ttcrypto.xcframework */,
 				EE7F5C202F922B79007132AA /* TTFFmpeg.xcframework */,
 				EE7F5C212F922B79007132AA /* TTSDKCore.xcframework */,
 				EE7F5C222F922B79007132AA /* TTSDKFramework.framework */,
@@ -153,7 +148,6 @@
 				EE7F5C252F922B79007132AA /* TTSDKPlayerCoreLiveLite.xcframework */,
 				EE7F5C262F922B79007132AA /* TTSDKReachability.xcframework */,
 				EE7F5C272F922B79007132AA /* TTSDKStrategyLite.xcframework */,
-				EE7F5C282F922B79007132AA /* TTSDKTools.xcframework */,
 				EE7F5C292F922B79007132AA /* TTSDKTTFFmpegLiveLite.xcframework */,
 				D34385F5DB5815C9E0696299 /* Pods_Demo.framework */,
 			);

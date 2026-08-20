@@ -187,6 +187,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/BUTTSDKFramework/TTFFmpeg/LiveLite/TTSDKTTFFmpegLiveLite.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/BUTTSDKFramework/VolcLog/TTSDKVolcLog.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/BUTTSDKFramework/VolcLog/VolcBaseLog.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/MiniAdSDK/MiniSDKFramework.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/BUTTSDKFramework/Core/TTSDKCore.framework"
@@ -200,6 +201,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/BUTTSDKFramework/TTFFmpeg/LiveLite/TTSDKTTFFmpegLiveLite.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/BUTTSDKFramework/VolcLog/TTSDKVolcLog.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/BUTTSDKFramework/VolcLog/VolcBaseLog.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/MiniAdSDK/MiniSDKFramework.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

@@ -6,7 +6,7 @@
 	<dict>
 		<key>CSJAdSDK.bundle/Info.plist</key>
 		<data>
-		CnwdKMgcR7IKsNXKywnEo1yTWQ0=
+		hW4bQlBfMoOVWnBeemNf78SnEOU=
 		</data>
 		<key>CSJAdSDK.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -325,28 +325,6 @@
 		<data>
 		/5uVpY+9lZYxdf8asLfRkwicqcM=
 		</data>
-		<key>CSJAdSDK.bundle/ja.lproj/BULanguage.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			qxEpD88EdP3jCqmkUQPRxbnZDso=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>CSJAdSDK.bundle/ko.lproj/BULanguage.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			JJVEwIiZN6xkVN4bhVevDm315RQ=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>CSJAdSDK.bundle/setup.txt</key>
-		<data>
-		ZM3A57y/v18OGzuvfRFEJO3U2Co=
-		</data>
 		<key>CSJAdSDK.bundle/shake_phone.json</key>
 		<data>
 		C33gzoljYSCSNbpr4AKagxS76U4=
@@ -389,7 +367,7 @@
 		</data>
 		<key>CSJAdSDK.bundle/version.txt</key>
 		<data>
-		mJqVW12L4ECICuPxSHSKs0Irf3g=
+		G9aN9Ion87woGRWRkvcypsuw7OI=
 		</data>
 		<key>CSJAdSDK.bundle/zh-Hans.lproj/BULanguage.strings</key>
 		<dict>
@@ -459,7 +437,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		M++GACNzWNGw0pQBB96XxjeXQYM=
+		TqU70IXwhh6bLkp6tutQYJySrDI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -480,7 +458,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9HpaRtgqa8ndupCK+vILWQOHWAhgjHcIEYiulgRsquw=
+			fVptBB4UKNvUM7KKX5qHo3bF8EilQZcCVxQO/wZkfSU=
 			</data>
 		</dict>
 		<key>CSJAdSDK.bundle/PrivacyInfo.xcprivacy</key>
@@ -1031,31 +1009,6 @@
 			fEFQMUuHScRxgdE9MaLc2W2aqqdyFA1fWRuiSSsotG4=
 			</data>
 		</dict>
-		<key>CSJAdSDK.bundle/ja.lproj/BULanguage.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Rp7MbldY80sDrDjqk7tBuDVikjvA846roBZ282VRgT4=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>CSJAdSDK.bundle/ko.lproj/BULanguage.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			pdZfm0+eu6A56GiYerScLe/+cVISLuGW3ppPbnPxz3U=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>CSJAdSDK.bundle/setup.txt</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			vM2IxdHZV33CH67WhjzFydq4IsFZFtzRed5nq4T+8Dg=
-			</data>
-		</dict>
 		<key>CSJAdSDK.bundle/shake_phone.json</key>
 		<dict>
 			<key>hash2</key>
@@ -1130,7 +1083,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ffzHIGfzUg/cGsmj6A8az2Umf9nmQVcNSQIUQqVjVQk=
+			q9X1+qg/QG7mO9h/14wsRtnzfgk8N2cZMPPR/ldehmg=
 			</data>
 		</dict>
 		<key>CSJAdSDK.bundle/zh-Hans.lproj/BULanguage.strings</key>
