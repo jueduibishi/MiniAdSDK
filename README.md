@@ -4,7 +4,7 @@
 # 接入指引，请添加source，否则可能走cdn的配置。
 ```
 source 'https://github.com/CocoaPods/Specs.git'
-pod "MiniAdSDK", :git => "https://github.com/jueduibishi/MiniAdSDK.git", :tag => '0.3.1'
+pod 'MiniAdSDK'
 pod 'BUTTSDKFramework', '~> 1.48.2.3-premium'
 # 以下为支持平台可选配置
 pod 'GDTMobSDK', '4.15.80'
