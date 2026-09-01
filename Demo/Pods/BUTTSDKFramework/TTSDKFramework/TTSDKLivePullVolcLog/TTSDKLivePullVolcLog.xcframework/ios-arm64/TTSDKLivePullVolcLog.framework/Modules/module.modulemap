@@ -1,0 +1,5 @@
+framework module TTSDKLivePullVolcLog {
+  umbrella header "TTSDKLivePullVolcLog.h"
+  export *
+  module * { export * }
+}

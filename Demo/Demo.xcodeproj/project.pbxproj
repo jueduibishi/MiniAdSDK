@@ -56,15 +56,6 @@
 		D34385F5DB5815C9E0696299 /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE3649B62E85381A0038AB56 /* Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		EE3649B72E85381A0038AB56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EE7F5C202F922B79007132AA /* TTFFmpeg.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TTFFmpeg.xcframework; path = Pods/BUTTSDKFramework/TTSDKFramework/TTSDKTTFFmpegLiveLite/TTFFmpeg.xcframework; sourceTree = "<group>"; };
-		EE7F5C212F922B79007132AA /* TTSDKCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TTSDKCore.xcframework; path = Pods/BUTTSDKFramework/TTSDKFramework/TTSDKCore/TTSDKCore.xcframework; sourceTree = "<group>"; };
-		EE7F5C222F922B79007132AA /* TTSDKFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TTSDKFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE7F5C232F922B79007132AA /* TTSDKLiveBase.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TTSDKLiveBase.xcframework; path = Pods/BUTTSDKFramework/TTSDKFramework/TTSDKLiveBase/TTSDKLiveBase.xcframework; sourceTree = "<group>"; };
-		EE7F5C242F922B79007132AA /* TTSDKLivePlayerLite.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TTSDKLivePlayerLite.xcframework; path = Pods/BUTTSDKFramework/TTSDKFramework/TTSDKLivePlayerLite/TTSDKLivePlayerLite.xcframework; sourceTree = "<group>"; };
-		EE7F5C252F922B79007132AA /* TTSDKPlayerCoreLiveLite.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TTSDKPlayerCoreLiveLite.xcframework; path = Pods/BUTTSDKFramework/TTSDKFramework/TTSDKPlayerCoreLiveLite/TTSDKPlayerCoreLiveLite.xcframework; sourceTree = "<group>"; };
-		EE7F5C262F922B79007132AA /* TTSDKReachability.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TTSDKReachability.xcframework; path = Pods/BUTTSDKFramework/TTSDKFramework/TTSDKReachability/TTSDKReachability.xcframework; sourceTree = "<group>"; };
-		EE7F5C272F922B79007132AA /* TTSDKStrategyLite.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TTSDKStrategyLite.xcframework; path = Pods/BUTTSDKFramework/TTSDKFramework/TTSDKStrategyLite/TTSDKStrategyLite.xcframework; sourceTree = "<group>"; };
-		EE7F5C292F922B79007132AA /* TTSDKTTFFmpegLiveLite.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TTSDKTTFFmpegLiveLite.xcframework; path = Pods/BUTTSDKFramework/TTSDKFramework/TTSDKTTFFmpegLiveLite/TTSDKTTFFmpegLiveLite.xcframework; sourceTree = "<group>"; };
 		EE823A882F5676E9000C960C /* BaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		EE823A892F5676E9000C960C /* BaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		EE823A8B2F567CCC000C960C /* LRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRViewController.h; sourceTree = "<group>"; };
@@ -140,15 +131,6 @@
 		27694F4ED7F67820FE3E4551 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EE7F5C202F922B79007132AA /* TTFFmpeg.xcframework */,
-				EE7F5C212F922B79007132AA /* TTSDKCore.xcframework */,
-				EE7F5C222F922B79007132AA /* TTSDKFramework.framework */,
-				EE7F5C232F922B79007132AA /* TTSDKLiveBase.xcframework */,
-				EE7F5C242F922B79007132AA /* TTSDKLivePlayerLite.xcframework */,
-				EE7F5C252F922B79007132AA /* TTSDKPlayerCoreLiveLite.xcframework */,
-				EE7F5C262F922B79007132AA /* TTSDKReachability.xcframework */,
-				EE7F5C272F922B79007132AA /* TTSDKStrategyLite.xcframework */,
-				EE7F5C292F922B79007132AA /* TTSDKTTFFmpegLiveLite.xcframework */,
 				D34385F5DB5815C9E0696299 /* Pods_Demo.framework */,
 			);
 			name = Frameworks;
@@ -166,6 +148,8 @@
 				0B5C03522C85B76500C30092 /* Frameworks */,
 				0B5C03532C85B76500C30092 /* Resources */,
 				0B340C1E2D6C6F0C00B84370 /* Embed Frameworks */,
+				093A444D39E4500A54C02F3D /* [CP] Embed Pods Frameworks */,
+				88EDEF3929DD0D94C7B1F175 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -224,6 +208,27 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		093A444D39E4500A54C02F3D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		1D443604579AC8964B4E1487 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -244,6 +249,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88EDEF3929DD0D94C7B1F175 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
