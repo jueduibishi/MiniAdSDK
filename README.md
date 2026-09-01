@@ -1,8 +1,10 @@
 # MiniAdSDK
-广告集成，最低支持iOS13.0，支持真机和模拟器。<br>想支持百度、优量汇和快手平台，请自行引入相关sdk。
-# 当前0.7.7.0.8版本，适配穿山甲最新版本，具体见下方代码。
-# 接入指引，请添加source，否则可能走cdn的配置。
+## 广告集成，最低支持iOS13.0，支持真机和模拟器。
+## 若要支持百度、优量汇和快手平台，请自行引入相关sdk。
+# 当前0.7.7.0.8版本，适配穿山甲最新版本。
+# 接入指引
 ```
+#请添加source，否则可能走cdn的配置。
 source 'https://github.com/CocoaPods/Specs.git'
 pod 'MiniAdSDK'
 pod 'BUTTSDKFramework', '~> 1.48.2.3-premium'
