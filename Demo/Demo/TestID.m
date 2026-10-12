@@ -7,7 +7,7 @@
 //
 #import <UIKit/UIKit.h>
 #import "TestID.h"
-#define firstView ([[UIApplication sharedApplication] keyWindow]?[[UIApplication sharedApplication] keyWindow]:[[[UIApplication sharedApplication] windows] firstObject])
+
 @interface TestID (){
     UILabel *label;
 }
@@ -50,7 +50,20 @@
     if (!label) {
         label =[[UILabel alloc]initWithFrame:CGRectMake(20, [UIScreen mainScreen].bounds.size.height-20-[UIApplication sharedApplication].delegate.window.safeAreaInsets.bottom, 500, 20)];
         label.textColor=[UIColor redColor];
-        [firstView addSubview:label];
+        UIWindow *window = nil;
+        for (UIScene *scene in UIApplication.sharedApplication.connectedScenes) {
+            if (scene.activationState == UISceneActivationStateForegroundActive &&
+                [scene isKindOfClass:[UIWindowScene class]]) {
+                for (UIWindow *w in ((UIWindowScene *)scene).windows) {
+                    if (w.isKeyWindow) {
+                        window = w;
+                        break;
+                    }
+                }
+                break;
+            }
+        }
+        [window addSubview:label];
     }
     label.text = tishText;
 }

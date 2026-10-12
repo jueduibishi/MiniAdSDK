@@ -1,5 +1,0 @@
-framework module TTSDKPlayerCoreLiveLite {
-  umbrella header "TTSDKPlayerCoreLiveLite.h"
-  export *
-  module * { export * }
-}
