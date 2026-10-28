@@ -7,3 +7,7 @@ sdk/*.zip
 sdk/*.zip
 sdk/*.zip
 .build/
+.swiftpm/cache/
+.swiftpm/configuration/
+.swiftpm/xcode/
+.build/
