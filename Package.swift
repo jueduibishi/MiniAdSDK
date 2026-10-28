@@ -2,19 +2,15 @@
 import PackageDescription
 
 let package = Package(
-    name: "Probe",
+    name: "MiniSDKFramework",
     platforms: [.iOS(.v12)],
     products: [
-        .library(name: "Probe", targets: ["Probe"])
+        .library(name: "MiniSDKFramework", targets: ["MiniSDKFramework"])
     ],
     targets: [
         .binaryTarget(
             name: "MiniSDKFramework",
             path: "sdk/MiniSDKFramework.xcframework.zip"
-        ),
-        .target(
-            name: "Probe",
-            dependencies: ["MiniSDKFramework"]
         )
     ]
 )
