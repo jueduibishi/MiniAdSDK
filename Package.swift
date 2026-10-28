@@ -2,20 +2,19 @@
 import PackageDescription
 
 let package = Package(
-    name: "MiniSDKFramework",
+    name: "Probe",
     platforms: [.iOS(.v12)],
     products: [
-        .library(
-            name: "MiniSDKFramework",
-            targets: ["MiniSDKFramework"])
+        .library(name: "Probe", targets: ["Probe"])
     ],
     targets: [
         .binaryTarget(
             name: "MiniSDKFramework",
-            url: "https://github.com/jueduibishi/MiniAdSDK/releases/download/0.7.805/MiniSDKFramework.xcframework.zip",
-            checksum: "89b74bd776cd193c069c0ecbd2842d26473b05a62eb1aa8f72c235b65c418fce")
-    ],
-    traits: [
-        .trait(name: "core", description: "广告集成")
+            path: "sdk/MiniSDKFramework.xcframework.zip"
+        ),
+        .target(
+            name: "Probe",
+            dependencies: ["MiniSDKFramework"]
+        )
     ]
 )
