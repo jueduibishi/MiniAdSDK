@@ -1,0 +1,15 @@
+{
+  "originHash" : "2e1a77ed760f3717dbaab85087130eb2a6582d6860e0ebd9053f6853e7257064",
+  "pins" : [
+    {
+      "identity" : "miniadsdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jueduibishi/MiniAdSDK.git",
+      "state" : {
+        "revision" : "f257a177d92ab08f257bbd003c4e4090d83eebbd",
+        "version" : "0.7.805"
+      }
+    }
+  ],
+  "version" : 3
+}

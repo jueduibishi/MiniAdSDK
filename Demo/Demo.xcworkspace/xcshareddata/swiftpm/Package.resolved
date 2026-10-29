@@ -6,7 +6,7 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/jueduibishi/MiniAdSDK.git",
       "state" : {
-        "revision" : "242d411204dd9ce1f79b30c7a657965d8e9b45a8",
+        "revision" : "f257a177d92ab08f257bbd003c4e4090d83eebbd",
         "version" : "0.7.805"
       }
     }
