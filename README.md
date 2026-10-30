@@ -19,7 +19,6 @@
 
 将代码保存为start.sh
 终端执行
-brew install gh
 bash start.sh
 ```
 打开项目工程,菜单栏选择 File → Add Package Dependencies… 搜索框里粘贴 Git 仓库地址，选择版本规则。
