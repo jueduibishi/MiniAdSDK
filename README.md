@@ -1,8 +1,102 @@
-# MiniAdSDK
-## 广告集成，最低支持iOS13.0，支持真机和模拟器。
-## 若要支持百度、优量汇和快手平台，请自行引入相关sdk。
-# 当前0.7.8.0.5版本，适配穿山甲最新版本。
+# 当前0.7.805版本，适配穿山甲7.8.0.5版本。最低支持iOS13.0，仅支持真机。
+## iOS最低版本支持说明
+0.2.7～0.3.1（包括）版本：最低支持iOS12.0——功能异常，仅可正常编译。iOS13以上功能正常。
+0.7.7.0.8~最新版本：最低支持iOS13.0
+## pod trunk即将停止维护，发布方式转为SPM。<br>过渡版本为0.7.8.0.5和0.7.805，这两个版本一模一样，都是适配穿山甲7.8.0.5。
+## 历史更新日志在底部，当前更新日志如下
+| 版本历史 | 支持平台 |  功能 | 更新时间 | 
+|:--------:|:------------:|:------------:|:------------:|  
+| 待更 | 待更 | -- |-- |
+| 0.7.805 | 默认支持穿山甲:7.8.0.5 <br> 自行引入优量汇、百度、快手 <br> 优量汇:`pod 'GDTMobSDK', '4.15.90'`<br> 百度:`pod 'BaiduMobAdSDK', '10.050'`<br>  快手:`pod 'KSAdSDK', '5.5.10.1'` | 此版本为过渡版本<br>与0.7.8.0.5功能上一模一样<br>转为SPM方式引入|2026年10月30日 |
+
+
 # 接入指引
+## 通过SPM引入，0.7.805（包含）以后的版本执行
+目前支持Xcode27.0以下的开发工具，以Xcode26.6为例，若系统为macOS27.0以上版本，则通过以下代码执行启动
+```
+#!/bin/zsh
+"/Applications/Xcode 26.6.app/Contents/MacOS/Xcode" &
+
+将代码保存为start.sh
+终端执行
+brew install gh
+bash start.sh
+```
+打开项目工程,菜单栏选择 File → Add Package Dependencies… 搜索框里粘贴 Git 仓库地址，选择版本规则。
+```
+https://github.com/jueduibishi/MiniAdSDK.git
+```
+### 还需要通过pod引入支持库
+```
+source 'https://github.com/CocoaPods/Specs.git'
+pod 'BUTTSDKFramework', '~> 1.48.2.3-premium'
+# 以下为支持平台可选配置
+pod 'BaiduMobAdSDK', '10.050'
+pod 'GDTMobSDK', '4.15.90'
+pod 'KSAdSDK', '5.5.10.1'
+```
+### spm过慢解决方案
+若报错，可以清理下缓存，cd到项目文件夹
+ ```
+ killall Xcode 2>/dev/null
+rm -rf ~/Library/Developer/Xcode/DerivedData
+rm -rf ~/Library/Caches/org.swift.swiftpm
+rm -rf ~/Library/org.swift.swiftpm
+find . -name "Package.resolved" -delete
+xcodebuild -resolvePackageDependencies -scmProvider system -project xxxx.xcodeproj
+open xxxx.xcworkspace
+
+将脚本保存为clean.sh   ——注意,xxxx替换为真实的项目名称
+
+执行 bash clean.sh
+ ```
+通过设置代理加速网络连接 ，打开系统设置，查看网络-代理-端口号
+ 
+ ```
+ #!/bin/bash
+set -e
+PROXY=socks5h://127.0.0.1:7897  #————7897替换为本机的真实代理端口号
+PROJ="$1"
+
+export http_proxy=$PROXY https_proxy=$PROXY ALL_PROXY=$PROXY
+export NO_PROXY=localhost,127.0.0.1,::1
+git config --global http.proxy $PROXY
+git config --global https.proxy $PROXY
+defaults write com.apple.dt.Xcode IDEPackageSupportUseBuiltinSCM -bool NO
+
+echo "== 测试 git 连通 =="
+git ls-remote https://github.com/apple/swift-nio.git HEAD >/dev/null && echo OK
+
+echo "== 清理缓存 =="
+rm -rf ~/Library/Caches/org.swift.swiftpm
+
+echo "== 解析依赖 =="
+cd "$PROJ"
+xcodebuild -resolvePackageDependencies -disablePackageRepositoryCache
+echo "== 完成，请 ⌘Q 退出 Xcode 后重开 =="
+
+将脚本保存为spm.sh
+
+执行 bash spm.sh
+ ```
+ sdk拉取结束后，还原网络设置
+ ```
+ # 取消git全局代理
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+
+# 清空当前终端代理环境变量
+unset http_proxy https_proxy ALL_PROXY NO_PROXY
+
+# 恢复Xcode内置SCM
+defaults write com.apple.dt.Xcode IDEPackageSupportUseBuiltinSCM -bool YES
+
+将脚本保存为spm_un.sh
+
+执行 bash spm_un.sh
+ ```
+ 
+## 通过pod引入，0.7.8.0.5（包含）以前的版本执行
 ```
 #请添加source，否则可能走cdn的配置。
 source 'https://github.com/CocoaPods/Specs.git'
@@ -13,14 +107,9 @@ pod 'BaiduMobAdSDK', '10.050'
 pod 'GDTMobSDK', '4.15.90'
 pod 'KSAdSDK', '5.5.10.1'
 ```
-## iOS最低版本支持说明
-0.2.7～0.3.1（包括）版本不支持iOS12.0——功能异常，仅可正常编译。iOS13以上功能正常。
-### 0.7.7.0.8 开始最低支持iOS13.0
-| 版本历史 | 支持平台 |  功能 | 更新时间 | 
-|:--------:|:------------:|:------------:|:------------:|  
-| 待更 | 待更 | -- |-- |
-| 0.7.8.0.5 | 默认支持穿山甲:7.8.0.5 <br> 自行引入优量汇、百度、快手 <br> 优量汇:`pod 'GDTMobSDK', '4.15.90'`<br> 百度:`pod 'BaiduMobAdSDK', '10.050'`<br>  快手:`pod 'KSAdSDK', '5.5.10.1'` | 适配穿山甲最新版本|2026年10月12日 |
 
+
+# 版本功能特别说明
 ## 0.3.0版本之后新增初始化时用户信息设定，示例如下
 ```
     UserConfigModel *userConfig = [[UserConfigModel alloc]init];
@@ -420,8 +509,14 @@ self->blockLabel1.text=@"激励广告加载未完成";
 }
 ```
 # 更新日历
+## 以下版本通过SPM引入
 | 版本历史 | 支持平台 |  功能 | 更新时间 | 
 |:--------:|:------------:|:------------:|:------------:|
+| 0.7.805 | 默认支持穿山甲:7.8.0.5 <br> 自行引入优量汇、百度、快手 <br> 优量汇:`pod 'GDTMobSDK', '4.15.90'`<br> 百度:`pod 'BaiduMobAdSDK', '10.050'`<br>  快手:`pod 'KSAdSDK', '5.5.10.1'` | 此版本为过渡版本<br>与0.7.8.0.5功能上一模一样<br>转为SPM方式引入|2026年10月30日 |
+## 以下版本通过pod引入，
+| 版本历史 | 支持平台 |  功能 | 更新时间 | 
+|:--------:|:------------:|:------------:|:------------:|
+| 0.7.8.0.5 | 默认支持穿山甲:7.8.0.5 <br> 自行引入优量汇、百度、快手 <br> 优量汇:`pod 'GDTMobSDK', '4.15.90'`<br> 百度:`pod 'BaiduMobAdSDK', '10.050'`<br>  快手:`pod 'KSAdSDK', '5.5.10.1'` | 适配穿山甲最新版本|2026年10月12日 |
 | 0.7.7.0.8 | 默认支持穿山甲:7.7.0.8 <br> 自行引入优量汇、百度、快手 <br> 优量汇:`pod 'GDTMobSDK', '4.15.90'`<br> 百度:`pod 'BaiduMobAdSDK', '10.050'`<br>  快手:`pod 'KSAdSDK', '5.5.10.1'`  |  适配穿山甲最新版本 <br> SDK版本命名规则更改，与穿山甲保持一致|  2026年9月1日|
 | 0.3.1 | 默认支持穿山甲:7.7.0.5 <br> 自行引入优量汇、百度、快手 <br> 优量汇:`pod 'GDTMobSDK', '4.15.80'`<br> 百度:`pod 'BaiduMobAdSDK', '10.050'`<br>  快手:`pod 'KSAdSDK', '5.3.20.1'` | 适配穿山甲最新版本 |2026年8月20日 |
 | 0.3.0 | 默认支持穿山甲:7.5.0.7 <br> 自行引入优量汇、百度、快手 <br> 优量汇:`pod 'GDTMobSDK', '4.15.75'`<br> 百度:`pod 'BaiduMobAdSDK', '10.032'`<br>  快手:`pod 'KSAdSDK', '4.12.20.1'` | 升级主sdk，设定用户uid，优化统计 |2026年5月9日 |
