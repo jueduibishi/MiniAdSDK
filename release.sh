@@ -135,7 +135,7 @@ if ! perl -e 'alarm shift; exec @ARGV' 120 swift package resolve; then
 fi
 info "SPM 解析测试通过 ✅"
 
-# ---------- 7. Git 提交与打 Tag（不再包含 zip） ----------
+# ---------- 7. Git 提交与打 Tag ----------
 echo -e "\033[33m📋 提交 Package.swift...\033[0m"
 git add Package.swift
 
@@ -145,27 +145,39 @@ else
     git commit -m "Release $VERSION (SPM - url + checksum)" && info "已提交"
 fi
 
+# 确保本地有正确的 Tag（如果远程已存在且不同，强制更新需要本地先有 Tag）
 if git rev-parse "refs/tags/$VERSION" >/dev/null 2>&1; then
-    warn "Tag $VERSION 已存在，跳过"
-else
-    git tag "$VERSION" && info "已打 Tag: $VERSION"
+    warn "本地 Tag $VERSION 已存在，删除并重新创建以指向当前提交"
+    git tag -d "$VERSION"
 fi
+git tag "$VERSION" && info "已打 Tag: $VERSION"
 
 # ---------- 8. 推送（带重试 & 失败退出） ----------
 echo "🚀 推送代码和 Tag..."
 MAX_ATTEMPTS=5
 PUSH_SUCCESS=false
+CURRENT_BRANCH=$(git branch --show-current)
 
 for (( attempt=1; attempt<=MAX_ATTEMPTS; attempt++ )); do
     echo "  [尝试 $attempt/$MAX_ATTEMPTS]"
-    if perl -e 'alarm shift; exec @ARGV' 120 git push origin HEAD --tags; then
-        PUSH_SUCCESS=true
-        info "推送成功"
-        break
-    else
-        warn "推送失败，等待重试..."
+    
+    # 推送分支
+    if ! perl -e 'alarm shift; exec @ARGV' 120 git push origin "$CURRENT_BRANCH"; then
+        warn "分支推送失败，等待重试..."
         sleep 5
+        continue
     fi
+    
+    # 强制推送 Tag（覆盖远程同名 Tag）
+    if ! perl -e 'alarm shift; exec @ARGV' 120 git push origin "$VERSION" --force; then
+        warn "Tag 推送失败，等待重试..."
+        sleep 5
+        continue
+    fi
+    
+    PUSH_SUCCESS=true
+    info "推送成功"
+    break
 done
 
 if [ "$PUSH_SUCCESS" = false ]; then
