@@ -1,110 +1,82 @@
 #!/bin/bash
-set -e
+set -eo pipefail
 
-# ==========================================
-# 基础配置（按需修改）
-# ==========================================
-SDK_NAME="MiniSDKFramework"  # 你的 SDK 名称，比如 MiniAdSDK
 
-# ---------- 从命令行参数读取版本号 ----------
-if [ -z "$1" ]; then
+SDK_NAME="MiniSDKFramework"
+
+# ---------------- 参数 ----------------
+if [ -z "${1:-}" ]; then
     echo -e "\033[31m❌ 错误：请指定版本号！\033[0m"
     echo -e "\033[33m用法: bash release.sh <版本号>\033[0m"
-    echo -e "\033[33m示例: bash release.sh 0.7.805\033[0m"
+    echo -e "\033[33m示例: bash release.sh 0.7.807\033[0m"
     exit 1
 fi
 VERSION="$1"
-# -------------------------------------------
 
 ZIP_PATH="sdk/$SDK_NAME.xcframework.zip"
+TIMEOUT() { perl -e 'alarm shift; exec @ARGV' "$@"; }
 
-info() { echo -e "\033[32m✅ $1\033[0m"; }
-warn() { echo -e "\033[33m⚠️ $1\033[0m"; }
+info()  { echo -e "\033[32m✅ $1\033[0m"; }
+warn()  { echo -e "\033[33m⚠️  $1\033[0m"; }
 error() { echo -e "\033[31m❌ $1\033[0m"; exit 1; }
 
-# ---------- 1. 打包 xcframework ----------
-echo -e "\033[33m📦 打包 xcframework...\033[0m"
-mkdir -p sdk
+# 兜底：脚本任一处失败时，提示不要盲目重跑
+trap 'RC=$?; if [ $RC -ne 0 ]; then echo -e "\033[31m💥 脚本异常退出，请先 git status 确认状态再重跑\033[0m"; fi' EXIT
 
-if [ ! -d "sdk/$SDK_NAME.xcframework" ]; then
-    error "sdk/$SDK_NAME.xcframework 不存在，请先编译出 xcframework"
-fi
+# ---------------- 1. 打包 xcframework ----------------
+echo -e "\033[33m📦 1/9 打包 xcframework...\033[0m"
+mkdir -p sdk
+[ -d "sdk/$SDK_NAME.xcframework" ] || error "sdk/$SDK_NAME.xcframework 不存在，请先编译出 xcframework"
 
 cd sdk
 ditto -c -k --keepParent "$SDK_NAME.xcframework" "$SDK_NAME.xcframework.zip"
 cd ..
-info "使用 ditto 打包（保留符号链接）"
 info "已打包: $ZIP_PATH"
 
-# ---------- 2. 验证 zip 内部结构（防卡死版） ----------
-echo -e "\033[33m🔍 验证 zip 内部结构...\033[0m"
-echo "----- unzip -Z -1 真实结构（前 20 行） -----"
-
-perl -e 'alarm shift; exec @ARGV' 10 unzip -Z -1 "$ZIP_PATH" | head -n 20
-
-FIRST_ENTRY=$(perl -e 'alarm shift; exec @ARGV' 10 unzip -Z -1 "$ZIP_PATH" | head -n 1)
+# ---------------- 2. 验证 zip 内部结构 ----------------
+echo -e "\033[33m🔍 2/9 验证 zip 内部结构...\033[0m"
+TIMEOUT 60 unzip -Z -1 "$ZIP_PATH" | head -n 20 || error "读取 zip 目录超时/失败"
+FIRST_ENTRY=$(TIMEOUT 10 unzip -Z -1 "$ZIP_PATH" | head -n 1)
 EXPECTED="$SDK_NAME.xcframework/"
+[ "$FIRST_ENTRY" = "$EXPECTED" ] || error "校验失败！期望根目录 $EXPECTED，实际: $FIRST_ENTRY"
+info "校验通过：xcframework 位于 zip 根目录"
 
-if [ "$FIRST_ENTRY" == "$EXPECTED" ]; then
-    info "校验通过！xcframework 在根目录"
-else
-    error "校验失败！期望根目录有 $EXPECTED，但实际是: $FIRST_ENTRY"
-fi
-
-# ---------- 3. 计算 Checksum ----------
-echo -e "\033[33m🔐 计算 zip checksum...\033[0m"
+# ---------------- 3. 计算 checksum ----------------
+echo -e "\033[33m🔐 3/9 计算 checksum...\033[0m"
 CHECKSUM=$(swift package compute-checksum "$ZIP_PATH")
+[ -n "$CHECKSUM" ] || error "checksum 计算失败"
 info "Checksum: $CHECKSUM"
 
-# ---------- 4. 解析 Git Remote 并上传到 GitHub Releases ----------
-echo -e "\033[33m📤 准备上传 zip 到 GitHub Releases...\033[0m"
+# ---------------- 4. 解析仓库并上传 GitHub Release ----------------
+echo -e "\033[33m📤 4/9 上传到 GitHub Releases...\033[0m"
+ORIGIN_URL=$(git remote get-url origin 2>/dev/null || true)
 
-# 获取当前 git origin 地址
-ORIGIN_URL=$(git remote get-url origin 2>/dev/null)
-
-# 优先使用环境变量，否则尝试从 origin 解析 (兼容 HTTPS 和 SSH)
-if [ -z "$GITHUB_REPO" ] && [ -n "$ORIGIN_URL" ]; then
-    if [[ "$ORIGIN_URL" == *"github.com"* ]]; then
-        # 使用 sed 稳健提取 owner/repo，兼容 https:// 和 git@ 格式
-        GITHUB_REPO=$(echo "$ORIGIN_URL" | sed -E 's#.*github\.com[:/]##; s#\.git$##')
-    fi
+if [ -z "${GITHUB_REPO:-}" ] && [ -n "$ORIGIN_URL" ] && [[ "$ORIGIN_URL" == *"github.com"* ]]; then
+    GITHUB_REPO=$(echo "$ORIGIN_URL" | sed -E 's#.*github\.com[:/]##; s#\.git$##')
 fi
+[ -n "${GITHUB_REPO:-}" ] || error "无法解析 owner/repo，请 export GITHUB_REPO=owner/repo"
 
-if [ -z "$GITHUB_REPO" ]; then
-    error "无法从 remote URL ($ORIGIN_URL) 解析 owner/repo，请确保 origin 是 GitHub 地址，或手动执行: export GITHUB_REPO=\"owner/repo\""
-fi
-
-echo "🎯 目标仓库: $GITHUB_REPO"
-
-# 检查 gh 命令行工具
-if ! command -v gh &> /dev/null; then
-    error "未找到 GitHub CLI (gh)，请先安装：brew install gh"
-fi
-
-# 检查 gh 登录状态
-if ! gh auth status &> /dev/null; then
-    error "gh 未登录，请先运行: gh auth login"
-fi
+command -v gh >/dev/null 2>&1 || error "未找到 gh，请先: brew install gh"
+gh auth status >/dev/null 2>&1 || error "gh 未登录，请先: gh auth login"
 
 RELEASE_URL="https://github.com/$GITHUB_REPO/releases/download/$VERSION/$SDK_NAME.xcframework.zip"
+info "目标仓库  : $GITHUB_REPO"
 info "Release URL: $RELEASE_URL"
 
-# 创建 Release 并上传（如果已存在则直接上传 asset）
-if gh release view "$VERSION" --repo "$GITHUB_REPO" &> /dev/null; then
-    warn "Release $VERSION 已存在，追加/更新 asset..."
+if gh release view "$VERSION" --repo "$GITHUB_REPO" >/dev/null 2>&1; then
+    warn "Release $VERSION 已存在，覆盖 asset（幂等重跑）..."
     gh release upload "$VERSION" "$ZIP_PATH" --repo "$GITHUB_REPO" --clobber
 else
-    info "创建 Release $VERSION 并上传 asset..."
     gh release create "$VERSION" "$ZIP_PATH" \
         --repo "$GITHUB_REPO" \
         --title "Release $VERSION" \
         --notes "Automated release for $SDK_NAME version $VERSION"
 fi
-info "上传完成 ✅"
+info "Release 上传完成"
 
-# ---------- 5. 生成 Package.swift（url + checksum 方式） ----------
-echo -e "\033[33m📝 生成 Package.swift (url + checksum)...\033[0m"
-cat > Package.swift <<PROBEEOF
+# ---------------- 5. 生成 Package.swift + 自检 ----------------
+echo -e "\033[33m📝 5/9 生成 Package.swift...\033[0m"
+cat > Package.swift <<EOF
 // swift-tools-version:5.9
 import PackageDescription
 
@@ -122,75 +94,71 @@ let package = Package(
         )
     ]
 )
-PROBEEOF
-info "已生成 Package.swift（包名: $SDK_NAME）"
+EOF
 
-# ---------- 6. SwiftPM 解析测试（真实下载并校验） ----------
-echo -e "\033[33m🧪 SwiftPM 解析测试（会真实下载 zip 并校验 checksum）...\033[0m"
-echo "----- swift package resolve 输出 -----"
-# 清理之前的缓存以确保重新下载
+# ★ 关键自检：文件里必须含本次版本号，防止生成错/残留旧文件还继续跑
+grep -qF "$VERSION" Package.swift || error "自检失败：Package.swift 中未找到版本号 $VERSION"
+info "Package.swift 已生成并通过版本自检"
+
+# ---------------- 6. SwiftPM 解析测试 ----------------
+echo -e "\033[33m🧪 6/9 SwiftPM 解析测试（真实下载并校验 checksum）...\033[0m"
 rm -rf .build
-if ! perl -e 'alarm shift; exec @ARGV' 120 swift package resolve; then
-    error "SPM 解析失败！请检查 URL 是否可达或 checksum 是否正确"
-fi
-info "SPM 解析测试通过 ✅"
+TIMEOUT 180 swift package resolve || error "SPM 解析失败！检查 URL 可达性与 checksum"
+info "SPM 解析测试通过"
 
-# ---------- 7. Git 提交与打 Tag ----------
-echo -e "\033[33m📋 提交 Package.swift...\033[0m"
+# ---------------- 7. 提交 Package.swift 并打 Tag（防漂移核心） ----------------
+echo -e "\033[33m📋 7/9 提交 Package.swift 并打 Tag...\033[0m"
 git add Package.swift
 
-if git diff --cached --quiet; then
-    warn "无变更，跳过 commit（Package.swift 内容可能未改变）"
+# 判断「暂存区里的 Package.swift」是否已经等价于「当前 HEAD 里的」
+if git diff --cached --quiet 2>/dev/null; then
+    # 内容没变：正确内容已经在 HEAD 里了（上次跑过且 commit 成功）
+    warn "Package.swift 相对 HEAD 无变化，复用当前 HEAD：$(git rev-parse --short HEAD)"
+    # 保险：万一 HEAD 里其实是旧版本（极端中断场景），兜底产一个空 commit 供 Tag 落脚
+    if ! grep -qF "$VERSION" <(git show HEAD:Package.swift 2>/dev/null || true); then
+        warn "HEAD 中的 Package.swift 不是 $VERSION，创建空提交以承载本次变更"
+        git commit --allow-empty -m "Release $VERSION (carry Package.swift for SPM)"
+    fi
 else
-    git commit -m "Release $VERSION (SPM - url + checksum)" && info "已提交"
+    # 有差异，正常提交
+    git commit -m "Release $VERSION (SPM - url + checksum)"
 fi
 
-# 确保本地有正确的 Tag（如果远程已存在且不同，强制更新需要本地先有 Tag）
-if git rev-parse "refs/tags/$VERSION" >/dev/null 2>&1; then
-    warn "本地 Tag $VERSION 已存在，删除并重新创建以指向当前提交"
-    git tag -d "$VERSION"
-fi
-git tag "$VERSION" && info "已打 Tag: $VERSION"
+# Tag 永远删掉重建，打在「现在这个一定含正确 Package.swift 的 HEAD」上
+git tag -d "$VERSION" 2>/dev/null || true
+git tag "$VERSION"
+info "Tag $VERSION → $(git rev-parse --short HEAD)  $(git show -s --format=%s HEAD)"
 
-# ---------- 8. 推送（带重试 & 失败退出） ----------
-echo "🚀 推送代码和 Tag..."
-MAX_ATTEMPTS=5
-PUSH_SUCCESS=false
+# ★★ 二次硬自检：这个 Tag 指的那个文件，版本号必须对
+grep -qF "$VERSION" <(git show "$VERSION":Package.swift) || error "致命：Tag $VERSION 指向的 Package.swift 版本自检失败，已终止，未推送"
+
+# ---------------- 8. 推送分支 + Tag（串行重试，全成功才算数） ----------------
+echo -e "\033[33m🚀 8/9 推送分支与 Tag...\033[0m"
 CURRENT_BRANCH=$(git branch --show-current)
+[ -n "$CURRENT_BRANCH" ] || error "当前不在任何分支上，无法推送"
 
-for (( attempt=1; attempt<=MAX_ATTEMPTS; attempt++ )); do
-    echo "  [尝试 $attempt/$MAX_ATTEMPTS]"
-    
-    # 推送分支
-    if ! perl -e 'alarm shift; exec @ARGV' 120 git push origin "$CURRENT_BRANCH"; then
-        warn "分支推送失败，等待重试..."
-        sleep 5
-        continue
-    fi
-    
-    # 强制推送 Tag（覆盖远程同名 Tag）
-    if ! perl -e 'alarm shift; exec @ARGV' 120 git push origin "$VERSION" --force; then
-        warn "Tag 推送失败，等待重试..."
-        sleep 5
-        continue
-    fi
-    
-    PUSH_SUCCESS=true
-    info "推送成功"
+MAX_ATTEMPTS=5
+PUSH_OK=false
+for ((try=1; try<=MAX_ATTEMPTS; try++)); do
+    echo "  [尝试 $try/$MAX_ATTEMPTS] 推送分支 $CURRENT_BRANCH ..."
+    TIMEOUT 120 git push origin "$CURRENT_BRANCH" || { warn "分支推送失败，5s 后重试"; sleep 5; continue; }
+
+    echo "  [尝试 $try/$MAX_ATTEMPTS] 推送 Tag $VERSION ..."
+    TIMEOUT 120 git push origin "$VERSION" --force || { warn "Tag 推送失败，5s 后重试"; sleep 5; continue; }
+
+    PUSH_OK=true
+    info "推送成功（分支 + Tag）"
     break
 done
+$PUSH_OK || error "推送失败！本地 Tag $VERSION 已就绪，请稍后手动：git push origin $CURRENT_BRANCH && git push origin $VERSION --force"
 
-if [ "$PUSH_SUCCESS" = false ]; then
-    error "推送失败！请手动检查 git 状态并重新推送。"
-fi
-
-# ---------- 9. 清理 ----------
-echo -e "\033[33m🧹 清理 .build 目录...\033[0m"
+# ---------------- 9. 清理 ----------------
+echo -e "\033[33m🧹 9/9 清理 .build...\033[0m"
 rm -rf .build
-info "已清理 .build 目录"
+info "已清理 .build"
 
 echo ""
-echo "✅ 发版全部完成！版本: $VERSION"
-echo "📦 Package.swift 已通过 Git 提交"
-echo "☁️  zip 文件已上传至 GitHub Releases（未提交进 Git）"
-echo "🔗 用户可通过 Git Tag 引入你的 SDK"
+echo "🎉 发版完成！版本: $VERSION"
+echo "   Tag : $VERSION → $(git rev-parse --short HEAD)"
+echo "   URL : $RELEASE_URL"
+echo "   用户可在自己项目里 swift package update 拉到新版本"
