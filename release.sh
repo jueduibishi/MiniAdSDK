@@ -33,13 +33,21 @@ ditto -c -k --keepParent "$SDK_NAME.xcframework" "$SDK_NAME.xcframework.zip"
 cd ..
 info "已打包: $ZIP_PATH"
 
-# ---------------- 2. 验证 zip 内部结构 ----------------
-echo -e "\033[33m🔍 2/9 验证 zip 内部结构...\033[0m"
-TIMEOUT 60 unzip -Z -1 "$ZIP_PATH" | head -n 20 || error "读取 zip 目录超时/失败"
-FIRST_ENTRY=$(TIMEOUT 10 unzip -Z -1 "$ZIP_PATH" | head -n 1)
+# ---------- 2. 验证 zip 内部结构（极速修复版） ----------
+echo -e "\033[33m🔍 验证 zip 内部结构...\033[0m"
+
+# 使用 bsdtar 替代慢吞吞的 unzip -Z -1，彻底去掉超时限制
+FIRST_ENTRY=$(bsdtar -tf "$ZIP_PATH" | head -n 1)
 EXPECTED="$SDK_NAME.xcframework/"
-[ "$FIRST_ENTRY" = "$EXPECTED" ] || error "校验失败！期望根目录 $EXPECTED，实际: $FIRST_ENTRY"
-info "校验通过：xcframework 位于 zip 根目录"
+
+echo "----- 真实结构（前 5 行） -----"
+bsdtar -tf "$ZIP_PATH" | head -n 5
+
+if [ "$FIRST_ENTRY" == "$EXPECTED" ]; then
+    info "校验通过！xcframework 在根目录"
+else
+    error "校验失败！期望根目录有 $EXPECTED，但实际是: $FIRST_ENTRY"
+fi
 
 # ---------------- 3. 计算 checksum ----------------
 echo -e "\033[33m🔐 3/9 计算 checksum...\033[0m"
