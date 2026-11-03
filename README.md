@@ -30,9 +30,9 @@ https://github.com/jueduibishi/MiniAdSDK.git
 source 'https://github.com/CocoaPods/Specs.git'
 pod 'BUTTSDKFramework', '~> 1.48.2.3-premium'
 # 以下为支持平台可选配置
-pod 'BaiduMobAdSDK', '10.050'
-pod 'GDTMobSDK', '4.15.90'
-pod 'KSAdSDK', '5.5.10.1'
+pod 'BaiduMobAdSDK', '10.060'
+pod 'GDTMobSDK', '4.16.10'
+pod 'KSAdSDK', '5.7.20.1'
 ```
 ### spm过慢解决方案
 若报错，可以清理下缓存，cd到项目文件夹
