@@ -16,12 +16,24 @@
 		0B5C036B2C85B76700C30092 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5C036A2C85B76700C30092 /* main.m */; };
 		0BD0C8D82D6EE5B10003E85F /* TestID.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0C8D62D6EE5B10003E85F /* TestID.m */; };
 		0BD0C8D92D6EE5B10003E85F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0BD0C8D72D6EE5B10003E85F /* Settings.bundle */; };
-		EE3506413093595400597BDC /* MiniSDKFramework in Frameworks */ = {isa = PBXBuildFile; productRef = EE3506403093595400597BDC /* MiniSDKFramework */; };
-		EE3506423093597D00597BDC /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D34385F5DB5815C9E0696299 /* Pods_Demo.framework */; };
 		EE3649B82E85381A0038AB56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3649B72E85381A0038AB56 /* SceneDelegate.swift */; };
 		EE823A8A2F5676E9000C960C /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE823A892F5676E9000C960C /* BaseNavigationController.m */; };
 		EE823A8D2F567CCC000C960C /* LRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE823A8C2F567CCC000C960C /* LRViewController.m */; };
+		EED7FD43309984C800ABD665 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D34385F5DB5815C9E0696299 /* Pods_Demo.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EED7FD42309984B200ABD665 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0B340C192D6C6EF400B84370 /* TableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableVC.m; sourceTree = "<group>"; };
@@ -55,8 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE3506413093595400597BDC /* MiniSDKFramework in Frameworks */,
-				EE3506423093597D00597BDC /* Pods_Demo.framework in Frameworks */,
+				EED7FD43309984C800ABD665 /* Pods_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,15 +147,13 @@
 				0B5C03512C85B76500C30092 /* Sources */,
 				0B5C03522C85B76500C30092 /* Frameworks */,
 				0B5C03532C85B76500C30092 /* Resources */,
+				EED7FD42309984B200ABD665 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Demo;
-			packageProductDependencies = (
-				EE3506403093595400597BDC /* MiniSDKFramework */,
-			);
 			productName = Demo;
 			productReference = 0B5C03552C85B76500C30092 /* Demo.app */;
 			productType = "com.apple.product-type.application";
@@ -173,9 +182,6 @@
 				Base,
 			);
 			mainGroup = 0B5C034C2C85B76500C30092;
-			packageReferences = (
-				EE35063F3093595400597BDC /* XCRemoteSwiftPackageReference "MiniAdSDK" */,
-			);
 			productRefGroup = 0B5C03562C85B76500C30092 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -493,25 +499,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		EE35063F3093595400597BDC /* XCRemoteSwiftPackageReference "MiniAdSDK" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jueduibishi/MiniAdSDK.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.7.805;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		EE3506403093595400597BDC /* MiniSDKFramework */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = EE35063F3093595400597BDC /* XCRemoteSwiftPackageReference "MiniAdSDK" */;
-			productName = MiniSDKFramework;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0B5C034D2C85B76500C30092 /* Project object */;
 }
